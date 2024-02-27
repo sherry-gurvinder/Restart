@@ -5,38 +5,97 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+         .container
+        {
+            border: 1px solid;
+            height: 1000px
+        }
+        .section-1 {
+            background-color: rgb(194, 194, 235);
+            color: black;
+            border: rgb(211, 16, 16) 2px solid;
+            margin: auto;
+            max-width: 1000px;
+            min-width: 100px;
+            height: 1500px; /* Changed to 1500px for demonstration */
+        }
         .sticky
         {
            position: sticky;
             width: 250px;
-            height: 250px;
+            height: 150px;
             border: 2px red;
             background-color: aqua;
             top: 0;
             margin-top: 5px;
+            z-index: 1;
         }
         .relative
         {
             position: relative;
             width: 250px;
-            height: 250px;
+            height:350px;
             border: 2px rgb(24, 224, 91);
             background-color: rgb(174, 28, 231);
            
         }
-        .container
+        .static
         {
-            border: 1px solid;
-            height: 1000px;
+            position: relative;
+            width: 250px;
+            height: 350px;
+            border: 2px rgb(0, 15, 5);
+            background-color: rgb(28, 231, 79);
+           
         }
+        .fixed
+        {
+            position: fixed;
+        width: 166px;
+        height: 40px;
+        border: 2px rgb(247, 15, 247);
+     background-color: rgb(231, 28, 28);
+        top: 36%;
+        left: 1%;
+    }
+           
+        
+        .absolute
+        {
+            position: absolute;
+            width: 250px;
+            height: 350px;
+            border: 2px rgb(45, 0, 248);
+            background-color: rgb(207, 253, 0);
+           
+        }
+       
+       
     </style>
 </head>
 <body>
     <div class="container">
+
         <div class="section-1">
+            <p style="text-align: center; font-size: 25px;">Since static and relative positioned elements stay in the normal flow of the document, when a user scrolls the page (or parent element) these elements will scroll too. And since fixed and absolute positioned elements are removed from the document flow, when a user scrolls, these elements will stay at their specified offset position.
+    
+                The sticky value is another position value that keeps an element in the document flow as the user scrolls, but sticks to a specified position as the page is scrolled further</p>
+            <ul>
+                <li><p>static: the default value (it does not need to be specified)</p></li>
+                <li><p>relative: </p></li>
+                <li><p>absolute: all other elements on the page will ignore the element and act like it is not present on the page</p></li>
+                <li><p>fixed: We can fix an element to a specific position on the page (regardless of user scrolling) by setting its position to fixed, and accompanying it with the familiar offset properties top, bottom, left, and right.</p></li>
+                <li><p>sticky</p></li>
+            </ul>
            
+            <div>
             <div class="sticky"> i am sticky</div>
             <div class="relative"> i am relative</div>
+            <div class="static"> i am relative</div>
+            <div class="absolute">i am absolute</div>
+            <div class="fixed"> i am fixed</div>
+            </div>
+          
         </div>
        
     </div>

@@ -39,6 +39,8 @@
             border: 5px solid rgb(50, 21, 214);
             position: absolute;
             background-color: azure;
+            top: 0;
+            left: 0;
         }
 
         .fixed-position {
@@ -46,7 +48,7 @@
             height: 100px;
             border: 5px solid rgb(11, 241, 211);
             position: fixed;
-            top: 0;
+            top: 10;
             left: 0;
             background-color: blueviolet;
         }
@@ -59,6 +61,7 @@
     background-color: green;
     border: 2px solid #4CAF50;
     margin-left: 41%;
+    margin-top: -40%;
         }
     </style>
 </head>
@@ -80,7 +83,7 @@
             <li><p>fixed: We can fix an element to a specific position on the page (regardless of user scrolling) by setting its position to fixed, and accompanying it with the familiar offset properties top, bottom, left, and right.</p></li>
             <li><p>sticky</p></li>
         </ul>
-        <div>
+        <div style="height: 100%;"><!-- sticky will only work to his parent dimesnion-->
             <div class="static-position"><p>static-position</p></div>
             <div class="relative-position"><p>relative-position</p></div>
             <div class="absolute-position"><p>absolute-position</p></div>
