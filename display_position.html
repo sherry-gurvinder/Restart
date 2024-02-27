@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        #section-1 {
+            background-color: rgb(194, 194, 235);
+            color: black;
+            border: rgb(211, 16, 16) 2px solid;
+            margin: auto;
+            max-width: 1000px;
+            min-width: 100px;
+            height: 1500px; /* Changed to 1500px for demonstration */
+        }
+
+        .main {
+            margin: auto;
+            max-width: 100%;
+        }
+
+        .static-position {
+            width: 40%;
+            height: 100px;
+            border: 5px solid greenyellow;
+            background-color: aliceblue;
+        }
+
+        .relative-position {
+            width: 40%;
+            height: 100px;
+            border: 5px solid rgb(218, 27, 27);
+            position: relative;
+            margin-bottom: 2%;
+            background-color: antiquewhite;
+        }
+
+        .absolute-position {
+            width: 40%;
+            height: 100px;
+            border: 5px solid rgb(50, 21, 214);
+            position: absolute;
+            background-color: azure;
+        }
+
+        .fixed-position {
+            width: 40%;
+            height: 100px;
+            border: 5px solid rgb(11, 241, 211);
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: blueviolet;
+        }
+
+        .sticky-position {
+    width: 40%;
+    height: 50px;
+    position: sticky;
+    top: 0;
+    background-color: green;
+    border: 2px solid #4CAF50;
+    margin-left: 41%;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        CSS Display and Position
+    </div>
+</div>
+<div class="main">
+    <div id="section-1">
+        <p style="text-align: center; font-size: 25px;">Since static and relative positioned elements stay in the normal flow of the document, when a user scrolls the page (or parent element) these elements will scroll too. And since fixed and absolute positioned elements are removed from the document flow, when a user scrolls, these elements will stay at their specified offset position.
+
+            The sticky value is another position value that keeps an element in the document flow as the user scrolls, but sticks to a specified position as the page is scrolled further</p>
+        <ul>
+            <li><p>static: the default value (it does not need to be specified)</p></li>
+            <li><p>relative: </p></li>
+            <li><p>absolute: all other elements on the page will ignore the element and act like it is not present on the page</p></li>
+            <li><p>fixed: We can fix an element to a specific position on the page (regardless of user scrolling) by setting its position to fixed, and accompanying it with the familiar offset properties top, bottom, left, and right.</p></li>
+            <li><p>sticky</p></li>
+        </ul>
+        <div>
+            <div class="static-position"><p>static-position</p></div>
+            <div class="relative-position"><p>relative-position</p></div>
+            <div class="absolute-position"><p>absolute-position</p></div>
+            <div class="fixed-position"><p>fixed-position</p></div>
+            <div class="sticky-position"><p>sticky: will stick when reach at top</p></div>
+        </div>
+    </div>
+    <div class="section-1"></div>
+    <div class="section-1"></div>
+</div>
+</body>
+</html>
