@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .container
+        {
+            border: 1px solid;
+            height: 100%;
+        }
+        .section-1 {
+            background-color: rgb(194, 194, 235);
+            color: black;
+            border: rgb(211, 16, 16) 2px solid;
+            margin: auto;
+            max-width: 1000px;
+            min-width: 100px;
+            height: 100%; 
+        }
+        .food-menu
+        {
+            display: inline;
+        }
+        .Food2
+        {
+           
+            width: 250px;
+            height: 350px;
+            border: 2px red;
+            background-color: aqua;
+            top: 0;
+            margin-top: 5px;
+            z-index: 1;
+        }
+        .Food3
+        {
+            
+            width: 250px;
+            height:350px;
+            border: 2px rgb(24, 224, 91);
+            background-color: rgb(174, 28, 231);
+           
+        }
+        .Food4
+        {
+           
+            width: 250px;
+            height: 350px;
+            border: 2px rgb(0, 15, 5);
+            background-color: rgb(28, 231, 79);
+           
+        }
+        .Food5
+        {
+            
+            width: 250px;
+            height: 350px;
+        border: 2px rgb(247, 15, 247);
+     background-color: rgb(231, 28, 28);
+      
+    }
+           
+        
+        .Food1
+        {
+           
+            width: 250px;
+            height: 350px;
+            border: 2px rgb(45, 0, 248);
+            background-color: rgb(207, 253, 0);
+           
+        }
+        .Food6
+        {
+           
+            width: 250px;
+            height: 350px;
+            border: 2px rgb(45, 0, 248);
+            background-color: rgb(33, 180, 112);
+           
+        }
+        .Food7
+        {
+           
+            width: 250px;
+            height: 350px;
+            border: 2px rgb(45, 0, 248);
+            background-color: rgb(234, 252, 163);
+           
+        }
+       
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="section-1">
+            <h1>Display</h1>
+            <p style="text-align: center; font-size: 25px;">Every HTML element has a default display value that dictates if it can share horizontal space with other elements. Some elements fill the entire browser from left to right regardless of the size of their content. Other elements only take up as much horizontal space as their content requires and can be directly next to other elements.
+
+                In this lesson, we’ll cover three values for the display property: inline, block, and inline-block.</p>
+            <ul>
+                <li><p>inline: The default display for some elements, such as em, strong, and a, is called inline. </p></li>
+                <li><p>block: These elements fill the entire width of the page by default, but their width property can also be set. Unless otherwise specified, they are the height necessary to accommodate their content.</p></li>
+                <li><p>inline-block: Inline-block display combines features of both inline and block elements.</p></li>
+                <li><p>Float: If you’re simply interested in moving an element as far left or as far right as possible in the container, you can use the float property.</p></li>
+            </ul>
+           
+            
+                <p>Inline-Examle: it will only be as wide as necessary to contain its content. inline elements cannot be altered in size with the height or width CSS properties.</p>
+            <div class="Food1" style="display: inline;"> Food1</div>
+            <p>block-Examle: by default block</p>
+            <div class="Food2" style="display: block;"> Food2</div>
+
+            
+                <p>Inline-Examle: Inline-block elements can appear next to each other and we can specify their dimensions using the width and height properties. below is  the best example of default inline-block elements.</p>
+                    <div class="Food3" style="display: inline-block; clear: right;"> Food3</div>
+                    <div class="Food4"  style="display: inline-block;">Food4</div>
+                    <div class="Food5"  style="display: inline-block;">Food5</div>
+                   <p>Float: The float property is often set using one of the values below:
+                    <div class="Food6" style="clear: right;" >Food6</div>
+                    <div class="Food7"  >Food7</div>
+                    left - moves, or floats, elements as far left as possible.
+                    right - moves elements as far right as possible.</p>
+                    <div class="Food6"  style="float: right;">Food6</div>
+                    <div class="Food7"  style="float: left;">Food7</div>
+
+            </div>
+          
+        </div>
+       
+    </div>
+</body>
+</html>
