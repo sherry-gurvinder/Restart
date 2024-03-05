@@ -1,0 +1,27 @@
+.Crafts{
+    display: block;
+}
+.blue-text{
+    color: blue;
+}
+.content>p
+{
+    font-weight: bold;
+}
+.header
+{
+    background-image: url("https://content.codecademy.com/courses/freelance-1/unit-2/pattern.jpeg?_gl=1*4h7xpr*_ga*Njc4MDU5MjI2NC4xNzA5MTI5NzE3*_ga_3LRZM6TM9L*MTcwOTEzMjgxMi4yLjEuMTcwOTEzMzM4My4zNi4wLjA.");
+}
+.header h1{
+    font-family: Helvetica;
+font-size: 100px;
+font-weight: bold;
+color: khaki;
+}
+.Crafts h1
+{
+    font-family: Helvetica;
+font-size: 32px;
+font-weight: bold;
+color: white;
+}
