@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <link href="responsive.css" rel="stylesheet">
+     
+    </head>
+<body>
+        <div class="container">
+                <h1>inline-Block-inlineblock</h1>
+                <div class="display1-1">
+                    <h1>display:block</h1> <p>.{
+                        height: 50px;
+                        width: 100px;
+                        border: 2px solid royalblue;
+                    }</p>
+                    <p>Display block means 1 element in one line if display set to block.and by default all elements are "Dispkay:Block". will take the whole width of the page or either we can set the height and width. </p>
+                    <div class="display1-1-block">DIV 1</div>
+                    <div class="display1-1-block">DIV 2</div>
+                    <div class="display1-1-block">DIV 3</div>
+                </div>
+                <div class="display1-1">
+                    <h1>display:inline</h1> <p>.{
+                        height: 50px;
+                        width: 100px;
+                        border: 2px solid royalblue;
+                    }</p>
+                    <p>Display block: we can not set the height and width. it will only take the width of the content. Display inline means can have more than 1 element in one line if display set to inline.</p>
+                    <div class="display1-1-inline">DIV 1</div>
+                    <div class="display1-1-inline">DIV 2</div>
+                    <div class="display1-1-inline">DIV 3</div>
+                </div>
+                <div class="display1-1">
+                    <h1>display:inline-block</h1> <p>.{
+                        height: 50px;
+                        width: 100px;
+                        border: 2px solid royalblue;
+                    }</p>
+                    <p>Display inline-block: we can set the height and width. Display inline-block is the combianation of inline+block. Means, can have more than 1 element in one line if display set to inline-block.</p>
+                    <div class="display1-1-inline-block">DIV 1</div>
+                    <div class="display1-1-inline-block">DIV 2</div>
+                    <div class="display1-1-inline-block">DIV 3</div>
+                </div> 
+        </div>
+        <div class="container">
+            
+                <h1>FLEX:Any element can be a flex container. Flex containers are helpful tools for creating websites that respond to changes in screen sizes. Child elements of flex containers will change size and location in response to the size and position of their parent container.</h1>
+                <h2>Display:flex</h2>
+                <p>For an element to become a flex container, its display property must be set to flex.
+                    div.container {
+                      display: flex;
+                    } 
+                </p>
+                <p>All divs with the class container are flex containers. If they have children, the children are flex items.  it will change the behavior of its child elements. Child elements will not begin on new lines.</p>
+                <h1>\|/-FLEX-container 1 </h1>
+                <div class="display2-flex">
+                    <div class="display2-2-flex">DIV 1</div>
+                    <div class="display2-2-flex">DIV 2</div>
+                    <div class="display2-2-flex">DIV 3</div> 
+                </div>
+                <div class="display2-flex">
+                    <div class="display2-2-flex">DIV 1</div>
+                    <div class="display2-2-flex">DIV 2</div>
+                    <div class="display2-2-flex">DIV 3</div> 
+                </div>
+                <h1>/|\-FLEX-container 2</h1>
+                <p>However,A div with the declaration display: flex; will remain block level — no other elements will appear on the same line as it.</p>
+            
+        </div>
+        <div class="container">
+            
+                <h1>Inline-Flex: If we have two flex container and want to be in one line. then We can chnage display:flex; -> display:inline-flex; width is the limitation. </h1>
+                <h2>Width is the limitation.</h2>
+                <p>if we have a width of display 500 px; The first limitation is width of both the width should be less than &lt500, otherwise,container#2 will move to new line</p>
+                <p>if the width of the page is 500px and container #1 width is 750px, then child of flex container shrink and adjust the width. but, flex-child  will not move to the next line</p>            
+            
+                <h1>\|/-FLEX-container 1 | h1>\|/-FLEX-container 2</h1> </h1>
+                <h1>Width of Container 100% </h1>
+                <div class="Display3-3">
+                    <div class="display3-inline-flex">
+                        <div class="display3-3-flex">DIV 1</div>
+                        <div class="display3-3-flex">DIV 2</div>
+                        <div class="display3-3-flex">DIV 3</div> 
+                    </div>
+                    <div class="display3-inline-flex">
+                        <div class="display3-3-flex">DIV 1</div>
+                        <div class="display3-3-flex">DIV 2</div>
+                        <div class="display3-3-flex">DIV 3</div> 
+                    </div>
+                </div>
+                <h1>Width of Container 400px: If display of width shrink to 400px. it will move to new line  </h1>
+                <div class="Display3-3.1">
+                    <div class="display3-inline-flex" style="width: 300px;">
+                        <div class="display3-3-flex">DIV 1</div>
+                        <div class="display3-3-flex">DIV 2</div>
+                        <div class="display3-3-flex">DIV 3</div> 
+                    </div>
+                    <div class="display3-inline-flex" style="width: 300px;">
+                        <div class="display3-3-flex">DIV 1</div>
+                        <div class="display3-3-flex">DIV 2</div>
+                        <div class="display3-3-flex">DIV 3</div> 
+                    </div>
+                </div>   
+        </div>
+<!-- Justify-align-item-flex-horizontely-->
+        <div class="container">
+            <h1>Justify-Content: To position the items from left to right, we use a property called justify-content.<br>Following CSS use for <br>flex container</h1>
+                <h3>
+                    
+                    .container-Justify
+                {
+                    display: flex;
+                    border: 1px solid goldenrod;
+                }
+                </h3>
+                <h1>flex Items</h1>
+                <h3>.box 
+                    {
+                        width:100px;
+                        height:50px;
+                        background-color: brown;
+                        color: white;
+                        border: 1px solid white;
+                    }</h3>
+                
+            <ol>
+                <li><h3>flex-start — all items will be positioned in order, starting from the left of the parent container, with no extra space between or before them.</h3>
+                <div class='container-Justify' id='flexstart' style="justify-content: flex-start;">
+                    <div class='box'>1</div>
+                    <div class='box'>2</div>
+                    <div class='box'>3</div>
+                </div>
+                </li>
+                <li><h3>flex-end — all items will be positioned in order, with the last item starting on the right side of the parent container, with no extra space between or after them.</h3>
+                    <div class='container-Justify' id='flexend' style="justify-content: flex-end;">
+                        <div class='box'>1</div>
+                        <div class='box'>2</div>
+                        <div class='box'>3</div>
+                      </div>
+                </li>
+                <li><h3>Center — all items will be positioned in order, in the center of the parent container with no extra space before, between, or after them.</h3>
+                    <div class='container-Justify' id='center' style="justify-content: center;">
+                        <div class='box'>1</div>
+                        <div class='box'>2</div>
+                        <div class='box'>3</div>
+                      </div>
+                </li>
+                <li><h3>space-around — items will be positioned with equal space before and after each item, resulting in double the space between elements.</h3>
+                    <div class='container-Justify' id='spacearound' style="justify-content: space-around;">
+                        <div class='box'>1</div>
+                        <div class='box'>2</div>
+                        <div class='box'>3</div>
+                        <div class='box'>4</div>
+                        <div class='box'>5</div>
+                      </div>
+                </li>
+                <li><h3>space-between — items will be positioned with equal space between them, but no extra space before the first or after the last elements.</h3>
+                    <div class='container-Justify' id='spacebetween' style="justify-content: space-between;">
+                    <div class='box'>1</div>
+                    <div class='box'>2</div>
+                    <div class='box'>3</div>
+                    <div class='box'>4</div>
+                  </div>
+                </li>
+            </ol>
+        </div>
+<!-- Justify-align-item-flex-vertically-->
+        <div class="container">
+                <h1>align-items: justify the content of a flex container from left to right across the page.</h1>
+                <ol>
+                    <li>
+                        <h1>flex-start — all elements will be positioned at the top of the parent container.</h1>
+                        <div class="justify-align-items" style="align-items: flex-start;">
+                            <div class='box'>1</div>
+                            <div class='box'>2</div>
+                            <div class='box'>3</div>
+                            <div class='box'>4</div>
+                        </div>
+                    </li>
+                    <li>
+                        <h1>flex-end — all elements will be positioned at the bottom of the parent container.</h1>
+                        <div class="justify-align-items" style="align-items: flex-end;">
+                            <div class='box'>1</div>
+                            <div class='box'>2</div>
+                            <div class='box'>3</div>
+                            <div class='box'>4</div>
+                        </div>
+                    </li>
+                    <li>
+                        <h1>center — the center of all elements will be positioned halfway between the top and bottom of the parent container.</h1>
+                        <div class="justify-align-items" style="align-items:center">
+                            <div class='box'>1</div>
+                            <div class='box'>2</div>
+                            <div class='box'>3
+                                
+
+                            </div>
+                            <div class='box'>4</div>
+                        </div>
+                    </li>
+                    <li>
+                        <h1>baseline — the bottom of the content of all items will be aligned with each other.</h1>
+                        <div class="justify-align-items" style="align-items:baseline;">
+                            <div class='box'>1</div>
+                            <div class='box'>2<br>1<br></div>
+                            <div class='box'>3</div>
+                            <div class='box'>4</div>
+                        </div>
+                        
+                    </li>
+                    <li>
+                        <h1>stretch — if possible, the items will stretch from top to bottom of the container (this is the default value; elements with a specified height will not stretch; elements with a minimum height or no height specified will stretch).</h1>
+                        <div class="justify-align-items" style="align-items:stretch;">
+                            <div class='box' style="height: 25px;">set the hright to 25px;</div>
+                            <div class='box'>2</div>
+                            <div class='box'>3</div>
+                            <div class='box'>4</div>
+                        </div>
+                    </li>
+                </ol>
+         </div>
+<!-- Flex-grow: How Flex item will respond- Limitation of their width according to the flex-grow-ratio-->
+         <div class="container">
+            <h1>Flex Grow<br> display:flex = All the items of flex container align to each other in single line and if the width of the flex container shrink or expand. All flex items will be shrink and expand equally </h1>
+            <h1>The flex-grow property allows us to specify if items should grow to fill a container and also which items should grow proportionally more or less than others.</h1>
+            <h2>Below is the example if only set the flex-grow property under Left Div to <p>#left
+                {
+                    flex-grow: 1;
+                }<p> 
+                    then it will take all the width of the flex container and Center Div, right div  element shrink to their min-width property i.e <p>.box 
+                        {
+                            min-width:100px;
+                            min-height:50px;
+                            background-color: brown;
+                            color: white;
+                            border: 1px solid white;
+                        }</p>
+                </h2>
+            <div id="flex-grow" id="flex-grow">
+                <div class="box" id="left">Left Div</div>
+                <div class="box" >Center Div</div>
+                <div class="box" >Right Div</div>
+            </div>
+            <h1>
+                Now we set the <p>#center
+                {
+                    flex-grow: 2;
+                }
+            </p>
+            Center Div wil grow twice the left. right will be the min-width i.e 100px </h1>
+            <div id="flex-grow" id="flex-grow">
+                <div class="box" id="left">Left Div</div>
+                <div class="box" id="center-1">Center Div</div>
+                <div class="box" id="right">Right Div</div>
+            </div>
+            <h1>if we want only center DIV will grow and left and right will only grow to 250px then we can set the CSS 
+                <p></p>
+                #left, right{
+                    max-width:250px;
+                }
+                #center{
+                    flex-grow:1;
+                }
+            </h1>
+            <div id="flex-grow" id="flex-grow">
+                <div class="box" id="left-1">Left Div</div>
+                <div class="box" id="center-1">Center Div</div>
+                <div class="box" id="right-1">Right Div</div>
+            </div>
+            <h2>We can play with flex-grow as per our requirement,but the only limitation is min-width and max-width, if the width of the flex-item reach to that set width. flex grow will not work</h2>
+         </div>
+         <div></div>
+    
+</body>
+</html>

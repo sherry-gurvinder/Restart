@@ -1,0 +1,114 @@
+.display1-1-block
+{
+    height: 50px;
+    width: 100px;
+    border: 2px solid royalblue;
+    margin:1px;
+    display: block;
+}
+.display1-1-inline
+{
+    height: 50px;
+    width: 100px;
+    border: 2px solid royalblue;
+    margin:1px;
+    display: inline;
+}
+.display1-1-inline-block
+{
+    height: 50px;
+    width: 100px;
+    border: 2px solid royalblue;
+    margin:1px;
+    display: inline-block;
+}
+.display2-2-flex /*child FLEX*/
+{
+    height: 50px;
+    width: 100px;
+    border: 2px solid royalblue;
+    margin:1px;
+   
+   
+}
+.display2-flex /*Parent FLEX*/
+{
+    border: 1px solid red;
+    display: flex;
+}
+.display3-inline-flex{
+    border: 1px solid rgb(30, 255, 0);
+    display: inline-flex;
+
+}
+.Display3-3
+{
+    border:1px purple solid;
+}
+.display3-3-flex
+{
+    height: 50px;
+    width: 100px;
+    border: 2px solid royalblue;
+    margin:1px;
+}
+.container-Justify
+{
+    display: flex;
+    border: 1px solid goldenrod;
+    
+}
+.box 
+{
+    min-width:100px;
+    min-height:50px;
+    background-color: brown;
+    color: white;
+    border: 1px solid white;
+}
+.justify-align-items{
+    display: flex;
+    border: 1px solid goldenrod;
+    min-width: 200px;
+    height: 150px;
+}
+.container1 {
+    height: 150px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+  }
+  
+
+  
+  #baseline .center {
+    height: 100px;
+    width: 100px;
+    border: 5px solid turquoise;
+  }
+  .container {
+    border: 2px solid;
+    margin: 2px;
+    padding: 2px;
+}
+#flex-grow {
+    display: flex;
+    min-width: 200px;
+    border: 1px solid skyblue;
+    padding: 5px;
+    margin: 5px;
+}
+#left
+{
+    flex-grow: 1;
+}
+#center-1
+{
+    flex-grow: 2;
+}
+#left-1 , #right-1 {
+    max-width:250px;
+}
+#center-1-1{
+    flex-grow:1;
+}
