@@ -58,9 +58,10 @@
     border: 1px solid goldenrod;
     
 }
+
 .box 
 {
-    min-width:100px;
+    min-width:50px;
     min-height:50px;
     background-color: brown;
     color: white;
@@ -91,12 +92,28 @@
     margin: 2px;
     padding: 2px;
 }
-#flex-grow {
+#flex-grow , .flex-shrink {
     display: flex;
-    min-width: 200px;
+   
     border: 1px solid skyblue;
     padding: 5px;
     margin: 5px;
+}
+#flex-grow .box 
+{
+    min-width:10px;
+    min-height:50px;
+    background-color: brown;
+    color: white;
+    border: 1px solid white;
+}
+.flex-shrink .box 
+{
+    min-width:10px;
+    min-height:50px;
+    background-color: brown;
+    color: white;
+    border: 1px solid white;
 }
 #left
 {
@@ -111,4 +128,98 @@
 }
 #center-1-1{
     flex-grow:1;
+}
+.flex-shrink{
+    justify-content:center;
+}
+#flex-1-left
+{
+flex-shrink: 2;
+width: 250px;
+}
+#flex-1-center
+{
+    width: 250px;
+    flex-shrink: 2;
+}
+#flex-1-right
+{
+    width: 250px;
+    flex-shrink: 2;
+}
+#flex-2-left
+{
+    width: 350px;
+    flex-shrink: 2;
+}
+#flex-2-center
+{
+    width: 250px;
+    flex-shrink: 1;
+}
+#flex-2-right
+{
+    width: 250px;
+
+}
+#flex-3-left
+{
+    width: 250px;
+    flex-shrink: 3;
+}
+#flex-3-center
+{
+    width: 250px;
+    flex-shrink: 1;
+}
+#flex-3-right
+{
+    width: 250px;
+    flex-shrink: 3;
+}
+.flex-basis
+{
+    display: flex;
+}
+
+.flex-box-1
+{
+   flex-basis:350px;
+    background-color: brown;
+    color: white;
+    border: 1px solid white;
+}
+.flex-box-2
+{
+   width:350px;
+    background-color: brown;
+    color: white;
+    border: 1px solid white;
+}
+.flex-wrap,.flex-nowrap,.flex-wrap-reverse{display: flex;justify-content: space-around;}
+.flex-wrap-box
+{
+    width:300px;
+    min-height:50px;
+    background-color: brown;
+    color: white;
+    border: 1px solid white;
+    
+}
+.flex-wrap{flex-wrap:wrap;}
+.flex-nowrap{flex-wrap:nowrap;}
+.flex-wrap-reverse{flex-wrap:wrap-reverse;}
+.flex-container
+{
+    display:flex;
+    flex-wrap: wrap;
+    border: 1px yellowgreen solid;
+    height: 500px;
+}
+.flex-container .box{
+    width:300px;
+    min-height:50px;
+    background-color: brown;
+    color: white;
+    border: 1px solid white;
 }
