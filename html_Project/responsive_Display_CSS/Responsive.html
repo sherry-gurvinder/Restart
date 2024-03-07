@@ -220,8 +220,8 @@
                 </ol>
          </div>
 <!-- Flex-grow: How Flex item will respond- Limitation of their width according to the flex-grow-ratio-->
-         <div class="container">
-            <h1>Flex Grow<br> display:flex = All the items of flex container align to each other in single line and if the width of the flex container shrink or expand. All flex items will be shrink and expand equally </h1>
+        <div class="container">
+            <h1>Flex Grow:By Deafult ,flex-grow is 0.<br> display:flex = All the items of flex container align to each other in single line and if the width of the flex container shrink or expand. All flex items will be shrink and expand equally </h1>
             <h1>The flex-grow property allows us to specify if items should grow to fill a container and also which items should grow proportionally more or less than others.</h1>
             <h2>Below is the example if only set the flex-grow property under Left Div to <p>#left
                 {
@@ -268,11 +268,297 @@
                 <div class="box" id="right-1">Right Div</div>
             </div>
             <h2>We can play with flex-grow as per our requirement,but the only limitation is min-width and max-width, if the width of the flex-item reach to that set width. flex grow will not work</h2>
-         </div>
-         <div class="container">
-            <p class="heading">Flex-Shrink</p>
-            <p class="content">Flex shrink is oppsoite of flex grow.</p>
-         </div>
-    
+        </div>
+        <div class="container">
+            <p class="header">Flex-Shrink: </p>
+            <p class="section">by default Flex-shrink is 1: ZOOM INTO 500+ for better understanding. You may have noticed in earlier exercises that flex items shrank when the flex container was too small, even though we had not declared the property. This is because the default value of flex-shrink is 1. However, flex items do not grow unless the flex-grow property is declared because the default value of flex-grow is 0.</p>
+            <p class="section">Flex shrink is oppsoite of flex grow.</p>
+
+            <p class="css">#flex-1-left
+                {
+                flex-shrink: 2;
+                }
+                                #flex-1-center
+                {
+                    width: 250px;
+                    flex-shrink: 2;
+                }
+                #flex-1-right
+                {
+                    width: 250px;
+                    flex-shrink: 2;
+                }
+            </p>
+            <p class="css-section">
+                left, center,right all the Div's shrink equally same like its default value 1, because there is no difference any one them.
+            </p>
+            <div class="flex-shrink">
+                <div class='box' id="flex-1-left">1</div>
+                <div class='box' id="flex-1-center">2</div>
+                <div class='box' id="flex-1-right">3</div>
+            </div>
+            <p class="header"></p>
+            <p class="section"></p>
+            <p class="section"></p>
+            <p class="css">#flex-2-left
+                {
+                flex-shrink: 2;
+                }
+            </p>
+            <p class="css-section">
+                Only left div will shrink twice the size, as compare to center and right
+            </p>
+            <div class="flex-shrink">
+                <div class='box' id="flex-2-left">1</div>
+                <div class='box' id="flex-2-center">2</div>
+                <div class='box' id="flex-2-right">3</div>
+            </div>
+
+            <p class="header"></p>
+            <p class="section"></p>
+            <p class="section"></p>
+            <p class="css">#flex-3-left ,  #flex-3-right
+                {
+                    width: 250px;
+                    flex-shrink: 3;
+                }
+               left and right div will shrink 3 times as compare to center, when screen resolution will change or zoom+ in the browser, center div will take 3x part.
+              
+               
+                </p>
+            <p class="css-section">
+
+            </p>
+            <div class="flex-shrink">
+                <div class='box' id="flex-3-left">1</div>
+                <div class='box' id="flex-3-center">2</div>
+                <div class='box' id="flex-3-right">3</div>
+            </div>
+        </div>
+        <div class="container">
+            <p class="header">Flex-Basis</p>
+            <p class="section">flex-basis is used to set the initial size of a flex item in a flex container,
+                 while width and height are used to set the exact size of an element in any layout context.The dimensions of the divs were determined by heights and widths set with CSS. Another way of specifying the width of a flex item is with the flex-basis property
+            </p>
+            <p class="section">flex-basis allows us to specify the width of an item before it stretches or shrinks.<br> There is no difference between flex-basis and Width
+            </p>
+            <p class="css">
+               
+                
+                left-div{flex-grow: 1}
+                center-div{flex-shrink: 2;}
+                right-div{flex-grow: 3;}
+            </p>
+            <p class="css-section">
+                Below is the demonstarion of flex-basis
+            </p>
+            <div class="flex-basis">
+                <div class="flex-box-1" style="flex-grow: 1;">1</div>
+                <div class="flex-box-1" style="flex-shrink: 2;">2</div>
+                <div class="flex-box-1" style="flex-grow: 3;">3</div>
+            </div>
+            <p class="css">
+                left-div{flex-grow: 1}
+                center-div{flex-shrink: 2;}
+                right-div{flex-grow: 3;}
+            </p>
+            <p class="css-section">
+                Below is the demonstarion of width
+            </p>
+            <div class="flex-basis">
+                <div class="flex-box-2" style="flex-grow: 1;">1</div>
+                <div class="flex-box-2" style="flex-shrink: 2;">2</div>
+                <div class="flex-box-2" style="flex-grow: 3;">3</div>
+            </div>
+        </div>
+        <div class="container">
+            <p class="header">Flex</p>
+            <p class="section">The shorthand flex property provides a convenient way for specifying how elements stretch and shrink, while simplifying the CSS required. </p>
+            <p class="section">The flex property allows you to declare flex-grow, flex-shrink, and flex-basis all in one line.<strong>Note</strong><br>The flex property is different from the flex value used for the display property.</p>
+            <p class="css">
+                .div{
+                    flex-grow:1;
+                    flex-shrink:2;
+                    flex-basis:150px;
+                }
+            </p>
+             <p class="css-section">
+                The CSS below declares these three properties in one line.
+             </p>
+             <p class="css">
+                .div{
+                    {
+                        flex: 2 1 150px;
+                      }
+                }
+            </p>
+        </div>
+        <div class="container">
+            <p class="header">Flex-Wrap</p>
+            <p class="section">Flex wrap is the flex item property to wrap the items when screen size shrinks.</p>
+            <p class="section"> Sometimes, we do not want our content to shrink to fit its container. Instead, we might want flex items to move to the next line when necessary. 
+                This can be declared with the flex-wrap property.
+            </p>
+            <h3>The flex-wrap property can accept three values:</h3>
+            <p class="section">
+                <ol> 
+                    <li>wrap — child elements of a flex container that don’t fit into a row will move down to the next line</li>
+                    <li> wrap-reverse — the same functionality as wrap, but the order of rows within a flex container is reversed (for example, in a 2-row flexbox, the first row from a wrap container will become the second in wrap-reverse and the second row from the wrap container will become the first in wrap-reverse)</li>
+                    <li>nowrap — prevents items from wrapping; this is the default value and is only necessary to override a wrap value set by a different CSS rule.</li>
+                </ol>
+            </p>
+            <h1>Wrap</h1>
+            <p class="css">
+                .container{flex-wrap:wrap;    display: flex;
+                    justify-content: space-around;}
+                    <br> <span>For All the flex item: </span><br>.flex-wrap-box
+                    {
+                        width:300px;
+                        min-height:50px;
+                        background-color: brown;
+                        color: white;
+                        border: 1px solid white;
+                        
+                    }
+            </p>
+            <p class="css-text">contianer items will wrap and move to the next line, it will not shrink when size of screen will reduce</p>
+            <div class="flex-wrap">
+                <div class="flex-wrap-box">1</div>
+                <div class="flex-wrap-box">2</div>
+                <div class="flex-wrap-box">3</div>
+                <div class="flex-wrap-box">4</div>
+                <div class="flex-wrap-box">5</div>
+            </div>
+            <h1>nowrap: This is the default value of wrap</h1>
+            <p class="css">.container{flex-wrap:nowrap;  display: flex;
+                justify-content: space-around;}</p>
+            <p class="css-text">Flex items will not move to the next line after reaching it to the set amount of width of flex items. It will start to shrink to fit into its container  </p>
+            <div class="flex-nowrap">
+                <div class="flex-wrap-box">1</div>
+                <div class="flex-wrap-box">2</div>
+                <div class="flex-wrap-box">3</div>
+                <div class="flex-wrap-box">4</div>
+                <div class="flex-wrap-box">5</div>
+            </div>
+            <h1>reverse-wrap</h1>
+            <p class="css">.container{flex-wrap:reverse-wrap;  display: flex;
+                justify-content: space-around;}</p>
+            <p class="css-text">last item will become the first after reaching to the set amount of width for particular width. I will not shrink</p>
+            <div class="flex-wrap-reverse">
+                <div class="flex-wrap-box">1</div>
+                <div class="flex-wrap-box">2</div>
+                <div class="flex-wrap-box">3</div>
+                <div class="flex-wrap-box">4</div>
+                <div class="flex-wrap-box">5</div>
+            </div>
+        </div>
+       
+        <div class="container">
+            <p class="header"> align-content</p>
+            <p class="section">its same behaviour like align item: align-items property to space flex items from the top to the bottom of a flex container. . but that it just for the content in single line.</p>
+            <p class="section">If a flex container has multiple rows of content, we can use align-content to space the rows from top to bottom. align-content is the flex container CSS property to align the multiple flex item row.</p>
+            
+            <p class="css-header"></p>
+             <p class="css-section"></p>
+             <h3>Below are some of the more commonly used align-content values:</h3>
+            <p class="section">
+                <ol> 
+                    <li>flex-start — all rows of elements will be positioned at the top of the parent container with no extra space between.
+                        <div class="flex-start flex-container" style="align-content: flex-start;">
+                            <div class="box">1</div>
+                            <div class="box">2</div>
+                            <div class="box">3</div>
+                            <div class="box">4</div>
+                            <div class="box">5</div>
+                        </div>
+                    </li>
+                    
+                    <li>flex-end — all rows of elements will be positioned at the bottom of the parent container with no extra space between.
+                        <div class="flex-end flex-container" style="align-content: flex-end;">
+                            <div class="box">1</div>
+                            <div class="box">2</div>
+                            <div class="box">3</div>
+                            <div class="box">4</div>
+                            <div class="box">5</div>
+                        </div>
+                    </li>
+                    <li>Center - all the rows of the element will be move to the center of the flex container with no extra space between.
+                        <div class="flex-Center flex-container" style="align-content: center;">
+                            <div class="box">1</div>
+                            <div class="box">2</div>
+                            <div class="box">3</div>
+                            <div class="box">4</div>
+                            <div class="box">5</div>
+                        </div>
+                    </li>
+                    <li>space-between- all the flex items rows will have equal space between them.but there is no space from top or bottom of the flex container.
+                        <div class="flex-space-between flex-container" style="align-content: space-between;">
+                            <div class="box">1</div>
+                            <div class="box">2</div>
+                            <div class="box">3</div>
+                            <div class="box">4</div>
+                            <div class="box">5</div>
+                        </div>
+                    </li>
+                    <li>space-around- All the flex item will be postined so there will be equal space between them and equal space will left on top and bottom.
+                        <div class="flex-space-around flex-container" style="align-content: space-around;">
+                            <div class="box">1</div>
+                            <div class="box">2</div>
+                            <div class="box">3</div>
+                            <div class="box">4</div>
+                            <div class="box">5</div>
+                        </div>
+                    </li>
+                    <li>stretch - All the flex item will strecth to fill the flex container from top to bottom, only min-height item will not strecth.
+                        <div class="flex-stretch flex-container" style="align-content:stretch;">
+                            <div class="box">1</div>
+                            <div class="box">2</div>
+                            <div class="box" style="height: 200px;">3 <p>height: 200px;elements with a specified height will not stretch; elements with a minimum height or no height specified will stretch top to bottom</p></div>
+                            <div class="box" >4</div>
+                            <div class="box">5</div>
+                        </div> </li>
+                </ol>
+                </p>
+
+        </div>
+        <div class="container">
+            <p class="header">flex-direction</p>
+            <p class="section">flex containers have two axes: a main axis and a cross axis. By default, the main axis is horizontal and the cross axis is vertical.</p>
+            <p class="section">
+                <h1>The main axis is used to position flex items with the following properties:</h1>
+                <ol>
+                    <li>justify-content</li>
+                    <li>flex-wrap</li>
+                    <li>flex-grow</li>
+                    <li>flex-shrink</li>
+                </ol>
+                <h1>The cross axis is used to position flex items with the following properties:</h1>
+                <ol>
+                    <li>align-items</li>
+                    <li>align-content</li>
+                </ol>
+            </p>
+            <p>The flex-direction property can accept four values:</p>
+            <div class="container">
+                
+                <ul>
+                    <li>row — elements will be positioned from left to right across the parent element starting from the top left corner (default).</li>
+                    <li>row-reverse — elements will be positioned from right to left across the parent element starting from the top right corner.</li>
+                    <li>column — elements will be positioned from top to bottom of the parent element starting from the top left corner.</li>
+                    <li>column-reverse — elements will be positioned from the bottom to the top of the parent element starting from the bottom left corner.</li>
+                  
+                </ul>
+            </div>
+            
+        </div>
 </body>
 </html>
+<!--
+    <div class="container">
+        <p class="header"></p>
+        <p class="section"></p>
+        <p class="section"></p>
+        <p class="css-header"></p>
+         <p class="css-section"></p>
+    </div>
+-->
