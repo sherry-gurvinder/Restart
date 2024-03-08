@@ -523,16 +523,16 @@
         </div>
         <div class="container">
             <p class="header">flex-direction</p>
-            <p class="section">flex containers have two axes: a main axis and a cross axis. By default, the main axis is horizontal and the cross axis is vertical.</p>
+            <p class="section">flex containers have two axes: a main axis and a cross axis. By default, the main axis is horizontal and the cross axis is vertical.The main axis is used to position flex items with the following properties:</p>
             <p class="section">
-                <h1>The main axis is used to position flex items with the following properties:</h1>
+                
                 <ol>
                     <li>justify-content</li>
                     <li>flex-wrap</li>
                     <li>flex-grow</li>
                     <li>flex-shrink</li>
                 </ol>
-                <h1>The cross axis is used to position flex items with the following properties:</h1>
+                <p>The cross axis is used to position flex items with the following properties:</p>
                 <ol>
                     <li>align-items</li>
                     <li>align-content</li>
@@ -561,7 +561,7 @@
                         </div>
                     </li>
                     <li>column — elements will be positioned from top to bottom of the parent element starting from the top left corner.
-                        <div class="flex-direction-container" style="flex-direction:column;">
+                        <div class="flex-direction-container" id="column-flex-direction" >
                             <div class="box">1</div>
                             <div class="box">2</div>
                             <div class="box">3</div>
@@ -570,19 +570,78 @@
                         </div>
                     </li>
                     <li>column-reverse — elements will be positioned from the bottom to the top of the parent element starting from the bottom left corner.
-                        <div class="flex-direction-container" style="flex-direction:column-reverse;">
+                        <div class="flex-direction-container" id="column-reverse-flex-direction">
                             <div class="box">1</div>
                             <div class="box">2</div>
                             <div class="box">3</div>
                             <div class="box">4</div>
                             <div class="box">5</div>
                         </div>
-                    </li>
-                  
+                    </li>  
                 </ul>
             </div>
-            
         </div>
+        <div class="container">
+            <p class="header">flex-flow</p>
+            <p class="section">Like the shorthand flex property, the shorthand flex-flow property is used to declare both the flex-wrap and flex-direction properties in one line.</p>
+            <p class="section">first value in the flex-flow declaration is a flex-direction value and the second is a flex-wrap value.</p>
+            <p class="css-header"></p>
+             <p class="css-section">.container {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+              }
+              </p>
+              <p class="css-header">first value in the flex-flow declaration is a flex-direction value and the second is a flex-wrap value. All values for flex-direction and flex-wrap are accepted.</p>
+              <p class="css-section">.container {
+                 display: flex;
+                 flex-wrap: wrap;
+                 flex-direction: column;
+               }
+               </p>
+        </div>
+        <div class="container">
+            <p class="header">Nested flex</p>
+        <p class="section">Nested flex containers are useful when you need to create more complex layouts with multiple levels of alignment and flexibility. For example, you might have a main container that uses flex properties to align items horizontally, and then within each of those items, you might want to align their children vertically or in another direction. </p>
+        <div class="main">
+            
+            <p>Parent</p>
+            <div class="container-flex-nested">
+                <p>Child</p>
+                <p>Flex child items aligned vertically</p>
+                <div class="flex-nested-child">Title</div>
+                <div class="flex-nested-child">DIV 2</div>
+            </div>
+            
+            <p>Grand-Parent</p>
+            <div class="container-flex-nested">
+                <p>parent</p>
+                <p>Flex child items aligned vertically</p> 
+                <div class="x-axis-flex">
+                    <p>Child 1</p>
+                    <div class="flex-nested-child">DIV 1</div>
+                    <div class="flex-nested-child">DIV 2</div>
+                    <div class="flex-nested-child">DIV 3</div>
+                </div>
+                <div class="x-axis-flex">
+                    <p>Child 2</p>
+                    <div class="flex-nested-child">DIV 1</div>
+                    <div class="flex-nested-child">DIV 2</div>
+                    <div class="flex-nested-child">DIV 3</div>
+                </div>
+                
+            </div>
+           <p>parent</p>
+            <div class="container-flex-nested" style="flex-direction: column-reverse;">
+                <p>Child</p>
+                <p>Flex child items aligned row-reverse</p>
+                <div class="flex-nested-child">DIV 1</div>
+                <div class="flex-nested-child">DIV 2</div>
+               
+            </div>
+        </div>
+        </div>
+        
 </body>
 </html>
 <!--

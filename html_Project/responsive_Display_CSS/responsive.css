@@ -226,12 +226,56 @@ width: 250px;
 .flex-direction-container{
     display: flex;
     border: 1px yellowgreen solid;
-    height: 500px;
+    
 }
 .flex-direction-container .box{
-    flex-basis:300px;
+    flex-basis:50px;
     height:50px;
     background-color: brown;
     color: white;
     border: 1px solid white;
+}
+#column-flex-direction
+{
+    flex-direction: column;
+    align-items: center;
+}
+#column-reverse-flex-direction
+{
+    flex-direction: column-reverse;
+    align-items: center;
+}
+.main
+{
+    border:10px solid black;
+    display: flex;
+    background-color: bisque;
+    align-items: center;
+
+}
+
+.flex-nested-child {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    background: brown;
+    color: white;
+}
+.container-flex-nested {
+    border: 10px solid #b57d3c;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 600px;
+    justify-content: space-around;
+}
+.x-axis-flex{
+    display: flex;
+    /* flex-direction: column; */
+    border: 10px solid #b57d3c;
+    height: 20%;
+    align-items: center;
+    width: 80%;
+    justify-content: space-around;
 }
