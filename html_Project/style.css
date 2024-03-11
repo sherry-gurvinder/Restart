@@ -1,0 +1,102 @@
+.header
+{
+    background-color: #d6790b9e;
+   
+    
+}
+body
+{
+    margin: auto;
+    background: #1c6f08b0;
+    color: white;
+}
+.header-nav {
+    /* background-color: azure; */
+    width: 90%;
+    display: flex;
+    justify-content: end;
+    margin-top: 0;
+    line-height: 30px;
+}
+li{
+    width: 10%;
+    list-style: none;
+    display: inline;
+}
+.main
+{
+    width: 100%;
+    border: 2px solid;
+    display: flex
+}
+.container
+{
+    display: flex;
+    width: 100%;
+    
+    flex-direction: column;
+    align-items: center;
+
+
+}
+.section-process {
+    /* width: 125px; */
+    height: 125px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: 1px solid;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 2;
+    color: black;
+}
+.container-inner
+{
+    display: flex;
+    flex-basis: 100%;
+    border: 1px solid;
+}
+
+.menu-price {
+    flex-basis: 33%;
+    border: 1px solid;
+    height: 200px;
+    align-items: center;
+    /* align-content: center; */
+    justify-content: center;
+    display: flex;
+    background-color: #547281;
+}
+
+.section-heading
+{
+    display: flex;
+}
+.section-content
+{
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+   
+}
+.footer
+{
+    width: 100%;
+    display: flex;
+    bottom: 0;
+    position: sticky;
+    justify-content: center;
+    background: #d6790b9e;
+    left: 0;
+}
+.row
+{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
