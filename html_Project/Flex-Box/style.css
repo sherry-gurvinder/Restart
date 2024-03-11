@@ -1,9 +1,4 @@
-.header
-{
-    background-color: #d6790b9e;
-   
-    
-}
+
 body
 {
     margin: auto;
@@ -11,17 +6,26 @@ body
     color: white;
 }
 .header-nav {
-    /* background-color: azure; */
-    width: 90%;
     display: flex;
     justify-content: end;
-    margin-top: 0;
     line-height: 30px;
+    flex-wrap: wrap;
+}
+.header
+{
+    background-color: #d6790b9e;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+   
 }
 li{
-    width: 10%;
+
+    
+    min-width: 100px;
     list-style: none;
     display: inline;
+
 }
 .main
 {
@@ -33,26 +37,25 @@ li{
 {
     display: flex;
     width: 100%;
-    
     flex-direction: column;
     align-items: center;
 
-
 }
 .section-process {
-    /* width: 125px; */
-    height: 125px;
     padding: 10px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center; */
+    /* align-items: center; */
     background: white;
     border: 1px solid;
     align-items: center;
     justify-content: center;
-    flex-grow: 2;
+    flex: 0 0 25%;
     color: black;
+    flex-direction: column;
+    margin: 11px;
 }
+
 .container-inner
 {
     display: flex;
@@ -78,7 +81,6 @@ li{
 .section-content
 {
     display: flex;
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 100%;
@@ -89,7 +91,6 @@ li{
     width: 100%;
     display: flex;
     bottom: 0;
-    position: sticky;
     justify-content: center;
     background: #d6790b9e;
     left: 0;
@@ -100,3 +101,23 @@ li{
     width: 100%;
     justify-content: center;
 }
+
+.header-img
+{
+    position: relative;
+    flex: 0 0 100%;
+}
+.text-overlay
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background: #0000007a;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+.process-img
+{
+    flex-wrap: wrap;
+}
+
