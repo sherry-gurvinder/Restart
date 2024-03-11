@@ -56,22 +56,27 @@ li{
     margin: 11px;
 }
 
-.container-inner
-{
+.container-inner {
     display: flex;
     flex-basis: 100%;
     border: 1px solid;
+    flex: 0 0 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 .menu-price {
     flex-basis: 34%;
     border: 1px solid;
-    height: 200px;
     align-items: center;
     /* align-content: center; */
     justify-content: center;
     display: flex;
     background-color: #547281;
+    flex-direction: column;
+    margin: 20px;
+    padding: 20px;
+    text-align: justify;
 }
 
 .section-heading
@@ -121,3 +126,15 @@ li{
     flex-wrap: wrap;
 }
 
+    .dish-img img {
+        width: 100%;
+        object-fit: cover;
+        height: 200px;
+        border-radius: 56%;
+}
+.add-to-cart button {
+    width: 117px;
+    margin: 20px;
+    height: 25px;
+    background-color: #fcd406;
+}
