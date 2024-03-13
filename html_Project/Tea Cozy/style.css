@@ -1,0 +1,138 @@
+
+body
+{
+    font-family: Helvetica, sans-serif;
+    font-size: 22px;
+    color: seashell;
+    background-color:black;
+    opacity: 0.9;
+    text-align: center;
+}
+.header
+{
+  display:flex;
+  height:69px;
+  border-bottom:1px solid seashell;
+  position:fixed;
+  width:100%;
+   background-color:black;
+   z-index:2;
+   align-items: center;
+}
+body
+{
+  
+  color:white;
+  margin:auto;
+}
+.navlink
+{
+  float:right;
+  width:100%;
+}
+.nav-link ul
+{
+  float:right;
+    width:100%;
+}
+.nav-link li
+{
+  display:inline;
+  text-decoration:underline;
+}
+.logo
+{
+  float:right;
+  margin-left:10px;
+  flex-grow: 1;
+  justify-content: flex-start;
+  display: flex;
+}
+.logo img
+{
+  height:50px;
+}
+.main
+{
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  
+}
+.landing-section
+{
+  height:700px;
+  display:flex;
+  justify-content: center;
+
+}
+.landing-img
+{
+position:relative;
+}
+.text-overlay-landing-image
+{
+  position:absolute;
+  background:black;
+ 
+  top:50%;
+  z-index: 1;
+  width: 1200px;
+  color: white;
+  
+}
+.tea-month {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 1000px;
+    
+}
+.tea-secition
+{
+    display: flex;
+    justify-content: center;
+}
+.tea-month-img-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tea-month-img-section img
+{
+    height: 200px;
+    width: 300px;
+}
+.location
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 500px;
+   
+}
+.location-cards-section
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background: transparent;
+    
+}
+.location-text
+{
+    background-color: transparent;
+}
+.location-card
+{
+    background-color: black;
+    width: 300px;
+    margin-right: 40px;
+    margin-right: 40px;
+}
+.location
+
+{
+    background-image: url("resources/locations-background.png");
+}
