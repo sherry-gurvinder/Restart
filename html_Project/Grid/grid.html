@@ -3,21 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="grid.css" rel="stylesheet">
     <title>Grid</title>
 </head>
 <body>
     <div class="container">
-
-        <div class="grid-section">
-            <h1>Creating a Grid</h1>
-            <p>To turn an HTML element into a grid container, you must set the element’s display property to one of two values:</p>
-
-               <ol>
-                <li>grid — for a block-level grid.</li>
-                <li>inline-grid — for an inline grid.</li>
-               </ol> 
-                </p>
+        <div class="grid-container">
+            <div class="grid-container-1">
+                <h1>Creating a Grid</h1>
+                <p>To turn an HTML element into a grid container, you must set the element’s display property to one of two values:</p>
+    
+                   <ol>
+                    <li>grid — for a block-level grid.
+                        <p>{display:grid;}</p>
+                    </li>
+                    <li>inline-grid — for an inline grid.<p>{Display-inline-grid;}</p></li>
+                   </ol> 
+                    </p>
+            </div>
         </div>
+        <div class="grid-container">
+            <h1>By default, grids contain only one column. If you were to start adding items, each item would be put on a new row; </h1>
+            <div class="grid-container-2">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+            </div>
+            <h1>Creating Columns</h1>
+                <h3>we need to explicitly define the number of rows and columns in our grid.</h3>
+                <p>Below is the example of {width: 500px; grid-template-columns: 100px 200px;} <br> grid-template-columns is the CSS property where we can define how many columns as width of column</p>
+                <p>The first column will be 100 pixels wide and the second column will be 200 pixels wide.</p>
+                <div class="grid-container-3">
+                    <div class="grid-item">Grid 1</div>
+                    <div class="grid-item">Grid 2</div>
+                    <div class="grid-item">Grid 3</div>
+                    <div class="grid-item">Grid 4</div>
+                </div>
+            <h3>We can also define the size of our columns as a percentage of the entire grid’s width.</h3>  
+            <p>{ grid-template-columns: 20% 50%;}</p>  
+                <div class="grid-container-4">
+                        <div class="grid-item">Grid 1</div>
+                        <div class="grid-item">Grid 2</div>
+                        <div class="grid-item">Grid 3</div>
+                        <div class="grid-item">Grid 4</div>
+                </div>
+        </div>
+        
+        <div class="grid-container">
+            <h1>Creating Rows: By default, the rows are sized to fit evenly inside the grid. </h1>
+            <h3>To specify the number and size of the rows, we are going to use the property grid-template-rows.</h3>
+            <h3>This property is almost identical to grid-template-columns. Take a look at the code below to see both properties in action.</h3>
+            <p>
+                .grid {
+                    display: grid;
+                    width: 1000px;
+                    height: 500px;
+                    grid-template-columns: 100px 200px;
+                    grid-template-rows: 10% 20% 600px;
+                }
+            </p>
+        </div>
+        <div class="grid-container">
+            <h1>Grid Template: The shorthand property</h1>
+            <h2>grid-template: rows/columns</h2>
+            <h3>2 Rows and 3 coulmns</h3>
+            <h3>.grid {
+                display: grid;
+                width: 1000px;
+                height: 500px;
+                grid-template: 200px 300px / 20% 10% 70%;
+            }
+            </h3>
+            <h3>2 Rows and 3 coulmns</h3>
+            <p>{} grid-template:50% 50% / 10% 100% 40% ;</p>
+            <p>width of the grid is 1000px and if onw of the column is going to take 100% width, So the rest of the column will be overflow from the container actual width. </p>
+            <div class="grid-container-5">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+            </div>
+        </div>
+        <div class="grid-container">
+            <h1>Fraction:CSS Grid introduced a new relative sizing unit — fr, like fraction.</h1>
+            <h2>You may already be familiar with several types of responsive units such as percentages (%), ems and rems.</h2>
+            <h2>Using fr makes it easier to prevent grid items from overflowing the boundaries of the grid.</h2>
+            <p>
+                .grid {
+                    display: grid;
+                    border: 1px solid red;
+                    width: 1000px;
+                    grid-template: 2fr 3fr / 2fr 3fr 4fr ;
+                }
+            </p>
+
+            <div class="grid-container-6">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+            </div>
+            <p>
+                In this example, the grid will have three rows and three columns. The rows are splitting up the available 400 pixels of height into four parts. The first row gets two of those parts, the second row gets one, and the third row gets one. Therefore the first row is 200 pixels tall, and the second and third rows are 100 pixels tall.
+            </p>
+            <h2>It is possible to use fr with other units as well. When this happens, each fr represents a fraction of the available space.</h2>
+            <p>
+                .grid {
+                    display: grid;
+                    width: 100px;
+                    grid-template-columns: 1fr 60px 1fr;
+                  }
+                  
+            </p>
+            <div class="grid-container-7">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+            </div>  
+        </div>
+        <div class="grid-container">
+            <h1>Repeat: repeat()</h1>
+            <h2>grid-template-columns: repeat(3, 100px);</h2>
+            <h2>grid-template-rows: repeat(2,50px)</h2>
+            <p>Repeat is particularly useful with fr. For example, repeat(5, 1fr) would split your table into five equal rows or columns.</p>
+            <h2>Second parameter of repeat can have multiple values</h2>
+            <h2>grid-template-columns: repeat(5,200px 100px)</h2>
+            <p>This code will create 5 columns where the first, third and fifth columns will be 200 pixels wide and the second and fourth will be 100 pixels wide.</p>
+            <div class="grid-container-8">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+                <div class="grid-item">Grid 5</div>
+            </div>
+
+        </div>
+        <div class="grid-container">
+            <h1>minmax: its a function to restrict the dimension of the row or column, minmax(minimum, maximum) minmax(100px , 500px)</h1>
+            <h2>.grid {
+                display: grid;
+                grid-template: 1fr/ repeat(2, 350px minmax(100px, 150px));
+              }</h2>
+              <h2> the first, 3rd and fifth columns will always be 350 pixels wide, no matter the size of the grid. The second and 4th column, however, will vary in size as the overall grid resizes. The second column will always be between 100 and 150 pixels wide.</h2>
+        
+              <div class="grid-container-9">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+                <div class="grid-item">Grid 5</div>
+            </div>  
+            </div>
+        <div class="grid-container">
+
+        </div>
+        
+        
+
+
     </div>
 </body>
 </html>
