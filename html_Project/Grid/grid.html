@@ -125,8 +125,20 @@
         </div>
         <div class="grid-container">
             <h1>Repeat: repeat()</h1>
-            <h2>grid-template-columns: repeat(3, 100px);</h2>
-            <h2>grid-template-rows: repeat(2,50px)</h2>
+            <h2>grid-template-columns: repeat(3, 100px);
+                <ol>
+                    <li>grid-template-columns: repeat(3, 100px); There will 3 columns of 100px </li>
+                    <li>repeat(3, 100px 100px); There will 6 columns of 100px</li>
+                    <li>repeat(3, 100px 200px); There will 6 columns in total and it will show like 100px 200px | 100px 200px | 100px 200px</li>
+                </ol>
+            </h2>
+            <h2>grid-template-rows: repeat(2,50px)
+                <ol>
+                    <li>grid-template-rows: repeat(2,50px); There will 2 rows of 50px  </li>
+                    <li>repeat(2,50px 50px); There will 4 rows of 50px</li>
+                    <li>repeat(2,50px 40px 30px); There will 6 rows in total of 1st row 50px 2nd row 40px 3rd row 30px and it will repeat the value mentioned in the first argument of the repeat function</li>
+                </ol>
+            </h2>
             <p>Repeat is particularly useful with fr. For example, repeat(5, 1fr) would split your table into five equal rows or columns.</p>
             <h2>Second parameter of repeat can have multiple values</h2>
             <h2>grid-template-columns: repeat(5,200px 100px)</h2>
@@ -155,11 +167,141 @@
                 <div class="grid-item">Grid 4</div>
                 <div class="grid-item">Grid 5</div>
             </div>  
-            </div>
-        <div class="grid-container">
-
         </div>
-        
+        <div class="grid-container">
+            <h1>Grid Gap: By default there are no space between any space between the items in our grid.</h1>
+            <div class="grid-container-10">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+                <div class="grid-item">Grid 5</div>
+            </div>  
+            <h1>The CSS properties row-gap and column-gap will put blank space between every row and column in the grid.
+                
+            </h1>
+            <h2><ol>
+                <li> column-gap</li>
+                <li>row-gap</li>
+            </ol></h2>
+            <h2>Also,shorthand CSS property, gap: row column;{gap:10px 10px;}</h2>
+            <div class="grid-container-11">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+                <div class="grid-item">Grid 5</div>
+            </div>  
+        </div>
+        <div class="grid-container ">
+            <h1>Grid Items:</h1>
+            <h2> Remember, we are no longer applying CSS to the outer grid container(Parent); we’re adding CSS to the elements (Child)sitting inside the grid!</h2>
+            <h2>Multiple Row Items:Using the CSS properties grid-row-start and grid-row-end, we can make single grid items take up multiple rows. </h2>
+            <h3>Row grid lines and column grid lines start at 1 and end at a value that is 1 greater than the number of rows or columns the grid has. For example, if a grid has 5 rows, the grid row lines range from 1 to 6. If a grid has 8 rows, the grid row lines range from 1 to 9.</h3>
+            <h1>Grid Row</h1>
+            <h2>Shorthand: grid-row: 4 / 6;</h2>
+            <div class="grid-multiple-row-items">
+                <div class="grid-item grid-mutliple-row">Grid 1</div>
+                <div class="grid-item grid-mutliple-row">Grid 2</div>
+                <div class="grid-item grid-mutliple-row">Grid 3</div>
+                <div class="grid-item grid-mutliple-row">Grid 4</div>
+                <div class="grid-item grid-mutliple-row">Grid 5</div>
+            </div>
+            <h1>Grid Column</h1>
+            <h2>Shorthand: grid-column: 4 / 6;</h2>
+            <div class="grid-multiple-column-items">
+                <div class="grid-item grid-mutliple-column">Grid 1</div>
+                <div class="grid-item grid-mutliple-column">Grid 2</div>
+                <div class="grid-item grid-mutliple-column">Grid 3</div>
+                <div class="grid-item grid-mutliple-column">Grid 4</div>
+                <div class="grid-item grid-mutliple-column">Grid 5</div>
+            </div>  
+            <h2>When using these properties, we can use the keyword span.</h2>
+            <h3>.item {
+                grid-column: 4 / span 2;
+            }<br>item element to begin in column four and take up two columns of space. So item would occupy columns four and five. It produces the same result as the following code blocks:
+
+            .item {
+              grid-column: 4 / 6;
+            }
+        </h3>
+        </div>
+        <div class="grid-container">
+            <h1>Grid Area: as shorthand properties</h1>
+            <h2> grid-area takes four values separated by slashes. The order is important! This is how grid-area will interpret those values.
+                <ol>
+                    <li>grid-row-start</li>
+                    <li>grid-column-start</li>
+                    <li>grid-row-end</li>
+                    <li>grid-column-end</li>
+                </ol>
+                <p>.item{grid-area: (span) row-start/ (span)row-end / (span)column-start / (span)column-end}</p>
+                <p>.item {
+                    grid-area: 2 / 3 / 4 / span 5;
+                  }
+                  </p>
+            </h2>
+            <div class="grid-container-13">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+                <div class="grid-item">Grid 5</div>
+            </div>  
+        </div>
+        <div class="grid-container">
+            <h1>Grid additional properties</h1>
+            <h2>
+                <ol>
+                <li>grid-template-areas</li>
+                <li>justify-items</li>
+                <li>justify-content</li>
+                <li>justify-self</li>
+                <li>align-items</li>
+                <li>align-content</li>
+                <li>align-self</li>
+                <li>grid-auto-rows</li>
+                <li>grid-auto-columns</li>
+                <li>grid-auto-flow</li>
+                </ol>
+            </h2>
+            <h2>grid-template-areas:The grid-template-areas property allows you to name sections of your web page to use as values in the grid-row-start, grid-row-end, grid-column-start,grid-column-end, and grid-area properties.</h2>
+            <h3>This property is declared on grid containers.</h3>
+            <div class="grid-container .grid-template-areas">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+                <div class="grid-item">Grid 5</div>
+            </div> 
+            <div class="grid-container-14">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+                <div class="grid-item">Grid 5</div>
+            </div>  
+        </div>
+        <div class="grid-container">
+            <h1></h1>
+            <div class="grid-container-15">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+                <div class="grid-item">Grid 5</div>
+            </div>  
+        </div>
+        <div class="grid-container">
+            <h1></h1>
+            <div class="grid-container-16">
+                <div class="grid-item">Grid 1</div>
+                <div class="grid-item">Grid 2</div>
+                <div class="grid-item">Grid 3</div>
+                <div class="grid-item">Grid 4</div>
+                <div class="grid-item">Grid 5</div>
+            </div>  
+        </div>
         
 
 
