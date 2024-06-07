@@ -251,15 +251,15 @@
         </div>
         <div class="grid-container">
             <h1>Grid additional properties</h1>
-            <h2>
+            <h2>This property is declared on grid containers.
                 <ol>
                 <li>grid-template-areas</li>
-                <li>justify-items</li>
-                <li>justify-content</li>
-                <li>justify-self</li>
-                <li>align-items</li>
+                <li>justify-items:</li>
+                <li>justify-content:</li>
+                <li>justify-self:  </li>
+                <li>align-items: .</li>
                 <li>align-content</li>
-                <li>align-self</li>
+                <li>align-self </li>
                 <li>grid-auto-rows</li>
                 <li>grid-auto-columns</li>
                 <li>grid-auto-flow</li>
@@ -288,32 +288,120 @@
                 <div class="grid-item right">Right</div>
                 <div class="grid-item footer">footer</div>
             </div> 
-            <div class="grid-container-14">
-                <div class="grid-item">Grid 1</div>
-                <div class="grid-item">Grid 2</div>
-                <div class="grid-item">Grid 3</div>
-                <div class="grid-item">Grid 4</div>
-                <div class="grid-item">Grid 5</div>
+            
+        </div>
+        <div class="grid-container">
+            <h1>Justify Items:Positions items from left to right</h1>
+            <h2>justify-items accepts these values:
+                <ul>
+                    <li>start — aligns grid items to the left side of the grid area</li>
+                    <li>end — aligns grid items to the right side of the grid area</li>
+                    <li>center — aligns grid items to the center of the grid area</li>
+                    <li>stretch — stretches all items to fill the grid area</li>
+                </ul>
+                justify-items: center;
+            </h2>
+            <div class="grid-container-Justify-Items">
+                <div class="grid-item">start</div>
+                <div class="grid-item">end</div>
+                <div class="grid-item">center</div>
+                <div class="grid-item">stretch</div>
             </div>  
         </div>
         <div class="grid-container">
-            <h1>Justify Items</h1>
-            <div class="grid-container-15">
-                <div class="grid-item">Grid 1</div>
-                <div class="grid-item">Grid 2</div>
-                <div class="grid-item">Grid 3</div>
-                <div class="grid-item">Grid 4</div>
-                <div class="grid-item">Grid 5</div>
+            <h1>Justify Content: To position the entire grid along the row axis.</h1>
+            <h2>   justify-content: center;</h2>
+            <div class="grid-container-Justify-content">
+                <div class="grid-item">start</div>
+                <div class="grid-item">end</div>
+                <div class="grid-item">center</div>
+                <div class="grid-item">stretch</div>
+                <div class="grid-item">space-around</div>
+                <div class="grid-item">space-between</div>
+                <div class="grid-item">space-evenly</div>
             </div>  
         </div>
         <div class="grid-container">
-            <h1></h1>
-            <div class="grid-container-16">
-                <div class="grid-item">Grid 1</div>
-                <div class="grid-item">Grid 2</div>
-                <div class="grid-item">Grid 3</div>
-                <div class="grid-item">Grid 4</div>
-                <div class="grid-item">Grid 5</div>
+            <h1>Align Items: To positions items from top to bottom with in the grid.</h1>
+            <h2> align-items: end;</h2>
+            <div class="grid-container-align-items">
+                <div class="grid-item">start</div>
+                <div class="grid-item">end</div>
+                <div class="grid-item">center</div>
+                <div class="grid-item">stretch</div>
+                <div class="grid-item">align-items</div>
+            </div>  
+            <div class="grid-container-align-items">
+                <div class="grid-item">start</div>
+                <div class="grid-item">end</div>
+                <div class="grid-item">center</div>
+                <div class="grid-item">stretch</div>
+                <div class="grid-item">align-items</div>
+                
+            </div>  
+        </div>
+
+
+        <div class="grid-container">
+            <h1>Align Content: positions the rows along the column axis, or from top to bottom</h1>
+            <h2>  Align Content: center;</h2>
+            <div class="grid-container-align-content">
+                <div class="grid-item">start</div>
+                <div class="grid-item">end</div>
+                <div class="grid-item">center</div>
+                <div class="grid-item">stretch</div>
+                <div class="grid-item">space-around</div>
+                <div class="grid-item">space-between</div>
+                <div class="grid-item">space-evenly</div>
+            </div>  
+        </div>
+
+
+        <div class="grid-container">
+            <h1>Justify-self:justify-self specifies how an individual element should position itself with respect to the row axis</h1>
+            <h1>align-self specifies how an individual element should position itself with respect to the column axis</h1>
+            <div class="grid-container-self" style="    grid-gap: 20px 20px;">
+                <div class="grid-item" style="justify-self: start;">justify-self: start;</div>
+                <div class="grid-item" style="align-self: end;">align-self:end</div>
+                <div class="grid-item" style="justify-self: center;">justify-self: center</div>
+                <div class="grid-item" style="align-self: stretch;">align-self:stretch</div>
+
+            </div>  
+        </div>
+
+        <div class="grid-container">
+            <h1>CSS Grid provides two properties to specify the size of grid tracks added implicitly: grid-auto-rows and grid-auto-columns. These properties are declared on grid containers.</h1>
+            <h1>grid-auto-rows specifies the height of implicitly added grid rows. </h1>
+            <h2>grid-auto-columns specifies the width of implicitly added grid columns.</h2>
+            <div class="grid-auto-rows-without">
+                <div class="grid-item">Header</div>
+                <div class="grid-item">Nav</div>
+                <div class="grid-item">Left</div>
+                <div class="grid-item">Right</div>
+                <div class="grid-item">overlap</div>
+                <div class="grid-item">footer</div>
+                <div class="grid-item">additional implicitly Row with grid-auto-rows property</div>
+            </div>  
+            <div class="grid-auto-rows-with">
+                <div class="grid-item">Header</div>
+                <div class="grid-item">Nav</div>
+                <div class="grid-item">Left</div>
+                <div class="grid-item">Right</div>
+                <div class="grid-item">overlap</div>
+                <div class="grid-item">footer</div>
+                <div class="grid-item">additional implicitly Row with grid-auto-rows property</div>
+            </div> 
+        </div>
+
+        <div class="grid-container">
+            <h1>Grid Auto Flow</h1>
+            <h2>grid-auto-flow specifies whether new elements should be added to rows or columns, and is declared on grid containers.</h2>
+            <div class=" grid-auto-column">
+                <div class="grid-item ">Header</div>
+                <div class="grid-item ">Nav</div>
+                <div class="grid-item ">Left</div>
+                <div class="grid-item ">Right</div>
+                <div class="grid-item ">footer</div>
             </div>  
         </div>
         

@@ -138,3 +138,60 @@
   .footer {
     grid-area: footer;
   } 
+
+  .grid-container-Justify-Items
+  {
+    grid-template: 150px 150px / 250px 250px;
+    border: 1px blue solid;
+    display: grid;
+    justify-items: center;
+  }
+  .grid-container-Justify-Items .grid-item
+  {
+    width: 100px;
+    height: 150px;
+    border: 1px solid red;
+  }
+  .grid-container-Justify-content
+  {
+    grid-template: 150px 150px / 250px 250px;
+    border: 1px blue solid;
+    display: grid;
+    justify-content: center;
+  }
+
+  .grid-container-align-items
+  {
+    grid-template: repeat(3,50px)/ 250px 250px;
+    border: 1px blue solid;
+    display: grid;
+    align-items: end;
+    height: 500px;
+  }
+  .grid-container-align-content, .grid-container-self
+  {
+    grid-template: repeat(3,50px)/ 250px 250px 250px;
+    border: 1px blue solid;
+    display: grid;
+    height: 500px;
+    align-content: center;
+
+  }
+  .grid-auto-rows-without
+  {
+    grid-template: repeat(3,50px)/ 450px 450px;
+    border: 1px blue solid;
+    display: grid;
+    align-items: end;
+    height: 500px;
+   
+  }
+  .grid-auto-rows-with
+  {
+    grid-template: repeat(3,50px)/ 450px 450px;
+    border: 1px blue solid;
+    display: grid;
+    align-items: end;
+    height: 500px;
+    grid-auto-rows: 81px;
+  }
