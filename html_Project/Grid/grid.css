@@ -110,3 +110,31 @@
     grid-column-start:2;
     grid-column-end:4;
   }
+  .grid-template-areas-div
+  {
+    
+    border:1px solid;
+    grid-template-areas:    "header header header"
+                            "nav nav nav"
+                            "left right right "
+                            "footer footer footer";
+  }
+  .header {
+    grid-area: header;
+  } 
+  
+  .nav {
+    grid-area: nav;
+  } 
+  
+  .left {
+    grid-area: left;
+  } 
+  
+  .right {
+    grid-area: right;
+  }
+  
+  .footer {
+    grid-area: footer;
+  } 
