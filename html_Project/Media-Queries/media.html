@@ -3,13 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="media.css" rel="stylesheet" type="CSS/txt">
     <title>Media Queries</title>
 </head>
 <body>
     <main>
         <div>
             <h1>Responsive Web Design</h1>
+            <h1>Viewport Meta Tag</h1>
+            <p>Based on the size of the viewport, the meta tag is used to instruct the browser on how to render the webpage’s scale and dimensions. For instance, say if a web page is 960px and the device is 320px wide. Adding the viewport meta tag will squish the content down until it is 320px — there is no need for the user to zoom out and view the whole page!</p>
+            <p>{ meta name= &ldquo; viewport &rdquo; content=&ldquo;width=device-width, initial-scale=1&rdquo;}</p>
+            <h3> We can break down the added meta tag into the following essential components:</h3>
+            <ul>
+                <li>The name=&ldquo;viewport&rdquo; attribute: tells the browser to display the web page at the same width as its screen</li>
+                <li>The content attribute: defines the values for the meta tag, including width and initial-scale</li>
+                <li>The width=device-width key-value pair: controls the size of the viewport in which it sets the width of the viewport to equal the width of the device</li>
+                <li>The initial-scale=1 key-value pair: sets the initial zoom lev</li>
+            </ul>
+        </div>
+        <div>
+            <h1>Media Queries</h1>
+            <p>With media queries, CSS can detect the size of the current screen and apply different CSS styles depending on the width of the screen.</p>
             
+            <p>The media query defines a rule for screens smaller than 480</p>
+            <p>@media only screen and (max-width: 480px) {
+                body {
+                  font-size: 12px;
+                }
+              }</p>
+              <ul>
+                <li> @media — This keyword begins a media query rule and instructs the CSS compiler</li>
+                <li>only screen — Indicates what types of devices should use this rule.</li>
+                <li>and (max-width : 480px) — This part of the rule is called a media feature, and instructs the CSS compiler to apply the CSS styles to devices with a width of 480 pixels or smaller. Media features are the conditions that must be met in order to render the CSS within a media query.</li>
+                <li>CSS rules are nested inside of the media query’s curly braces. The rules will be applied when the media query is met. In the example above, the text in the body element is set to a font-size of 12px when the user’s screen is less than 480px.</li>
+            </ul>
+        </div>
+        <div>
+            <h1>Range</h1>
+            <p>CSS rules only when the screen size is between 320 pixels and 480 pixels.</p>
+            <p>@media only screen and (min-width: 320px) and (max-width: 480px) {
+                /* ruleset for 320px - 480px */
+            }</p>
+            <p> the use of a second and keyword after the min-width media feature. This allows us to chain two requirements together.</p>
+            <h2>The example above can be written using two separate rules as well:</h2>
+            <p>@media only screen and (min-width: 320px) { 
+                /* ruleset for >= 320px */
+            }
+            
+            <br>
+            @media only screen and (min-width: 480px) { 
+                /* ruleset for >= 480px */
+            }
+            </p>
+        </div>
+        <div>
+            <h1>Dots Per Inch (DPI)</h1>
+            <p> Targeting screen resolution also helps users avoid downloading high resolution (large file size) images that their screen may not be able to properly display.</p>
+            <p>To target by resolution, we can use the min-resolution and max-resolution media features.</p>
+            <p>These media features accept a resolution value in either dots per inch (dpi) or dots per centimeter (dpc). </p>
+            <h3>Targets high resolution screens by making sure the screen resolution is at least 300 dots per inch. If the screen resolution query is met</h3>
+            <p>@media only screen and (min-resolution: 300dpi) {
+                /* CSS for high resolution screens */
+            }</p>
+        </div>
+        <div>
+            <h1>And Operator: Both the consition should be met</h1>
+            <p>@media only screen and (max-width: 480px) and (min-resolution: 300dpi) {
+                /* CSS ruleset */
+            }
+            </p>
+        </div>
+        <div>
+            <h1>Comma Separated List: if any one of them is true, it will run </h1>
+            <p>If only one of multiple media features in a media query must be met, media features can be separated in a comma separated list.</p>
+            <h3>we used a comma (,) to separate multiple rules. The example above requires only one of the media features to be true for its CSS to apply.</h3>
+            <p>@media only screen and (min-width: 480px), (orientation: landscape) {
+                /* CSS ruleset */
+            }
+            </p>
+            <p>@media only screen and (min-resolution:98dpi) , (min-width:480px){
+ 
+                .page-description{
+                  font-size:40px;
+                }
+              }
+            </p>
+            <p>The orientation media feature detects if the page has more width than height. If a page is wider, it’s considered landscape, and if a page is taller, it’s considered portrait.</p>
         </div>
     </main>
 </body>
