@@ -1,0 +1,28 @@
+#banner{
+    background-image: url('https://blogcdn.gmass.co/blog/wp-content/uploads/2020/12/Featured-image-what-is-an-email-header-43kb.png');
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    grid-column: 1 /span 2;
+}
+.container
+{
+    display: grid;
+    grid-template:1fr 1fr 1fr/repeat(2,1fr);
+}
+#banner h1 {
+  
+    
+    font-size:3.75em;
+  }
+  .contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1 / span2;
+}
+
+
+.contact-img img{
+    max-width: 100%;
+    
+}

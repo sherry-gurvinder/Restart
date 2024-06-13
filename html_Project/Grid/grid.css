@@ -183,8 +183,9 @@
     border: 1px blue solid;
     display: grid;
     align-items: end;
-    height: 500px;
-   
+    grid-gap:2px;
+    justify-content: space-around;
+  
   }
   .grid-auto-rows-with
   {
@@ -192,6 +193,17 @@
     border: 1px blue solid;
     display: grid;
     align-items: end;
-    height: 500px;
+    grid-gap:2px;
     grid-auto-rows: 81px;
+    justify-content: space-around;
+  }
+
+  .grid-auto-column
+  {
+    grid-template: repeat(3,50px)/ 450px 450px;
+    border: 1px blue solid;
+    display: grid;
+    align-items: end;
+    grid-gap:2px;
+    grid-auto-flow: column;
   }
