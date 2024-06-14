@@ -1,0 +1,41 @@
+header .logo {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-family: 'Roboto-mono-regular';
+}
+.banner
+{
+    background-image: url(/Restart/html_Project/fotomatic/images/banner-landingpage.jpg);
+}
+.image-container img {
+   
+    max-width: 100%;
+}
+
+#filters-section .images-container {
+   
+    display: inline-flex;
+}
+header {
+    height: 5.3rem;
+}
+header nav ul {
+    display: flex;
+    text-decoration: none;
+    list-style-type: none;
+}
+div#sign-up-cta {
+    margin-top: 10.6rem;
+    margin-left: 6.2rem;
+}
+
+#sign-up-cta .button {
+    margin-top: 1.625rem;
+    /* padding: 1.25rem 7.25rem; */
+    margin-bottom: 3.5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    width: 25.5rem;
+    height: 64px;
+}
