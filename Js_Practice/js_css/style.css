@@ -1,0 +1,66 @@
+html{
+    font-size:16px;
+}
+body{
+    background:#00ffb81f;
+}
+nav{
+    display: grid;
+    height:1rem;
+    background:#36afa4;
+    justify-content:end;
+    height: 3rem;
+    align-content:center;
+    font-size:2rem;
+    border:1px solid;
+    margin:1rem;
+}
+main{
+    display: grid;
+    border:1px solid;
+    margin:1rem;
+}
+.header{
+    display: grid;
+     border:1px solid;
+    margin:1rem;
+    justify-content:center;
+}
+.topics-container{
+    display: grid;
+     border:1px solid;
+    margin:1rem;
+    
+}
+.topic-item{
+    display: grid;
+     border:1px solid;
+    margin:1rem;
+    /*justify-items:center;*/
+     justify-content:center;
+}
+.topic-heading{
+    display: grid;
+     border:1px solid;
+    margin:1rem;
+}
+.topic-sub-heading{
+    display: grid;
+     border:1px solid;
+    margin:1rem;
+}
+.code-area{
+    display: grid;
+     border:1px solid;
+    margin:1rem;
+    background:black;
+    color:white;
+    width:fit-content;
+    
+
+}
+.topic-explain{
+    display: grid;
+     border:1px solid;
+    margin:1rem;
+}
