@@ -1,0 +1,41 @@
+body{
+    background: lightblue;
+}
+
+nav
+{
+  display: grid;
+  border: 1px solid;
+  grid-template-columns: 100%;
+}
+nav ul{    justify-self: end;}
+nav ul li{
+    display: inline;
+}
+main
+{
+    display: grid;
+    border: 1px solid;
+}
+
+section.header {
+    display: grid;
+    justify-content: center;
+}
+footer
+{
+    display: grid;
+    border: 1px solid;
+    margin: bottom 0;
+}
+
+.project-item {
+    border: 1px solid;
+    padding: 5rem;
+}
+
+.projects {
+    grid-template-columns: 50% 50%;
+    display: grid;
+    justify-items: center;
+}

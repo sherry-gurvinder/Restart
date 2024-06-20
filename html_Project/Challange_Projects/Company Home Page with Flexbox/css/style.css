@@ -106,14 +106,14 @@ header
   text-transform: uppercase;
 }
 
-#product
-{
 
- display:flex;
- justify-content:space-evenly;
- flex-wrap:wrap;
- background: aliceblue;
+ #product {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background: repeating-linear-gradient(323deg, white, orange 4px), white;
 }
+
 .product-secition-heading {
   display: flex;
   flex-basis: 100%;
@@ -158,6 +158,7 @@ header
   align-items: center;
   overflow: hidden;
   flex-direction: column-reverse;
+  background: blanchedalmond;
 
   margin: 2rem;
   /*flex-basis: 37rem;*/
