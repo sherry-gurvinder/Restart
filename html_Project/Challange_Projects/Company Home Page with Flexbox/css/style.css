@@ -4,6 +4,11 @@ html
   margin:0 auto;
   font-size:16px;
 }
+body
+{
+  margin: auto;
+  background: white;
+}
 .container
 {
   border: 1px solid;
@@ -16,73 +21,123 @@ nav
   display:flex;
   flex-flow:row;
    justify-content:center;
-   width:100%;
+   background: white;
+   height: 7rem;
+ 
 }
-nav ul{
-  display:inline-flex;
-  list-style-type:none;
-  justify-content: end;
-  
+nav ul {
+  display: inline-flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  color: #834f00;
+  margin-top: 0.1rem;
 }
 nav ul li{
   padding:1rem;
 }
 nav img
 {
-  max-width:10%;
+  max-width:5rem;
   border-radius:50%;
 }
 #nav-list
 {
-  border: 1px solid;
+  border: 0px solid;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  background: #a3d119;
+  color: white;
+  padding: 1rem;
+  border-radius: 4rem;
+  width: 7rem;
 }
 header
 {
-  border: 1px solid;
+ 
   display:flex;
   justify-content:center;
   align-content:center;  
   background:url('../images/banner.png');
   background-size:cover;
   width:100%;
-  height: 46rem;
+  height: 40rem;
   background-position: bottom;
 
+
 }
-#description
+.banner {
+  display: flex;
+  flex-basis: 70%;
+  justify-content: space-around;
+  background: black;
+  opacity: 0.7;
+  height: 50%;
+  margin-top: 10rem;
+  margin-bottom: 10rem;
+  overflow: hidden;
+}
+.banner h2 {
+  color: #ffa707;
+  text-align: center;
+  align-self: center;
+}
+#dish {
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: #d0842c;
+  color: white;
+  text-transform: uppercase;
+}
+#Contact
 {
- border: 1px solid;
-  display:flex;
-    justify-content:center;
-    align-content:center;
- 
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background: #d0842c;
+  color: white;
+  text-transform: uppercase;
 }
+
 #product
 {
- border: 1px solid;
+
  display:flex;
  justify-content:space-evenly;
  flex-wrap:wrap;
+ background: aliceblue;
 }
-.product-secition-heading
-{
-  display:flex;
-  flex-basis:100%;
-  justify-content:center;
+.product-secition-heading {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  background: white;
+  color: black;
+  text-transform: uppercase;
 }
-#other-Description
+#team
 {
    border: 1px solid;
     display:flex;
     justify-content:center;
     align-content:center;
+    background: #d0842c;
+    color: white;
 }
 #employee
 {
-   border: 1px solid;
+  
    display:flex;
    justify-content:space-around;
    flex-wrap:wrap;
+   background: white;
 }
 header
 {
@@ -96,13 +151,63 @@ header
  justify-content:center;
  align-content:center;
 }
-.product-item
-{ 
+.product-item {
   border: 1px solid;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column-reverse;
+
+  margin: 2rem;
+  /*flex-basis: 37rem;*/
+  width:37rem;
+  
+}
+.product-item img {
+  max-width: 25rem;
+  max-height: 20rem !important;
+  min-width: 25rem;
+  min-height: 18rem;
+  border-radius: 3rem;
+}
+p.dish-heading {
+  background: #fdb03c;
+  padding: 1rem;
+  color: white;
+  margin: 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  /* font-weight: bold; */
+}
+p.dish-details {
+  text-align: center;
+  font-size: 1.1rem;
 }
 .employee-item
 {
-   border: 1px solid;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: column-reverse;
+  margin: 2rem;
+ 
+}
+.employee-item img {
+  max-width: 25rem;
+  max-height: 20rem !important;
+  min-width: 25rem;
+  min-height: 18rem;
+  border-radius: 10rem;
+}
+
+p.employee-item {
+  background: #a3d119;
+  padding: 1rem;
+  color: white;
 }
 #map{border: 1px solid;}
 #address{border: 1px solid;}
@@ -114,10 +219,15 @@ footer
    align-content:end;
 }
 #map{flex-grow:1; justify-self:center;}
-#address
-{
-  flex-grow:1;
+
+  #address {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+
 
 
 
@@ -126,21 +236,21 @@ footer
 @media only screen and (max-width:480px) and (min-width:768px)
 {
   body{
-    background:rgb(185, 178, 247);
+   
   }
 }
 /*Tablet*/
 @media only screen and (max-width:768px) and (min-width:1600px)
 {
   body{
-    background:rgb(111, 107, 151);
+    
   }
 }
 /*Tablet Landscape*/  
 @media only screen and (max-width:1024px),(orientation:landsacpe)
 {
   body{
-    background:rgb(185, 178, 247);
+    
   }
 }
 
@@ -148,7 +258,7 @@ footer
 @media only screen and (max-width:1600px)
 {
   body{
-    background:rgb(97, 90, 161);
+   
   }
 }
 
@@ -156,6 +266,6 @@ footer
 @media only screen and (min-width:1600px)
 {
   body{
-    background:rgb(86, 77, 175);
+    
   }
 }
