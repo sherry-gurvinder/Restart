@@ -6,30 +6,172 @@
     <link href="js_css/style.css" rel="stylesheet">
     <title>Java Script</title>
 </head>
-<body>
-    <nav>Home</nav>
-    <main>
-        <section class="header">
-            <h1>JS Basics</h1>
-            <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Official documentation</a></p>
-        </section>
+<body>    
         <section class="topics-container">
+            <section class="header">
+                <h1>JS Basics</h1>
+                <p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">Official documentation</a></p>
+            </section>
+            <!-- Placeholder !-->
             <div class="topic-item">
                 <h1 class="topic-heading">Topic Heading</h1>
-                <h2 class="sub-heading">Sub-heading</h2>
-                <p class="code-area">Code</p>
+                <h2 class="topic-sub-heading">Sub-heading</h2>
                 <p class="topic-explain">Explanation</p>
-                <p class="code-area">Code</p>
+                <p class="code-area"><code> </code></p>
             </div>
+            <!-- End-Placeholder !-->
+            <!-- JS Basics !-->
+            <div class="topic-item">
+                <h1 class="topic-heading">INTRODUCTION TO JAVASCRIPT</h1>
+                <h2 class="topic-sub-heading">Basics</h2>
+                <p class="topic-explain">Data is printed, or logged, to the console, a panel that displays messages</p>
+                <p class="code-area"><code>console.log()</code></p>
+
+                <p class="topic-explain">JS Comments</p>
+                <p class="code-area"><code> We can write single-line comments with // and multi-line comments between /* and */.</code></p>
+
+                <p class="topic-explain">JS Data Types: There are 7 fundamental data types in JavaScript: strings, numbers, booleans, null, undefined, symbol, and object.</p> 
+                <p class="code-area"><code>
+                    var rollno:56;//number;<br>
+                    let result:true;//boolenas;
+                    const DOB=1994;//constant;
+                </code></p>
+
+                <p class="topic-explain">JS Operators: The built-in arithmetic operators include +, -, *, /, and %.</p>
+                <p class="code-area"><code> var total=2+2; //addition </code></p>
+               
+                <p class="topic-explain">JS Objects, including instances of data types, can have properties, stored information. The properties are denoted with a . after the name of the object, </p>
+                <p class="code-area"><code> console.log('Hello'.length)</code></p>
+              
+                <p class="topic-explain">Objects, including instances of data types, can have methods which perform actions. Methods are called by appending the object or instance with a period, the method name, 
+                    and parentheses.We can access properties and methods by using the ., dot operator.For example:  </p>
+                <p class="code-area"><code>console.log
+                    ('hello'.
+                    toUpperCase())</code>
+                                
+                <p class="topic-explain">Built-in objects, including Math, are collections of methods and properties that JavaScript provides.</p>
+                <p class="code-area"><code>console.log(Math.random()); </code></p>
+               
+            </div>
+            <!-- End-JS Basics !-->
+            <!-- VARIABLES !-->
+            <div class="topic-item">
+                <h1 class="topic-heading">VARIABLES</h1>
+                <h2 class="topic-sub-heading">In programming, a variable is a container for a value. You can think of variables as little containers for information that live in a computer’s memory. Information stored in variables, such as a username, account number,   
+                    <br>There are a few general rules for naming variables:
+                    <ul>
+                        <li>Variable names cannot start with numbers.</li>
+                        <li>Variable names are case sensitive, so myName and myname would be different variables. It is bad practice to create two variables that have the same name using different cases.</li>
+                        <li>
+                            Variable names cannot be the same as keywords. For a comprehensive list of keywords check out MDN’s keyword documentation.</li>
+                    </ul>
+                </h2>
+                <p class="topic-explain">Create a Variable: var</p>
+                <p class="code-area"><code>var myName = 'Gurvinder';
+                    console.log(myName);
+                    // Output: Arya </code>
+                </p>
+                <p class="topic-explain"> the let keyword was introduced in ES6. Create a Variable: let</p>
+                <p class="code-area"><code> 
+                    let meal = 'Enchiladas';
+                    console.log(meal); // Output: Enchiladas
+                    meal = 'Burrito';
+                    console.log(meal); // Output: Burrito
+                </code>
+                </p>
+                <h2 class="topic-sub-heading">Create a Variable: const</h2>
+                <p class="topic-explain">
+                    
+                    The const keyword was also introduced in ES6, and is short for the word constant. Just like with var and let you can store any value in a const variable. The way you declare a const variable and assign a value to it follows the same structure as let and var. Take a look at the following example:
+                    <br>However, a const variable cannot be reassigned because it is constant. If you try to reassign a const variable, you’ll get a TypeError.
+
+                    Constant variables must be assigned a value when declared. If you try to declare a const variable without a value, you’ll get a SyntaxError.
+                </p>
+                <p class="code-area"><code> const myName = 'Gilberto';
+                    console.log(myName); // Output: Gilberto</code></p>
+
+                <p class="topic-explain">String Concatenation with Variables</p>
+                <p class="code-area"><code>let myPet = 'armadillo';
+                    console.log('I own a pet ' + myPet + '.'); 
+                    // Output: 'I own a pet armadillo.' </code></p>
+
+                <p class="topic-explain">The Increment and Decrement Operator</p>
+                <p class="code-area"><code> let a = 10;
+                    a++;
+                    console.log(a); // Output: 11</code>
+                <code>let b = 20;
+                    b--;
+                    console.log(b); // Output: 19</code></p>
+
+                <p class="topic-explain">String Interpolation: In the ES6 version of JavaScript, we can insert, or interpolate, variables into strings using template literals.<br><br>
+                    a template literal is wrapped by backticks `<br>Inside the template literal, you’ll see a placeholder, ${myPet}
+                </p>
+                <p class="code-area"> <code>Template `${}`</code><code> const myPet = 'armadillo';
+                    console.log(`I own a pet ${myPet}.`);</code></p>
+                <p class="topic-explain">typeof operator: To check the data type of the varible. <br>The typeof operator checks the value to its right and returns, or passes back, a string of the data type. </p>
+                <p class="code-area">
+                     </code>
+                    <code>
+                        let newVar = 'typeof.';
+                        console.log(typeof(newVar));
+                        newVariable = 1;
+                        console.log(typeof(newVare));
+                        </code></p>
+                
+                
+            </div>
+            <!-- End-VARIABLES !-->
+            <!-- dfsd !-->
             <div class="topic-item">
                 <h1 class="topic-heading">Topic Heading</h1>
-                <h2 class="sub-heading">Sub-heading</h2>
-                <p class="code-area">Code</p>
+                <h2 class="topic-sub-heading">Sub-heading</h2>
                 <p class="topic-explain">Explanation</p>
-                <p class="code-area">Code</p>
+                <p class="code-area"><code> </code></p>
             </div>
+            <!-- End- !-->
+            <!-- dfsd !-->
+            <div class="topic-item">
+                <h1 class="topic-heading">Topic Heading</h1>
+                <h2 class="topic-sub-heading">Sub-heading</h2>
+                <p class="topic-explain">Explanation</p>
+                <p class="code-area"><code> </code></p>
+            </div>
+            <!-- End- !-->
+            <!-- dfsd !-->
+            <div class="topic-item">
+                <h1 class="topic-heading">Topic Heading</h1>
+                <h2 class="topic-sub-heading">Sub-heading</h2>
+                <p class="topic-explain">Explanation</p>
+                <p class="code-area"><code> </code></p>
+            </div>
+            <!-- End- !-->
+            <!-- dfsd !-->
+            <div class="topic-item">
+                <h1 class="topic-heading">Topic Heading</h1>
+                <h2 class="topic-sub-heading">Sub-heading</h2>
+                <p class="topic-explain">Explanation</p>
+                <p class="code-area"><code> </code></p>
+            </div>
+            <!-- End- !-->
+            <!-- dfsd !-->
+            <div class="topic-item">
+                <h1 class="topic-heading">Topic Heading</h1>
+                <h2 class="topic-sub-heading">Sub-heading</h2>
+                <p class="topic-explain">Explanation</p>
+                <p class="code-area"><code> </code></p>
+            </div>
+            <!-- End- !-->
+            <!-- dfsd !-->
+            <div class="topic-item">
+                <h1 class="topic-heading">Topic Heading</h1>
+                <h2 class="topic-sub-heading">Sub-heading</h2>
+                <p class="topic-explain">Explanation</p>
+                <p class="code-area"><code> </code></p>
+            </div>
+            <!-- End- !-->
+            <!-- dfsd !-->
+            <footer></footer>
         </section>
-    </main>
-    <footer></footer>
+    
 </body>
 </html>
