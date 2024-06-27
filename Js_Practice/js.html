@@ -79,7 +79,7 @@
                     console.log(meal); // Output: Burrito
                 </code>
                 </p>
-                <h2 class="topic-sub-heading">Create a Variable: const</h2>
+               
                 <p class="topic-explain">
                     
                     The const keyword was also introduced in ES6, and is short for the word constant. Just like with var and let you can store any value in a const variable. The way you declare a const variable and assign a value to it follows the same structure as let and var. Take a look at the following example:
@@ -123,42 +123,225 @@
             <!-- End-VARIABLES !-->
             <!-- dfsd !-->
             <div class="topic-item">
-                <h1 class="topic-heading">Topic Heading</h1>
-                <h2 class="topic-sub-heading">Sub-heading</h2>
-                <p class="topic-explain">Explanation</p>
-                <p class="code-area"><code> </code></p>
+                <h1 class="topic-heading">CONDITIONAL STATEMENTS</h1>
+                <h3 class="topic-sub-heading">If Statement</h3>
+                <p class="topic-explain">If blocks only runs when it matched to the condition, other wise if block statment will not run</p>
+                <p class="code-area"><code>if (true) {
+                    console.log('This message will print!'); 
+                  }
+                  // Prints: This message will print!
+                   </code></p>
             </div>
             <!-- End- !-->
             <!-- dfsd !-->
             <div class="topic-item">
-                <h1 class="topic-heading">Topic Heading</h1>
-                <h2 class="topic-sub-heading">Sub-heading</h2>
-                <p class="topic-explain">Explanation</p>
-                <p class="code-area"><code> </code></p>
+                <h2 class="topic-sub-heading">If...Else Statements</h2>
+                <p class="topic-explain">In Case of If...Else Statements, only one Statement will run, if IF statment condition matched, then IF statement will run or vice versa </p>
+                <p class="code-area"><code>if (false) {
+                    console.log('The code in this block will not run.');
+                  } else {
+                    console.log('But the code in this block will!');
+                  }
+                  
+                  // Prints: But the code in this block will! </code></p>
             </div>
             <!-- End- !-->
             <!-- dfsd !-->
             <div class="topic-item">
-                <h1 class="topic-heading">Topic Heading</h1>
-                <h2 class="topic-sub-heading">Sub-heading</h2>
-                <p class="topic-explain">Explanation</p>
-                <p class="code-area"><code> </code></p>
+                <h1 class="topic-heading">Comparison Operators</h1>
+                <p class="topic-explain">Less than: <</p>
+                <p class="code-area"><code>10 < 12 // Evaluates to true </code></p>
+                <p class="topic-explain">Greater than: ></p>
+                <p class="code-area"><code> 10 < 12 // Evaluates to false</code></p>
+                <p class="topic-explain">Less than or equal to: <=</p>
+                <p class="code-area"><code> 12 <= 12 // Evaluates to true</code></p>
+                <p class="topic-explain">Greater than or equal to: >=</p>
+                <p class="code-area"><code>13 >= 12 // Evaluates to true </code></p>
+                <p class="topic-explain">== will check the value and === will check the type and value both</p>
+                <p class="code-area"><code>let age = '30';
+                    console.log(30==age); // false </code>
+                    <code>let age = '30';
+                        console.log(30===age); // false </code></p>
+                <p class="topic-explain">Is not equal to: !==</p>
+                <p class="code-area"><code> 0 !== 12 // Evaluates to true</code></p>
+
             </div>
             <!-- End- !-->
             <!-- dfsd !-->
             <div class="topic-item">
-                <h1 class="topic-heading">Topic Heading</h1>
-                <h2 class="topic-sub-heading">Sub-heading</h2>
-                <p class="topic-explain">Explanation</p>
-                <p class="code-area"><code> </code></p>
+                <h1 class="topic-heading">Logical Operators</h1>
+                <h2 class="topic-sub-heading">the and operator (&&)</h2>
+                <p class="topic-explain">both conditions must evaluate to true for the entire condition to evaluate to true and execute. Otherwise, if either condition is false, the && condition will evaluate to false and the else block will execute.</p>
+                <p class="code-area"><code>if (stopLight === 'green' && pedestrians === 0) {
+                    console.log('Go!');
+                  } else {
+                    console.log('Stop');
+                  }
+                   </code></p>
+
+                <h2 class="topic-sub-heading">the or operator (||)</h2>
+                <p class="topic-explain">When using the || operator, only one of the conditions must evaluate to true for the overall statement to evaluate to true.</p>
+                <p class="code-area"><code>if (day === 'Saturday' || day === 'Sunday') {
+                    console.log('Enjoy the weekend!');
+                  } else {
+                    console.log('Do some work.');
+                  } </code></p>
+
+                <h2 class="topic-sub-heading">the not operator, otherwise known as the bang operator (!)</h2>
+                <p class="topic-explain">the ! operator will either take a true value and pass back false, or it will take a false value and pass back true.</p>
+                <p class="code-area"><code>let excited = true;
+                    console.log(!excited); // Prints false
+                    
+                    let sleepy = false;
+                    console.log(!sleepy); // Prints true </code></p>
+
+                <h2 class="topic-sub-heading">Truthy and Falsy Assignment: short-hand possibilities!</h2>
+                <p class="topic-explain">Because || or statements check the left-hand condition first, the variable defaultName will be assigned the actual value of username if it is truthy, and it will be assigned the value of 'Stranger' if username is falsy. This concept is also referred to as short-circuit evaluation.</p>
+                <p class="code-area"><code> let username = '';
+                    let defaultName;
+                    
+                    if (username) {
+                      defaultName = username;
+                    } else {
+                      defaultName = 'Stranger';
+                    }
+                    
+                    console.log(defaultName); // Prints: Stranger
+                    </code>
+                    <code>
+                        let username = '';
+let defaultName = username || 'Stranger';
+
+console.log(defaultName); // Prints: Stranger
+                    </code>
+                </p>
+                
+                <h2 class="topic-sub-heading">Ternary Operator</h2>
+                <p class="topic-explain">In the spirit of using short-hand syntax, we can use a ternary operator to simplify an if...else statement.
+                    <bold>Condition ? true : fasle</bold>
+                </p>
+                <p class="code-area">
+                    <code> let isNightTime = true;
+
+                        if (isNightTime) {
+                          console.log('Turn on the lights!');
+                        } else {
+                          console.log('Turn off the lights!');
+                        }
+                        
+                    </code>
+                    <code>isNightTime ? console.log('Turn on the lights!') : console.log('Turn off the lights!');</code>
+            </p>
+            <h2 class="topic-sub-heading">The switch keyword: Switch statement are improved version to writer nested if elseif elseif statement</h2>
+                <p class="topic-explain"> we have a series of conditions checking for a value that matches a groceryItem variable.</p>
+                <p class="code-area">let groceryItem = 'papaya';
+
+                    switch (groceryItem) {
+                      case 'tomato':
+                        console.log('Tomatoes are $0.49');
+                        break;
+                      case 'lime':
+                        console.log('Limes are $1.49');
+                        break;
+                      case 'papaya':
+                        console.log('Papayas are $1.29');
+                        break;
+                      default:
+                        console.log('Invalid item');
+                        break;
+                    }
+                    
+                    // Prints 'Papayas are $1.29'<code> 
+                </code></p>
+
+
+
             </div>
             <!-- End- !-->
             <!-- dfsd !-->
             <div class="topic-item">
-                <h1 class="topic-heading">Topic Heading</h1>
-                <h2 class="topic-sub-heading">Sub-heading</h2>
-                <p class="topic-explain">Explanation</p>
-                <p class="code-area"><code> </code></p>
+                <h1 class="topic-heading">JS - FUNCTIONS</h1>
+                <h2 class="topic-sub-heading">Javascript function are set of spectific line of code written and can be called when needed.</h2>
+                <p class="topic-explain"> keyword[function] [function name([function arguments])]{//Line of code} to call this function [functionName();]</p>
+                <p class="code-area"><code>greetWorld(); // Output: Hello, World!
+
+                    function greetWorld() {
+                      console.log('Hello, World!');
+                    }
+                    </code></p>
+                
+                <h2 class="topic-sub-heading">Default Parameters</h2>
+                <p class="topic-explain">One of the features added in ES6 is the ability to use default parameters. Default parameters allow parameters to have a predetermined value in case there is no argument passed into the function or if the argument is undefined when called.</p>
+                <p class="code-area"><code>
+                    function greeting (name = 'stranger') {
+                        console.log(`Hello, ${name}!`)
+                      }
+                      
+                      greeting('Nick') // Output: Hello, Nick!
+                      greeting() // Output: Hello, stranger!    
+                </code></p>
+                
+                <h2 class="topic-sub-heading">Arrow Functions</h2>
+                <p class="topic-explain">ES6 introduced arrow function syntax, a shorter way to write functions by using the special “fat arrow” () => notation.
+
+                    Arrow functions remove the need to type out the keyword function every time you need to create a function. Instead, you first include the parameters inside the ( ) and then add an arrow => that points to the function body surrounded in { } like this:</p>
+                <p class="code-area"><code> const rectangleArea = (width, height) => {
+                    let area = width * height;
+                    return area;
+                  };
+                  </code></p>
+                  <p class="topic-explain">Functions that take only a single parameter do not need that parameter to be enclosed in parentheses. However, if a function takes zero or multiple parameters, parentheses are required.<br>A function body composed of a single-line block does not need curly braces. Without the curly braces, whatever that line evaluates will be automatically returned. The contents of the block should immediately follow the arrow => and the return keyword can be removed. This is referred to as implicit return.</p>
+                  
+                  <p class="code-area">
+                    <code>const functionName = () =>{};</code>
+                    <code>const functionName = paramOne => {};</code>
+                    <code>const functionName = (paramOne, paramTwo )=> {};</code>
+                    <code>const squareNum = num => num * num;</code>
+                    <code> const squareNum = (num) => {
+                    return num * num;
+                  };
+                  </code></p>
+                
+                  <h1 class="topic-heading">
+                    <p>Review Functions</p>
+                    <ul class="fxn-review">
+                        <li><p>A function is a reusable block of code that groups together a sequence of statements to perform a specific task.</p> </li>
+                        <li>
+                            <p>A function declaration :</p>
+                            <img src="images/function-default.png">
+                        </li>
+                        <li>
+                            <p>A parameter is a named variable inside a function’s block which will be assigned the value of the argument passed in when the function is invoked:</p>
+                            <img src="images/function-param.png">
+                        </li>
+                        <li>
+                            <p>To call a function in your code:</p>
+                            <img src="images/function-call.png">
+                        </li>
+                        <li>
+                            <p>ES6 introduces new ways of handling arbitrary parameters through default parameters which allow us to assign a default value to a parameter in case no argument is passed into the function.</p>
+                           
+                        </li>
+                        <li>
+                            <p>To return a value from a function, we use a return statement.</p>
+                           
+                        </li>
+                        <li>
+                            <p>To define a function using function expressions:
+
+                            </p>
+                            <img src="images/function-define-normal.png">
+                        </li>
+                        <li>
+                            <p>To define a function using arrow function notation:</p>
+                            <img src="images/function-define-arrow.png">
+                        </li>
+                        <li>
+                            <p>Function definition can be made concise using concise arrow notation:</p>
+                            <img src="images/function-define-arrow-concise.png">
+                        </li>
+                    </ul>
+                  </h1> 
             </div>
             <!-- End- !-->
             <!-- dfsd !-->

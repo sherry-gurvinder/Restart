@@ -78,3 +78,27 @@ main{
     margin: 1rem;
     font-size: 1.2rem;
 }
+.fxn-review img{
+    max-width: 100%;
+
+}
+ul.fxn-review {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+ul.fxn-review li {
+    font-size: 1rem;
+    margin: 2rem;
+    background: black;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+ul.fxn-review li p
+{
+    text-align: center;
+}
