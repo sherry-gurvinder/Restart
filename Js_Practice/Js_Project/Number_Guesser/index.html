@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Guesser</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="grid-item-row">
+        <h1>Number Guesser!</h1>
+    </div>
+    <div class="grid-item-row">
+        <h1>Round <span id="game_round"></span>
+
+           </h1>
+        <h2> Target Number: <span id="target_no">?</span></h2>
+    </div>
+    <div class="grid-item-col-main-section">
+        <div class="grid-item-col-1">
+            <h1>Computer</h1>
+            <h2>Score: <span id="computer_score">0</span></h2>
+            <h1 id="computer_guess">?</h1>
+        </div>
+        <div class="grid-item-col-2">
+            <h1>You</h1>
+            <h2>Score:<span id="human_score">0</span></h2>
+            <input type="text" name="user_guess_number" id="user_no" value="0"><br>
+            <button id="minus" onclick="minus();">-</button> <button id="addition" onclick="addition();">+</button><br>
+            <button id="make_guess" onclick="guess_Game_Start();">Make a Guess</button>
+        </div>
+    </div>
+    <div class="grid-item-row"><button onclick="advanceRound();">Next Round</button></div>
+    <div class="grid-item-col-instructions">
+        <div class="grid-item-col">
+           <h1>Step 1</h1>
+           <h2>Input a number between 0 and 9</h2>
+        </div>
+        <div class="grid-item-col">
+            <h1>Step 2</h1>
+            <h2>Click "Make a Guess" to submit your guess and see who won the round.</h2>
+        </div>
+        <div class="grid-item-col">
+            <h1>Step 3</h1>
+            <h2>Click "Next Round" to play again.</h2>
+        </div>
+    </div>
+</div>
+    
+</body>
+<script src="script.js">
+   
+    </script>
+</html>
