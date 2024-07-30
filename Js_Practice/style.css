@@ -1,0 +1,45 @@
+body
+{
+    background-color: #00878b;
+    color: white;
+}
+
+
+.Nav-list
+{
+
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr auto;
+    justify-items: center;
+    grid-auto-rows: 10rem;
+    grid-row-gap: 5rem;
+}
+.topic-main {
+    text-align: center;
+    border: 1px solid;
+    height: 10rem;
+    width: 70%;
+    display: grid;
+}
+.topic-card {
+    display: grid;
+    align-content: space-evenly;
+  
+}
+.topic-sub-head
+{}
+.topic-button {
+}
+li {
+    display: inline;
+    font-size: 2rem;s
+}
+
+Nav {
+    display: grid;
+    background: repeating-linear-gradient(45deg, white, transparent 100px);
+}
