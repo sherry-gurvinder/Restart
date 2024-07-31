@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Part 2</title>
+    <style>
+        body
+        {
+           background-color: #00878b; ;
+        }
+        li {
+    display: inline;
+    font-size: 2rem;
+}
+.container {
+    display: grid;
+    grid-template-columns: 80%;
+    justify-content: center;
+    grid-gap: 1rem;
+}
+.container-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* background: white; */
+    justify-content: center;
+    /* justify-items: center; */
+    /* border: 1px solid; */
+    grid-gap: 1rem;
+    justify-items: stretch;
+    text-align: center;
+}
+.item {
+    border: 1px solid;
+    background: white;
+    align-self: center;
+}
+.section {
+    background: white;
+    display: grid;
+    grid-template-columns: 90%;
+    justify-content: center;
+}
+.section-heading h1 {
+    background: black;
+    color: white;
+    padding: 1rem;
+    border-bottom-left-radius: 10rem;
+}
+.section-card p {
+    font-size: 1.2rem;
+    font-family: monospace;
+    text-align: justify;
+}
+.item {
+    background: black;
+    color: white;
+    border-top-right-radius: 4rem;
+}
+.item a {
+    font-family: cursive;
+    color: white;
+  
+}
+    </style>
+</head>
+<body>
+    <div class="Nav">
+        <div class="Nav-list">
+            <ul>
+                <li> <p>JavaScript 2</p> </li>
+            </ul>
+           
+        </div>
+    </div>
+    <div class="container">
+        <div class="section">
+            <div class="section-heading"><h1>Runtime environment</h1>
+                <div class="section-card">  
+                    <p>A runtime environment is where your program will be executed. JavaScript code may be executed in one of two runtime environments:
+                            a browser runtime environment the Node runtime environment
+                            In each of these environments, different data values and functions are available, and these differences help distinguish front-end applications from back-end applications.  
+                            Front-end JavaScript applications are executed in a browser runtime environment and have access to the window object.
+                            Back-end JavaScript applications are executed in the Node runtime environment and have access to the file system, databases, and networks attached to the server.
+                    </p>
+                </div>    
+            </div>
+        </div> 
+
+        <div class="container-items">
+            <div class="item"> 
+                <h1> <a href="js_Array.html"> Array</a></h1> 
+            </div>
+            <div class="item"> 
+                <h1> <a href="#"> Topic </a></h1> 
+            </div>
+            <div class="item"> 
+                <h1> <a href="#"> Topic </a></h1> 
+            </div>
+            <div class="item"> 
+                <h1> <a href="#"> Topic </a></h1> 
+            </div>
+            <div class="item"> 
+                <h1> <a href="#"> Topic </a></h1> 
+            </div>
+        </div>   
+    </div>  
+</body>
+</html>
