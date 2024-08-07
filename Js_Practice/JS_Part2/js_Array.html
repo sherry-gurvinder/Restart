@@ -15,8 +15,7 @@
            
         </div>
     </div>
-    <div class="container">
-        
+    <div class="container"> 
         <div class="topic">
             <div class="topic-heading"><h1>Create an Array</h1></div>
             <div class="topic-card">
@@ -26,96 +25,334 @@
                     <ul>
                         <li>
                             <p class="topic-code-area">Array Literals: The most straightforward and commonly used way to create arrays is through array literals:</p>
-                            <p class="topic-code-area"><code>let fruits = ['apple', 'banana', 'cherry'];</code></p>
-                            <p class="topic-code-area"> <code>// Creating an empty array <br>let emptyArray = []; console.log(emptyArray); // Outputs: []</code></p>
+                            <p class="topic-code-area"><code><span>let fruits = ['apple', 'banana', 'cherry'];</span></code></p>
+                            <p class="topic-code-area">
+                          
+                                <code>
+                                    <span>let emptyArray = []; console.log(emptyArray); // Outputs: []</span>
+                                </code></p>
                         </li>
                         <li>
                             <p> Array Constructor: 
-                            Use the Array constructor when you specifically need to create an array of a particular length without initializing its values</p>
-                            <p class="topic-code-area">  <code>// Creating an empty array<br
+                            Use the Array constructor when you specifically need to create an array of a particular length without initializing its values.</p>
+                            <p> Creating an empty array</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span></span>
+                                    <span></span>
                                 let emptyArray = new Array();
-                                console.log(emptyArray); // Outputs: []</code></p>
-                            <p class="topic-code-area"> <code> // Creating an array with a specific length (but uninitialized)<br>
-                                let uninitializedArray = new Array(5);
-                                console.log(uninitializedArray); // Outputs: [ <5 empty items> ]</code></p>
-                            <p class="topic-code-area">  <code>
-                                // Creating an array with values<br>
-                                let valuesArray = new Array('apple', 'banana', 'cherry');
-                                console.log(valuesArray); // Outputs: ['apple', 'banana', 'cherry']</code></p>                         
+                                console.log(emptyArray); Outputs: [] 
+                            
+                            </code>
+                        </p>
+                            <p class="topic-code-area"> <span>// Creating an array with a specific length (but uninitialized)</span>
+                                <code>
+                                <span> let uninitializedArray = new Array(5);</span>
+                                <span>console.log(uninitializedArray); // Outputs: [ <5 empty items> ]</span>
+                               
+                                </code></p>
+                            <p class="topic-code-area"> <span>   // Creating an array with values</span> <code>
+                             
+                                <span> let valuesArray = new Array('apple', 'banana', 'cherry');</span>
+                                <span> console.log(valuesArray); // Outputs: ['apple', 'banana', 'cherry']</span>
+                               
+                               </code></p>                         
+                        </li>
+                    </ul>
+                </div> 
+                  
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>Arrays with let and const</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>Variables declared with let can be reassigned. Variables declared with the const keyword cannot be reassigned</p>
+                    <p>However, elements in an array declared with const remain mutable. Meaning that we can change the contents of a const array, but cannot reassign a new array or a different value.</p>
+                    </div>
+                    <div class="topic-code">
+                        <p>re-assign an entire new array using the let/const keyword</p>
+                        <ul>
+                            <li>
+                                <p class="topic-code-area">Notice that you can re-assign elements in an array and re-assign an entire new array to a variable declared using the let keyword.</p>
+                                <p class="topic-code-area"><code>
+                                    <span>  let sampleArr = [1, 2, 3];</span>
+                                    <span> sampleArr = ['a string'];</span>
+                                 
+                                   </code></p>
+                            </li>
+                            <li>
+                                <p class="topic-code-area">Can not possible to re-assign a new array using const keyword</p>
+                                <p class="topic-code-area"><code> 
+                                    <span> const myList = ['car','bike', 'plane']</span>
+                                    <span> myList = ['trip to paris']; // this will throw a error</span>
+                                   </code></p>
+                            </li>
+                           
+                        </ul>
+                    </div>  
+                
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>The .length property</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>Same like string we also have a built-in properties is length and it returns the number of items in the array. We access the .length property just like we do with strings. </p>
+                    </div>
+                    <div class="topic-code">
+                        <p>When we want to know how many elements are in an array, we can access the .length property.</p>
+                        <ul>
+                            <li>
+                                <p class="topic-code-area">To access the length property, use dot notation like the example below:</p>
+                                <p class="topic-code-area"><code>
+                                    <span> let fruit_Basket = ['Banana','Apple','Grapes','Melon']; </span>
+                                    <span> console.log(fruit_Basket.length); // Output: 3</span>
+                                
+                                   </code></p>
+                            </li>
+                           
+                        </ul>
+                    </div>
+                    
+
+
+                
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>The .push() and .pop() Method:</h1><h3>.pop() and .push() mutate(Change) the array</h3>  </h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p> .push(), allows us to add items to the end of an array. </p>
+                    </div>
+                    <div class="topic-code">
+                        <ul>
+                            <li>
+                                <p class="topic-code-area">.push() can take a single argument or multiple arguments separated by commas.</p>
+                                <p class="topic-code-area"><code>
+                                    <span>  const chores = ['wash dishes', 'do laundry', 'take out trash'];
+                                    </span>
+                                    <span>  chores.push('cooking','cleaning');</span>
+                                    <span> console.log(chores); </span>
+                                  
+                                  
+                                   </code></p>
+                            </li>
+                        </ul>
+                    </div>  
+            </div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>.pop(), removes the last item of an array.</p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>  
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>const newItemTracker = ['item 0', 'item 1', 'item 2'];</span>
+                                    <span>  const removed = newItemTracker.pop();</span>
+                                    <span>console.log(newItemTracker); // Output: [ 'item 0', 'item 1']</span>    
+                                </code></p>
+                        </li>    
+                    </ul>
+                </div>    
+            </div>
+        </div>
+
+        <div class="topic">
+            <div class="topic-heading"><h1> More built-in methods  </h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>.join(), .slice(), .splice(), .shift(), .unshift(), and .concat()</p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area"> array.join(separator);</p>
+                            <p class="topic-code-area">
+                                <code>
+                                <span>const gameObjects = ['rock', 'paper', 'scissors'];</span>
+                                <span>const joinNoSeparator = gameObjects.join();//rock,paper,scissors</span>
+                                <span>const joinWithSeparator = gameObjects.join(' + ');//rock + paper + scissors</span>
+                            </code></p>
+                        </li> 
+                        <li>
+                            <p class="topic-code-area">.slice(index,index+1):</p>
+                            <p class="topic-code-area"><code>
+                                <span>const gameObjects = ['rock', 'paper', 'scissors'];</span>
+                                <span>console.log(gameObjects.slice(1,2+1))//['paper','scissors']</span>
+                                <span></span>
+                            </code></p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">The .splice() method in JavaScript is used to modify an array in place. It can add, remove, and replace elements from the array. Syntax: array.splice(start, deleteCount, item1, item2, ...)</p>
+                            <p class="topic-code-area">
+                                <span>.splice() changes the original array and returns an array of the removed elements.</span>
+                               
+                                <code> 
+                        
+                                <span>let arr = [1, 2, 3, 4, 5];  </span>
+                                <span></span> arr.splice(2, 2); // Removes 2 elements starting from index 2  </span>
+                                <span> arr.splice(2,1,'gurvider');(Removed and replaced element of index 2) // [1,2,'gurvinder',4,5] </span>
+                                <span> arr.splice(2,2,'gurvider');(Removed and replaced element of index 2,3) // [1,2,'gurvinder',5] </span>
+                                <span> arr.splice(2,3,'gurvider');(Removed and replaced element of index 2,3,4) // [1,2,'gurvinder'] </span>
+                                <span></span> console.log(arr); // [1, 2, 5]
+                                <span>arr.splice(2); //[1,2]
+                               </span>
+                                </span>
+                            </span>
+                            </code>
+                                <code>
+                                <span>arr.splice(2, 2, 'a', 'b'); // Starting at index 2, remove 2 elements and add 'a' and 'b'</span>
+                                <span> console.log(arr); // [1, 2, 'a', 'b', 5]
+                                    </span></code></p>
+                        </li> 
+                        <li>
+                            <p class="topic-code-area"> .shift():  method to remove the first item from the array</p>
+                            <p class="topic-code-area"><code> <span>let arr = [1, 2, 3, 4, 5];</span>
+                                <span>arr.shift();//[2, 3, 4, 5]]</span>
+                                </code></p>
+                        </li>  
+                        <li>
+                            <p class="topic-code-area">.unshift(): add 'element' to the beginning of your array.</p>
+                            <p class="topic-code-area"><code> <span>let arr = [1, 2, 3, 4, 5];</span>
+                                <span>arr.unshift(4);//[4,1,2, 3, 4, 5]]</span>
+                                </code></p>
+                        </li> 
+                        <li>
+                            <p class="topic-code-area">.indexOf(): .indexOf() returns the first element that matches the value of the argument passed in. If there isn’t an element whose value matches that of the argument, -1 is returned.</p>
+                            <p class="topic-code-area"><code> <span></span>
+                                <span>let arr = [10, 20, 30, 40, 50];
+                                    </span>
+                                <span>>arr.indexOf(30);// console.log(index); // 2</span></code></p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">.concat():The .concat() method in JavaScript is used to merge two or more arrays into a single array. It does not modify the original arrays but instead returns a new array that contains the combined elements. </p>
+                            <p class="topic-code-area"><code> 
+                              
+
+
+
+                                <span>  let arr1 = [1, 2];</span>
+                                <span>let arr2 = [3, 4];</span>
+                                <span>let result = arr1.concat(arr2, arr3);
+                                    console.log(result); // [1, 2, 3, 4]</span></code></p>
                         </li>
                     </ul>
                 </div>   
             </div>
         </div>
+
         <div class="topic">
-            <div class="topic-heading"><h1>Topic Heading</h1></div>
+            <div class="topic-heading">
+                <h1>Arrays and Functions</h1>
+            </div>
             <div class="topic-card">
                 <div class="topic-explain">
-                    <p>explain </p>
-                    </div>
-                    <div class="topic-code">
-                        <p>code point 1</p>
-                        <ul>
-                            <li>
-                                <p class="topic-code-area">list</p>
-                                <p class="topic-code-area"><code>code-example</code></p>
-                            </li>
-                            <li>
-                                <p class="topic-code-area">list</p>
-                                <p class="topic-code-area"><code>code-example</code></p>
-                            </li>
-                           
-                        </ul>
-                    </div>  
-                
+                    <p>So when you pass an array into a function, if the array is mutated inside the function, that change will be maintained outside the function as well. You might also see this concept explained as pass-by-reference since what we’re actually passing to the function is a reference to where the variable memory is stored and changing the memory.</p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area"></p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>concept = ['arrays', 'can', 'be', 'mutated'];</span> 
+                                    <span>const addElement = (arr) =>
+                                        {
+                                        arr.push('add me');
+                                        }</span> 
+                                    <span>const removeElement = (arr) =>
+                                        {
+                                            arr.pop();
+                                        }</span>
+                                    <span>const makeMeFirst = (arr) =>
+                                        {
+                                        arr.unshift('i am the first element of array');
+                                        }</span> 
+                                    <span>const deleteFirstelement = (arr) =>
+                                        {
+                                        arr.shift();
+                                        }</span>  
+                                    <span>addElement(concept);//[ 'arrays', 'can', 'be', 'mutated', 'add me' ]</span>
+                                    <span>removeElement(concept);// [ 'arrays', 'can', 'be', 'mutated' ]</span> 
+                                    <span> makeMeFirst(concept);// [ 'i am the first element of array',
+                                        'arrays',
+                                        'can',
+                                        'be',
+                                        'mutated' ]</span> 
+                                    <span>deleteFirstelement(concept);// [ 'arrays', 'can', 'be', 'mutated' ]</span> 
+                                    <span></span>  
+                                </code>
+                            </p>
+                        </li>
+                    </ul>
+                </div>   
             </div>
         </div>
+
         <div class="topic">
-            <div class="topic-heading"><h1>Topic Heading</h1></div>
+            <div class="topic-heading"><h1>Nested Arrays</h1></div>
             <div class="topic-card">
                 <div class="topic-explain">
-                    <p>explain </p>
-                    </div>
-                    <div class="topic-code">
-                        <p>code point 1</p>
-                        <ul>
-                            <li>
-                                <p class="topic-code-area">list</p>
-                                <p class="topic-code-area"><code>code-example</code></p>
-                            </li>
-                            <li>
-                                <p class="topic-code-area">list</p>
-                                <p class="topic-code-area"><code>code-example</code></p>
-                            </li>
-                           
-                        </ul>
-                    </div>  
-                
+                    <p>  When an array contains another array it is known as a nested array.  </p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">To access the nested arrays we can use bracket notation with the index value, </p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>const nestedArr = [[1], [2, 3]];
+
+                                       </span>
+                                    <span> console.log(nestedArr[1]); // Output: [2, 3]</span>
+                                </code>
+                                <code>
+                                    <span>const nestedArr = [[1], [2, 3]];
+
+                                       </span>
+                                    <span> console.log(nestedArr[1][1]); // Output: [3]// First subscript denoted the index of the array, second subscript gives you the value 3 is the element at index 1 of the sub-array [2, 3].</span>
+                                </code>
+                            </p>
+                        </li> 
+                    </ul>
+                </div>   
             </div>
         </div>
-        <div class="topic">
-            <div class="topic-heading"><h1>Topic Heading</h1></div>
+
+        <!-- PlaceHolder-->
+       <!-- <div class="topic">
+            <div class="topic-heading"><h1>PlaceHolder</h1></div>
             <div class="topic-card">
                 <div class="topic-explain">
-                    <p>explain </p>
-                    </div>
-                    <div class="topic-code">
-                        <p>code point 1</p>
-                        <ul>
-                            <li>
-                                <p class="topic-code-area">list</p>
-                                <p class="topic-code-area"><code>code-example</code></p>
-                            </li>
-                            <li>
-                                <p class="topic-code-area">list</p>
-                                <p class="topic-code-area"><code>code-example</code></p>
-                            </li>
-                           
-                        </ul>
-                    </div>  
-                
+                    <p> PlaceHolder </p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">PlaceHolder</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span></span>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">PlaceHolder</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span></span>
+                                </code>
+                            </p>
+                        </li>  
+                    </ul>
+                </div>   
             </div>
-        </div>
+        </div>-->
+        <!-- PlaceHolder End-->
     </div>
 </body>
 <script src="script.js"></script>

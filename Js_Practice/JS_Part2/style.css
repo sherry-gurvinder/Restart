@@ -10,13 +10,13 @@ body
     grid-template-columns: 80%;
     grid-template-rows: 1fr auto;
     justify-items: center;
-    grid-auto-rows: 10rem;
     grid-row-gap: 5rem;
     justify-content: center;
     color: white;
     grid-gap: 1rem;
     padding-top: 1rem;
     padding-bottom: 2rem;
+    grid-auto-flow: dense;
 }
 .topic {
     text-align: center;
@@ -26,6 +26,7 @@ body
     color: black;
     grid-template-columns: 90%;
     justify-content: center;
+    width: 75%;
 }
 .topic-heading p {
     font-size: 1.5rem;
@@ -34,7 +35,9 @@ body
     text-decoration: underline;
 }
 .topic-code ul {
-    padding-left: 1rem;
+  
+    padding-inline-start: 1rem;
+    
 }
 
 .topic-explain p {
@@ -79,7 +82,15 @@ code {
     font-weight: lighter;
     color: white;
     background: black;
+    display: grid;
     padding: 0rem;
+    justify-content: center;
+    grid-template-columns: 100%;
+    margin-left: -1rem;
+    padding: 2rem;
+    /* text-align: left; */
+    font-size: 1rem;
+    text-indent: -1rem;
 }
 .topic-code>p {
     background: black;
@@ -87,4 +98,9 @@ code {
     font-size: 1.4rem;
     border-bottom-right-radius: 10rem;
     padding: 1rem;
+}
+.topic-code ul li {
+    /* padding-inline-start: 1rem; */
+    list-style-type: decimal;
+    display: list-item;
 }

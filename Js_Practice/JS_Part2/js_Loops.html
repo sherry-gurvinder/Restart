@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel='stylesheet'>
+    <title>Loops</title>
+</head>
+<body>
+    <div class="Nav">
+        <div class="Nav-list">
+            <ul>
+                <li> <p>Loops</p> </li>
+            </ul> 
+        </div>
+    </div>
+    <div class="container"> 
+        <div class="topic">
+            <div class="topic-heading"><h1>For Loop</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p> A loop is a programming tool that repeats a set of instructions until a specified condition, called a stopping condition is reached. </p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">The For Loop: for (initialization; condition; increment) {
+                                // Code to be executed in each iteration
+                            }</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>
+                                        for (let i = 1; i <= 5; i++) {
+                                            console.log(i);
+                                        }
+                                    </span>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Nested Loops: Nested loops in JavaScript are loops placed inside other loops. They are useful when you need to perform operations on multi-dimensional structures like matrices or tables.</p>
+                            <p class="topic-code-area">
+                               
+                                <code>
+                                    <span>Basic Syntax</span>
+                                    <span>for (let i = 0; i < outerLimit; i++) {</span>
+                                    <span>  for (let j = 0; j < innerLimit; j++) {</span>
+                                        <span>// Code to be executed</span>
+                                        }
+                                    }</span></code></p>
+                        </li>  
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>The While Loop</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p> a while loop repeatedly executes a block of code as long as a specified condition evaluates to true. It's particularly useful when you don't know in advance how many times you'll need to iterate. </p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">while (condition) {
+                                // Code to be executed while the condition is true
+                            }</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span> let count = 1;</span>
+                                    <span> while (count <= 5) {</span>
+                                    <span>  console.log(count);</span>
+                                    <span>   count++; // Increment the count to eventually break the loop
+                                    }</span>  
+                                                                    
+                                </code>
+                            </p>
+                        </li>
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>Do...While Statements</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>you want a piece of code to run at least once and then loop based on a specific condition after its initial run. This is where the do...while statement comes in. </p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">do {
+                                // Code to be executed
+                            } whil</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span> let count = 1;</span>
+                                    <span> do {</span>
+                                    <span>  console.log(count);</span>
+                                    <span>  count++; // Increment the count</span>
+                                   <span> } while (count <= 5);</span>    
+                                   
+                                </code>
+                            </p>
+                        </li>
+                        
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>The break Keyword</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p> The break keyword allows programs to “break” out of the loop from within the loop’s block. </p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">hello will only print 3 times</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>for (let i = 0; i < 99; i++) {</span>
+                                    <span>  if (i > 2 ) {</span>
+                                    <span> break;</span>
+                                    <span> }
+                                        console.log('hello.');
+                                      }</span>
+          
+                                </code>
+                            </p>
+                        </li>
+                       
+                    </ul>
+                </div>   
+            </div>
+        </div>
+    <!-- Container End-->
+    </div>
+</body>
+</html>
