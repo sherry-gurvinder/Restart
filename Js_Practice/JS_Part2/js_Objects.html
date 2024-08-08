@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel='stylesheet'>
+    <title>Objects</title>
+</head>
+<body>
+    <div class="Nav">
+        <div class="Nav-list">
+            <ul>
+                <li> <p>Objects</p> </li>
+            </ul> 
+        </div>
+    </div>
+    <div class="container"> 
+        <div class="topic">
+            <div class="topic-heading"><h1>Creating Object Literals</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p> In JavaScript, objects are a fundamental data type used to store collections of data in key-value pairs.</p>
+                    <p>Objects can be assigned to variables just like any JavaScript type. We use curly braces, {}, to designate an object literal</p>
+                    <p>let spaceship = {}; // spaceship is an empty object</p>
+                    <span> <img src="../images/object.png"></span>
+                </div>
+                <div class="topic-code">
+                    <h1>Accessing Properties: </h1>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">dot notation, .</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span><img src="../images/access-object.png"></span>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Bracket Notation: The second way to access a key’s value is by using bracket notation, [ ].</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span><img src="../images/bracket notation.png"></span>
+                                </code>
+                            </p>
+                        </li>  
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>Property Assignment</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p> Objects are mutable meaning we can update them after we create them!</p>
+                    <p>We can use either dot notation, ., or bracket notation, [], and the assignment operator, = to add new key-value pairs to an object or change an existing property.</p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">If the property already exists on the object, whatever value it held before will be replaced with the newly assigned value.
+                                If there was no property with that name, a new property will be added to the object.</p>
+                            <p class="topic-code-area">
+                               
+                                <code>
+                                    <span><img src='../images/assignment-object.png'></span>
+                                </code>
+                                <p>
+                                    It’s important to know that although we can’t reassign an object declared with const, we can still mutate it, meaning we can add new properties and change the properties that are there.
+                                </p>
+                                <code>
+                                    <span>const spaceship = {type: 'shuttle'};</span>
+                                    <span>spaceship = {type: 'alien'}; // TypeError: Assignment to constant variable.</span>
+                                    <span>spaceship.type = 'alien'; // Changes the value of the type property</span>
+                                    <span>spaceship.speed = 'Mach 5'; // Creates a new key of 'speed' with a value of 'Mach 5'</span>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Delete: You can delete a property from an object with the delete operator.</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>const spaceship = {</span>
+                                        <span>'Fuel Type': 'Turbo Fuel',</span>
+                                        <span> homePlanet: 'Earth',</span>
+                                        <span> mission: 'Explore the universe'};</span>
+                                        <span> delete spaceship.mission;  // Removes the mission property</span>
+                                        <span>delete spaceship.'Fuel Type';  // throw error</span>
+                                     </span>
+                                </code>
+                            </p>
+                        </li>  
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <!---->
+         <!-- Topic Placeholder-->
+         <div class="topic">
+            <div class="topic-heading"><h1>Defining Methods in Objects</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p> When the data stored on an object is a function we call that a method. A property is what an object has, while a method is what an object does.</p>
+                    <p>Do object methods seem familiar? That’s because you’ve been using them all along! For example console is a global JavaScript object and .log() is a method on that object. Math is also a global JavaScript object and .floor() is a method on it.</p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">We can include methods in our object literals by creating ordinary, colon-separated key-value pairs. The key serves as our method’s name, while the value is an anonymous function expression.</p>
+                            <p class="topic-code-area">
+                                <code> 
+                                    <span> let object_name {</span>
+                                    <span>function_Name () {},</span>
+                                    <span>function_Name () {},</span>
+                                    <span>function_Name () {},</span>
+                                    <span>function_Name () {},</span>
+                                    <span>};</span>
+                                    object_Name.function_Name();
+                                </code>
+                                <code>
+                                    <span>const alienShip = {</span>
+                                    <span>invade: function () { </span>
+                                    <span>console.log('Hello!')</span>
+                                    <span> }</span>
+                                    <span>};</span>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">With the new method syntax introduced in ES6 we can omit the colon and the function keyword.</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>const alienShip = {</span>
+                                    <span> invade () { </span>
+                                    <span> console.log('Hello!')
+                                    }</span>
+                                    <span>};</span>
+                                  
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Object methods are invoked by appending the object’s name with the dot operator followed by the method name and parentheses:</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>alienShip.invade(); // Prints 'Hello!'</span>
+                                </code>
+                                
+                            </p>
+                        </li>
+                    </ul>
+                </div>   
+            </div>
+        </div> <!-- Topic Placeholder-->
+        <div class="topic">
+            <div class="topic-heading"><h1>Nested Objects</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>You can define nested objects by including one object as a value for a key in another object:</p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">Creating Nested Objects</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>const person = {
+                                        name: 'John Doe',
+                                        age: 30,
+                                        address: {
+                                          street: '123 Main St',
+                                          city: 'Anytown',
+                                          country: 'USA'
+                                        },
+                                        contact: {
+                                          email: 'john.doe@example.com',
+                                          phone: '555-1234'
+                                        }
+                                      };
+                                      
+                                      console.log(person.address.city); // Output: Anytown
+                                      console.log(person.contact.email); // Output: john.doe@example.com
+                                      </span>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Accessing Nested Object Properties</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>console.log(person.address.city); // Output: Anytown
+                                        console.log(person['contact']['phone']); // Output: 555-1234</span>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Modifying Nested Object Properties</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>// Update a nested property</span>
+                                        <span>person.address.city = 'Newtown';</span>
+                                        <span>console.log(person.address.city); // Output: Newtown</span>
+                                    <span>// Add a new property to a nested object</span>
+                                        <span>person.address.zipCode = '12345';</span>
+                                        <span>console.log(person.address.zipCode); // Output: 12345</span>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Adding Nested Objects</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>person.social = {</span>
+                                        <span>facebook: 'facebook.com/johndoe',</span>
+                                        <span>twitter: 'twitter.com/johndoe'</span>
+                                      <span>};
+                                      
+                                      </span>
+                                    <span>console.log(person.social.facebook); // Output: facebook.com/johndoe</span>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Pass By Reference: In JavaScript, when you pass an object as a parameter to a function, you're passing a reference to that object, not a copy of it. Therefore, if you modify the object's properties within the function, the changes will be reflected in the original object.</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>// Define an object</span>
+                                        <span>const car = {</span>
+                                        <span> make: 'Toyota',</span>
+                                        <span>model: 'Camry',</span>
+                                        <span> year: 2023</span>
+                                                        <span>};</span>
+                                        <span>// Function that modifies the object</span>
+                                        <span>carObj.year = 2024; // Modify the property of the object</span>
+                                        <span>}</span>
+                                        <span>// Call the Function</span>
+                                        <span>updateCar(car);</span>
+                                                                    
+                                        <span>console.log(car.year); // Output: 2024
+                                        </span>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Looping Through Objects: use For.....IN</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>
+                                        const car = {
+                                            make: 'Toyota',
+                                            model: 'Camry',
+                                            year: 2023
+                                          };</span>
+                                          
+                                         <span>for (const key in car) {</span> 
+                                           <span> if (car.hasOwnProperty(key)) {
+                                              console.log(`${key}: ${car[key]}`);</span>
+                                              <span>}
+                                          }
+                                    </span>
+                                    <span>// Output:
+                                        // make: Toyota
+                                        // model: Camry
+                                        // year: 2023</span>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">PlaceHolder</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span></span>
+                                </code>
+                            </p>
+                        </li>
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <!---->
+         <!-- Topic Placeholder-->
+         <div class="topic">
+            <div class="topic-heading"><h1>------------------</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p> ----------------</p>
+                    <p>--------------------------</p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">PlaceHolder</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span></span>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">PlaceHolder</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span></span>
+                                </code>
+                            </p>
+                        </li>  
+                    </ul>
+                </div>   
+            </div>
+        </div>
+         <!-- Topic Placeholder-->
+        <div class="topic">
+            <div class="topic-heading"><h1>------------------</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p> ----------------</p>
+                    <p>--------------------------</p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">PlaceHolder</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span></span>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">PlaceHolder</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span></span>
+                                </code>
+                            </p>
+                        </li>  
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <!-- Topic Placeholder-->
+    </div>
+    <!-- Container End-->
+    </div>
+</body>
+</html>

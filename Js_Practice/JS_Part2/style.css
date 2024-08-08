@@ -27,6 +27,7 @@ body
     grid-template-columns: 90%;
     justify-content: center;
     width: 75%;
+    text-align: left;
 }
 .topic-heading p {
     font-size: 1.5rem;
