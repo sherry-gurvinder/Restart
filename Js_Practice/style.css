@@ -1,45 +1,121 @@
-body
+html, body {
+    margin: 0;
+    height: 100%; /* Ensures the body takes up full viewport height */
+}
+body{
+    display:flex;
+    min-height: 100%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+
+
+.social-media a {
+    color: #fff;
+    margin-left: 1em;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+.wrapper
 {
-    background-color: #00878b;
-    color: white;
-}
-
-
-.Nav-list
-{
-
-}
-
-.container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr auto;
-    justify-items: center;
-    grid-auto-rows: 10rem;
-    grid-row-gap: 5rem;
-}
-.topic-main {
-    text-align: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     border: 1px solid;
-    height: 10rem;
-    width: 70%;
-    display: grid;
 }
-.topic-card {
-    display: grid;
-    align-content: space-evenly;
+main {
+    display: flex;
+    flex: 1;
+    border: 1px solid;
+    background: black;
+    color: white;
+    flex-direction: column;
+}
+section.Topic {
+    display: flex;
+    /* flex-direction: column; */
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Topic-Heading {
+    display: flex;
+    justify-content: center;
+
+   
+        flex-basis: 100%;
   
 }
-.topic-sub-head
-{}
-.topic-button {
-}
-li {
-    display: inline;
-    font-size: 2rem;
+.Topic-Item
+{
+    
+        border: 1px solid;
+        padding: 5rem;
+        flex-basis: 11%;
+        height: 10rem;
+        text-align: center;
+        margin: 1rem;
+        border-bottom-left-radius: 22rem;
+        border-bottom-right-radius: 22rem;
+        background: #d4bf33;
+    }
+footer {
+    bottom: 0;
+    border: 1px solid;
+    
 }
 
-Nav {
-    display: grid;
-    background: repeating-linear-gradient(45deg, white, transparent 100px);
+.Topic-Item
+{
+    flex-basis: 22%;
+    color: black;
+    font-size: 1.2rem;
+}
+
+button {
+    background: black;
+    padding: 1rem;
+    color: white;
+    border-bottom-right-radius: 46%;
+    border: 1px solid;
+}
+
+button a {
+    color: #d4bf33;
+    text-decoration: none;
+    font-size: 1.5rem;
+    
+}
+
+
+footer {
+    background: #f1f1f1;
+    padding: 1em;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
