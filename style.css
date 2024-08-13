@@ -1,41 +1,141 @@
-body{
-    background: lightblue;
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
-nav
-{
-  display: grid;
-  border: 1px solid;
-  grid-template-columns: 100%;
+body {
+    display: flex;
+    flex-direction: column;
 }
-nav ul{    justify-self: end;}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+main {
+    flex: 1;
+    background: black;
+    display: flex;
+    border: 1px solid;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    border: 1px solid;
+    height: 5rem;
+    font-size: 1.5rem;
+}
+nav ul{
+    justify-self: end;
+}
 nav ul li{
     display: inline;
 }
-main
-{
-    display: grid;
-    border: 1px solid;
-}
 
 section.header {
-    display: grid;
+    display: flex;
     justify-content: center;
 }
-footer
-{
-    display: grid;
-    border: 1px solid;
-    margin: bottom 0;
-}
 
+.project-heading {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+}
 .project-item {
     border: 1px solid;
     padding: 5rem;
+    flex-basis: 15rem;
+    height: 10rem;
+    text-align: center;
+    margin: 1rem;
+    border-bottom-left-radius: 22rem;
+    border-bottom-right-radius: 22rem;
+    background: #d4bf33;
 }
 
 .projects {
-    grid-template-columns: 50% 50%;
-    display: grid;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: black;
+    color: white;
+}
+
+.project-item a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid;
+    padding: 1rem;
+    background: black;
+    border-bottom-right-radius: 2rem;
+}
+
+.project-heading h1
+{
+    border: 1px solid;
+    padding: 1rem;
+}
+
+
+footer {
+    background: #f1f1f1;
+    padding: 1em;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.social-media a {
+    color: #fff;
+    margin-left: 1em;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
 }
