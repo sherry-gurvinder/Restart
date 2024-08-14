@@ -4,16 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel='stylesheet'>
-    <title>Objects</title>
+    <title>Objects</title> 
+    
+    <style>
+        .header {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    justify-content: space-between;
+    border: 1px solid white;
+    padding: 1rem;
+    background: #333;
+}
+.logo
+{
+    display: grid;
+}
+section.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.social-media {
+    display: grid;
+    justify-items: end;
+    grid-template-columns: 1fr;
+    justify-items: end;
+    /* justify-content: space-around; */
+}
+section.social-media a {
+    color: white;
+    text-decoration: none;
+}
+.footer
+{
+    display: grid;
+    border: 1px solid white;
+  
+        background: #f1f1f1;
+        padding: 1em;
+        text-align: center;
+        border-top: 1px solid #ddd;
+ 
+}
+section.footer p, a {
+    color: black;
+    margin: 0;
+}
+.footer a {
+    color: #007bff !important;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+    </style>
 </head>
 <body>
-    <div class="Nav">
-        <div class="Nav-list">
-            <ul>
-                <li> <p>Objects</p> </li>
-            </ul> 
-        </div>
-    </div>
+    <section class="header">
+        <section class="logo">
+            <h1>Gurvinder Singh</h1>
+            <p>Web Developer | Designer | Fullstack | React | NodeJS </p>
+        </section>
+        <section class="social-media">
+            <section class="links">
+                <a href="https://linkedin.com/in/sherrygurvinder" target="_blank">LinkedIn</a>
+            | 
+            <a href="https://github.com/sherry-gurvinder" target="_blank">GitHub</a>
+            </section>
+        </section>
+    </section>
     <div class="container"> 
         <div class="topic">
             <div class="topic-heading"><h1>Creating Object Literals</h1></div>
@@ -22,7 +81,7 @@
                     <p> In JavaScript, objects are a fundamental data type used to store collections of data in key-value pairs.</p>
                     <p>Objects can be assigned to variables just like any JavaScript type. We use curly braces, {}, to designate an object literal</p>
                     <p>let spaceship = {}; // spaceship is an empty object</p>
-                    <span> <img src="../images/object.png"></span>
+                   <img src="../images/object.png">
                 </div>
                 <div class="topic-code">
                     <h1>Accessing Properties: </h1>
@@ -31,16 +90,16 @@
                             <p class="topic-code-area">dot notation, .</p>
                             <p class="topic-code-area">
                                 <code>
-                                    <span><img src="../images/access-object.png"></span>
+                                  <img src="../images/access-object.png">
                                 </code>
                             </p>
                         </li>
                         <li>
                             <p class="topic-code-area">Bracket Notation: The second way to access a key’s value is by using bracket notation, [ ].</p>
                             <p class="topic-code-area">
-                                <code>
-                                    <span><img src="../images/bracket notation.png"></span>
-                                </code>
+                               
+                                   <img src="../images/bracket notation.png">
+                              
                             </p>
                         </li>  
                     </ul>
@@ -279,30 +338,75 @@
         <!---->
          <!-- Topic Placeholder-->
          <div class="topic">
-            <div class="topic-heading"><h1>------------------</h1></div>
+            <div class="topic-heading"><h1>Advanced Objects Introduction</h1></div>
             <div class="topic-card">
                 <div class="topic-explain">
-                    <p> ----------------</p>
-                    <p>--------------------------</p>
+                    <p>'this' Keyword:</p>
+                    <p>The this keyword references the calling object which provides access to the calling object’s properties.</p>
                 </div>
                 <div class="topic-code">
                     <ul>
                         <li>
-                            <p class="topic-code-area">PlaceHolder</p>
+                            <p class="topic-code-area">Global Context:</p>
                             <p class="topic-code-area">
                                 <code>
-                                    <span></span>
+                                    <span> console.log(this); // In a browser, this logs the window object.</span>
                                 </code>
                             </p>
                         </li>
                         <li>
-                            <p class="topic-code-area">PlaceHolder</p>
+                            <p class="topic-code-area">Object Method: When used inside a method of an object, this refers to the object itself.</p>
                             <p class="topic-code-area">
                                 <code>
-                                    <span></span>
+                                    <span>const person = { <br>
+                                        name: 'Gurvnder', <br>
+                                        greet: function() { <br>
+                                          console.log(this.name); <br>
+                                        }
+                                      };
+                                      person.greet(); // Logs "Gurvinder"</span>
                                 </code>
                             </p>
-                        </li>  
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Constructor Function: In a constructor function (used with new), this refers to the newly created instance.</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>function Person(name) {
+                                        this.name = name;
+                                      }
+                                      const gurvinder = new Person('Gurvinder');
+                                      console.log(gurvinder.name); // Logs "Gurvinder"</span>
+                                </code>
+                            </p>
+                        </li> 
+                        <li>
+                            <p class="topic-code-area">Arrow Functions: Arrow functions do not have their own this context; instead, they inherit this from their enclosing lexical context.</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>const person = {
+                                        name: 'Gurvinder',
+                                        greet: function() {
+                                          const innerFunc = () => {
+                                            console.log(this.name); // 'this' refers to the person object
+                                          };
+                                          innerFunc();
+                                        }
+                                      };
+                                      person.greet(); // Logs "Gurvinder"</span>
+                                </code>
+                            </p>
+                        </li> 
+                        <li>
+                            <p class="topic-code-area">Event Handlers: In event handlers, this refers to the element that triggered the event.</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>document.querySelector('button').addEventListener('click', function() {
+                                        console.log(this); // Logs the button element
+                                      });</span>
+                                </code>
+                            </p>
+                        </li> 
                     </ul>
                 </div>   
             </div>
@@ -341,5 +445,11 @@
     </div>
     <!-- Container End-->
     </div>
+    <section class="footer">
+            
+        <p>&copy; 2024 Gurvinder Singh. All rights reserved.</p>
+        <p>Contact me: <a href="mailto:your.email@example.com">sgurvinder0594@gmail.com</a></p>
+    
+</section>
 </body>
 </html>

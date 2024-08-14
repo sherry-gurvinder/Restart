@@ -24,16 +24,27 @@ body
     display: grid;
     background: white;
     color: black;
-    grid-template-columns: 90%;
+    grid-template-columns: 88%;
     justify-content: center;
-    width: 75%;
     text-align: left;
+    min-width: 80%;
+    max-width: 80%;
 }
 .topic-heading p {
     font-size: 1.5rem;
     font-weight: bold;
     font-style: italic;
     text-decoration: underline;
+}
+.topic-explain {
+    display: grid;
+}
+.topic-explain img {
+    /* display: grid; */
+    width: 100%;
+}
+p.topic-code-area img {
+    width: 100%;
 }
 .topic-code ul {
   
@@ -67,9 +78,9 @@ Nav {
 .topic .topic-heading > h1 {
     background: black;
     color: white;
-  
     padding: 1rem;
     border-bottom-left-radius: 10rem;
+    text-align: end;
 }
 .topic-code li {
     font-size: 1.1rem;

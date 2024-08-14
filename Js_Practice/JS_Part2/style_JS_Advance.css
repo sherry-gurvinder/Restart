@@ -1,0 +1,143 @@
+html ,body
+{
+    height: 100%;
+}
+body
+{
+    margin: 0;
+    display: grid;
+    height: 100%;
+    background: black;
+    color: white;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 80% 10%;
+}
+.header {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    justify-content: space-between;
+    border: 1px solid white;
+    padding: 1rem;
+    background: #333;
+}
+.logo
+{
+    display: grid;
+}
+section.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.social-media {
+    display: grid;
+    justify-items: end;
+    grid-template-columns: 1fr;
+    justify-items: end;
+    /* justify-content: space-around; */
+}
+section.social-media a {
+    color: white;
+    text-decoration: none;
+}
+.main {
+    display: grid;
+    border: 1px solid white;
+    grid-template-rows: 1fr 2fr;
+}
+.heading {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: white;
+    grid-template-rows: 1fr 2fr;
+    justify-items: center;
+    padding: 1rem;
+}
+.topics {
+    display: grid;
+    border: 1px solid white;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    grid-auto-rows: minmax(29%, auto);
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+}
+.heading {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: white;
+    grid-template-rows: 1fr 2fr;
+    background: white;
+    color: black;
+}
+section.heading h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 2rem;
+    border: 1px solid white;
+    padding: 1rem;
+    /* background: #d4bf33; */
+    border: 1px solid;
+    display: grid;
+    align-items: center;
+}
+.section-card p {
+    font-size: 1.2rem;
+}
+
+.items {
+    display: grid;
+    border: 1px solid white;
+    align-self: center;
+    background: #d4bf33;
+    border-top-right-radius: 45%;
+    width: 45%;
+    height: 35%;
+    justify-content: center;
+    align-items: center;
+}
+.topics-heading {
+    display: grid;
+    position: absolute;
+}
+section.topics-heading h1 {
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-top: 3rem;
+    border: 1px solid;
+}
+section.items a {
+    padding: 0rem;
+    border-top-right-radius: 66%;
+    font-size: 2rem;
+    color: white;
+    background: #d4bf33;
+    border: 0px;
+    text-decoration: underline;
+}
+.footer
+{
+    display: grid;
+    border: 1px solid white;
+  
+        background: #f1f1f1;
+        padding: 1em;
+        text-align: center;
+        border-top: 1px solid #ddd;
+ 
+}
+section.footer p, a {
+    color: black;
+    margin: 0;
+}
+.footer a {
+    color: #007bff !important;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}

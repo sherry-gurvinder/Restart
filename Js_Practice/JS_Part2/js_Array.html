@@ -5,16 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href="style.css" rel="stylesheet">
+    <style>
+        .header {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    justify-content: space-between;
+    border: 1px solid white;
+    padding: 1rem;
+    background: #333;
+}
+.logo
+{
+    display: grid;
+}
+section.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.social-media {
+    display: grid;
+    justify-items: end;
+    grid-template-columns: 1fr;
+    justify-items: end;
+    /* justify-content: space-around; */
+}
+section.social-media a {
+    color: white;
+    text-decoration: none;
+}
+.footer
+{
+    display: grid;
+    border: 1px solid white;
+  
+        background: #f1f1f1;
+        padding: 1em;
+        text-align: center;
+        border-top: 1px solid #ddd;
+ 
+}
+section.footer p, a {
+    color: black;
+    margin: 0;
+}
+.footer a {
+    color: #007bff !important;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+    </style>
 </head>
 <body>
-    <div class="Nav">
-        <div class="Nav-list">
-            <ul>
-                <li> <p>Array</p> </li>
-            </ul>
-           
-        </div>
-    </div>
+    <section class="header">
+        <section class="logo">
+            <h1>Gurvinder Singh</h1>
+            <p>Web Developer | Designer | Fullstack | React | NodeJS </p>
+        </section>
+        <section class="social-media">
+            <section class="links">
+                <a href="https://linkedin.com/in/sherrygurvinder" target="_blank">LinkedIn</a>
+            | 
+            <a href="https://github.com/sherry-gurvinder" target="_blank">GitHub</a>
+            </section>
+        </section>
+    </section>
     <div class="container"> 
         <div class="topic">
             <div class="topic-heading"><h1>Create an Array</h1></div>
@@ -61,6 +118,17 @@
                     </ul>
                 </div> 
                   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>Dot Notation vs. Bracket Notation</h1></div>
+            <div class="topic-card">
+                <div class="topic-code">
+                    <p class="topic-code-area">Dot Notation (city.key): This is used to access properties of an object where the property name is a fixed identifier (e.g., city.school).</p>
+                                <p class="topic-code-area">Bracket Notation (city[key]): This is used to access properties dynamically using a variable (e.g., city['school'] or city[key] where key is a variable).
+                                </p>
+                        
+                    </div>         
             </div>
         </div>
         <div class="topic">
@@ -113,11 +181,7 @@
                             </li>
                            
                         </ul>
-                    </div>
-                    
-
-
-                
+                    </div>         
             </div>
         </div>
         <div class="topic">
@@ -322,6 +386,43 @@
                 </div>   
             </div>
         </div>
+        <div class="topic">
+            <div class="topic-heading"><h1> hasOwnProperty</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p> The hasOwnProperty method is a built-in method in JavaScript that is used to check whether an object has a specific property as its own property (i.e., not inherited through the prototype chain).
+                    </p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">object.hasOwnProperty(propertyName)
+
+                                object: The object on which the method is called.
+                                propertyName: The name of the property you want to check for.
+                                Returns
+                                true: If the object has the specified property as its own property.
+                                false: If the object does not have the specified property as its own property or if the property is inherited.
+                                </p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <span>let person = {
+                                        name: "John",
+                                        age: 30
+                                      };
+                                      
+                                      console.log(person.hasOwnProperty("name")); // true
+                                      console.log(person.hasOwnProperty("age"));  // true
+                                      console.log(person.hasOwnProperty("toString")); // false, because `toString` is inherited 
+                                      </span>
+                                </code>
+                            </p>
+                        </li>
+                        
+                    </ul>
+                </div>   
+            </div>
+        </div>
 
         <!-- PlaceHolder-->
        <!-- <div class="topic">
@@ -354,6 +455,12 @@
         </div>-->
         <!-- PlaceHolder End-->
     </div>
+    <section class="footer">
+            
+        <p>&copy; 2024 Gurvinder Singh. All rights reserved.</p>
+        <p>Contact me: <a href="mailto:your.email@example.com">sgurvinder0594@gmail.com</a></p>
+    
+</section>
 </body>
 <script src="script.js"></script>
 </html>
