@@ -41,10 +41,10 @@ body
 }
 .topic-explain img {
     /* display: grid; */
-    width: 100%;
+    width: 50%;
 }
 p.topic-code-area img {
-    width: 100%;
+    width: 50%;
 }
 .topic-code ul {
   

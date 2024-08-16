@@ -323,14 +323,7 @@ section.footer p, a {
                                 </code>
                             </p>
                         </li>
-                        <li>
-                            <p class="topic-code-area">PlaceHolder</p>
-                            <p class="topic-code-area">
-                                <code>
-                                    <span></span>
-                                </code>
-                            </p>
-                        </li>
+                       
                     </ul>
                 </div>   
             </div>
@@ -362,8 +355,8 @@ section.footer p, a {
                                         name: 'Gurvnder', <br>
                                         greet: function() { <br>
                                           console.log(this.name); <br>
-                                        }
-                                      };
+                                        }<br>
+                                      };<br>
                                       person.greet(); // Logs "Gurvinder"</span>
                                 </code>
                             </p>
@@ -372,10 +365,10 @@ section.footer p, a {
                             <p class="topic-code-area">Constructor Function: In a constructor function (used with new), this refers to the newly created instance.</p>
                             <p class="topic-code-area">
                                 <code>
-                                    <span>function Person(name) {
-                                        this.name = name;
-                                      }
-                                      const gurvinder = new Person('Gurvinder');
+                                    <span>function Person(name) {<br>
+                                        this.name = name;<br>
+                                      }<br>
+                                      const gurvinder = new Person('Gurvinder');<br>
                                       console.log(gurvinder.name); // Logs "Gurvinder"</span>
                                 </code>
                             </p>
@@ -384,15 +377,15 @@ section.footer p, a {
                             <p class="topic-code-area">Arrow Functions: Arrow functions do not have their own this context; instead, they inherit this from their enclosing lexical context.</p>
                             <p class="topic-code-area">
                                 <code>
-                                    <span>const person = {
-                                        name: 'Gurvinder',
-                                        greet: function() {
-                                          const innerFunc = () => {
-                                            console.log(this.name); // 'this' refers to the person object
-                                          };
-                                          innerFunc();
-                                        }
-                                      };
+                                    <span>const person = {<br>
+                                        name: 'Gurvinder',<br>
+                                        greet: function() {<br>
+                                          const innerFunc = () => {<br>
+                                            console.log(this.name); // 'this' refers to the person object<br>
+                                          };<br>
+                                          innerFunc();<br>
+                                        }<br>
+                                      };<br>
                                       person.greet(); // Logs "Gurvinder"</span>
                                 </code>
                             </p>
@@ -401,8 +394,8 @@ section.footer p, a {
                             <p class="topic-code-area">Event Handlers: In event handlers, this refers to the element that triggered the event.</p>
                             <p class="topic-code-area">
                                 <code>
-                                    <span>document.querySelector('button').addEventListener('click', function() {
-                                        console.log(this); // Logs the button element
+                                    <span>document.querySelector('button').addEventListener('click', function() {<br>
+                                        console.log(this); // Logs the button element<br>
                                       });</span>
                                 </code>
                             </p>
@@ -413,27 +406,58 @@ section.footer p, a {
         </div>
          <!-- Topic Placeholder-->
         <div class="topic">
-            <div class="topic-heading"><h1>------------------</h1></div>
+            <div class="topic-heading"><h1>get and set</h1></div>
             <div class="topic-card">
-                <div class="topic-explain">
-                    <p> ----------------</p>
-                    <p>--------------------------</p>
-                </div>
+                
                 <div class="topic-code">
                     <ul>
                         <li>
-                            <p class="topic-code-area">PlaceHolder</p>
+                            <p class="topic-code-area">In JavaScript, getters are special methods in objects or classes that allow you to access properties in a controlled way. They are part of the broader concept of accessor properties, which also includes setters.</p>
                             <p class="topic-code-area">
                                 <code>
-                                    <span></span>
+                                    <span>
+                                        const person = { <br>
+                                            firstName: 'Gurvinder', <br>
+                                            lastName: 'singh', <br>
+                                          
+                                            // Getter to compute the full name <br>
+                                            get fullName() { <br>
+                                              return `${this.firstName} ${this.lastName}`; <br>
+                                            } <br>
+                                          }; <br>
+                                          
+                                          console.log(person.fullName); // "Gurvinder Singh" <br>
+                                    </span>
                                 </code>
                             </p>
                         </li>
                         <li>
-                            <p class="topic-code-area">PlaceHolder</p>
+                            <p class="topic-code-area"> setters are special methods that allow you to define custom behavior when setting the value of an object's property. They provide a way to intercept property assignments, making it possible to control how a property is updated or to perform additional actions whenever a property value changes.</p>
                             <p class="topic-code-area">
                                 <code>
-                                    <span></span>
+                                    <span>
+                                        const person = {<br>
+                                            _name: '',<br>
+                                        
+                                            set name(newName) {<br>
+                                              if (typeof newName === 'string' && newName.length > 0) {<br>
+                                                this._name = newName;<br>
+                                              } else {<br>
+                                                console.log('Please provide a valid name');<br>
+                                              }<br>
+                                            },<br>
+                                          
+                                            get name() {<br>
+                                              return this._name;<br>
+                                            }<br>
+                                          };<br>
+                                          
+                                          person.name = 'Gurvinder'; // Sets the name to 'Gurvinder'<br>
+                                          console.log(person.name);   // Logs 'Gurvinder'<br>
+                                          
+                                          person.name = '';           // Logs 'Please provide a valid name'<br>
+                                          console.log(person.name);   // Still logs 'Gurvinder'<br>
+                                    </span>
                                 </code>
                             </p>
                         </li>  
@@ -441,7 +465,281 @@ section.footer p, a {
                 </div>   
             </div>
         </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>Factory Functions</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>A factory function in JavaScript is a function that returns a new object every time it is called.</p>
+                    <p>A factory function is just a regular function that creates and returns a new object. You can use it to create multiple objects with the same structure.</p>
+                    <p>Unlike constructors that use the new keyword, factory functions create objects without the new keyword. They are a popular way to create objects in JavaScript because they provide more flexibility and avoid some of the pitfalls associated with the this keyword in constructors.</p>
+                </div>
+                <div class="topic-code">
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">Factory Function</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    function createPerson(name, age) {<br>
+                                        return {<br>
+                                          name: name,<br>
+                                          age: age,<br>
+                                          greet() {<br>
+                                            console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);<br>
+                                          }<br>
+                                        };<br>
+                                      }<br>
+                                      
+                                      const person1 = createPerson('Gurvinder', 30);<br>
+                                      const person2 = createPerson('Simran', 25);<br>
+                                      
+                                      person1.greet(); // Logs: "Hello, my name is Gurvinder and I am 30 years old."<br>
+                                      person2.greet(); // Logs: "Hello, my name is Simran and I am 25 years old."<br>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Constructor Function:</p>
+                            <p class="topic-code-area"><code>
+                                function Person(name, age) {<br>
+                                    this.name = name;<br>
+                                    this.age = age;<br>
+                                  }<br>
+                                  
+                                  Person.prototype.greet = function() {<br>
+                                    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);<br>
+                                  };<br>
+                                  
+                                  const person = new Person('Gurvinder', 30);<br>
+                                  person.greet(); // Logs: "Hello, my name is Gurvinder and I am 30 years old."
+                                </code>
+                            </p>
+                            <p class="topic-code-area">Why Use Factory Functions?<br>
+                                No new Keyword: You don't need to use new like you do with constructor functions. Just call the function, and it returns an object.
+                                
+                                No this Issues: Since factory functions don't rely on this, you avoid common mistakes where this gets misinterpreted.
+                                
+                                Flexible: You can easily add or change properties inside the factory function.</p>
+                        </li>  
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>Destructured assignment </h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>In JavaScript is a convenient way to extract values from objects or arrays and assign them to variables. It's especially useful when dealing with complex data structures.</p>                  
+                </div>
+                <div class="topic-code">
+                    <h1>Destructuring Objects</h1>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">When you have an object, you can extract its properties into individual variables using destructuring.</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    const person = {<br>
+                                        name: 'Gurvinder',<br>
+                                        age: 30,<br>
+                                        city: 'Toronto'<br>
+                                      };<br>
+                                      
+                                      // Destructuring the object<br>
+                                      const { name, age, city } = person;<br>
+                                      
+                                      console.log(name); // Logs: 'Gurvinder'<br>
+                                      console.log(age);  // Logs: 30<br>
+                                      console.log(city); // Logs: 'Toronto'<br>
+                                </code>
+                            </p>
+                            <p>Here, { name, age, city } extracts the values from the person object and assigns them to variables with the same name as the object’s properties.</p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Renaming Variables:</p>
+                            <p class="topic-code-area">
+                                const person = {<br>
+                                    name: 'Gurvinder',<br>
+                                    age: 30,<br>
+                                    city: 'Toronto'<br>
+                                  };<br>
+                                  
+                                  // Destructuring with renaming<br>
+                                  const { name: fullName, age: years, city: hometown } = person;<br>
+                                  
+                                  console.log(fullName); // Logs: 'Gurvinder'<br>
+                                  console.log(years);    // Logs: 30<br>
+                                  console.log(hometown); // Logs: 'Toronto'<br>
+                            </p>
+                        </li>  
+                    </ul>
+                </div>   
+            </div>
+       
+                <div class="topic-code">
+                    <h1>Destructuring Arrays</h1>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">Destructuring works similarly with arrays, allowing you to unpack values from an array into individual variables.</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    const numbers = [10, 20, 30];<br>
+
+                                    // Destructuring the array<br>
+                                    const [first, second, third] = numbers;<br>
+
+                                    console.log(first);  // Logs: 10<br>
+                                    console.log(second); // Logs: 20<br>
+                                    console.log(third);  // Logs: 30<br>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Skipping Elements: You can skip elements in an array by leaving an empty space in the destructuring assignment.</p>
+                            <p class="topic-code-area">
+                                    <code>
+                                        const numbers = [10, 20, 30];<br>
+
+                                        // Skip the second element<br>
+                                        const [first, , third] = numbers;<br>
+
+                                        console.log(first);  // Logs: 10<br>
+                                        console.log(third);  // Logs: 30<br>
+                                    </code>
+                            </p>
+                        </li>  
+                        <li>
+                            <p class="topic-code-area">Default Values: You can provide default values in case the property or element doesn’t exist:</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    const person = {<br>
+                                        name: 'Gurvinder',<br>
+                                        age: 30<br>
+                                      };<br>
+                                      
+                                      // Providing default values<br>
+                                      const { name, age, city = 'Unknown' } = person;<br>
+                                      
+                                      console.log(city); // Logs: 'Unknown'<br>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Nested Destructuring:If you have a nested object or array, you can destructure it similarly:</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    const person = {<br>
+                                        name: 'Gurvinder',<br>
+                                        address: {<br>
+                                          city: 'Toronto',<br>
+                                          zip: 'M1t'<br>
+                                        }<br>
+                                      };<br>
+                                      
+                                      // Nested destructuring<br>
+                                      const { name, address: { city, zip } } = person;<br>
+                                      
+                                      console.log(city); // Logs: 'Toronto'<br>
+                                      console.log(zip);  // Logs: 'M5V'<br>
+                                      
+                                </code>
+                            </p>
+                        </li>
+                    </ul>
+                </div>   
+       
+    
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>  ....</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>.....</p>
+                    <p>....</p>
+                    <p>...</p>
+                   
+                </div>
+                <div class="topic-code">
+                    <h1>.....</h1>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">.....</p>
+                            <p class="topic-code-area">
+                                <code>
+                                 
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">......</p>
+                            <p class="topic-code-area">
+                 
+                            </p>
+                        </li>  
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>  ....</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>.....</p>
+                    <p>....</p>
+                    <p>...</p>
+                   
+                </div>
+                <div class="topic-code">
+                    <h1>.....</h1>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">.....</p>
+                            <p class="topic-code-area">
+                                <code>
+                                 
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">......</p>
+                            <p class="topic-code-area">
+                 
+                            </p>
+                        </li>  
+                    </ul>
+                </div>   
+            </div>
+        </div>
         <!-- Topic Placeholder-->
+        <div class="topic">
+            <div class="topic-heading"><h1>  ....</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>.....</p>
+                    <p>....</p>
+                    <p>...</p>
+                  
+                </div>
+                <div class="topic-code">
+                    <h1>.....</h1>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">.....</p>
+                            <p class="topic-code-area">
+                                <code>
+                                 
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">......</p>
+                            <p class="topic-code-area">
+                 
+                            </p>
+                        </li>  
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <!-- End-->
     </div>
     <!-- Container End-->
     </div>
