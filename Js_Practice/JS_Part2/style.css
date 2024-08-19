@@ -86,9 +86,10 @@ Nav {
     font-size: 1.1rem;
 }
 .topic-code p {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     text-align: left;
-    font-weight: bold;
+    /* font-weight: bold; */
+    font-family: cursive;
 }
 code {
     font-weight: lighter;

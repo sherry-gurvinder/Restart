@@ -645,70 +645,93 @@ section.footer p, a {
                         </li>
                     </ul>
                 </div>   
-       
-    
         </div>
         <div class="topic">
-            <div class="topic-heading"><h1>  ....</h1></div>
+            <div class="topic-heading"><h1>Higher-Order Functions</h1></div>
             <div class="topic-card">
                 <div class="topic-explain">
-                    <p>.....</p>
-                    <p>....</p>
-                    <p>...</p>
-                   
+                    <p>we can assign functions to variables, and we can reassign them to new variables.</p> 
                 </div>
                 <div class="topic-code">
-                    <h1>.....</h1>
+                    <h1>Functions as Data</h1>
                     <ul>
                         <li>
-                            <p class="topic-code-area">.....</p>
+                            <p class="topic-code-area">we have an annoyingly long function name that hurts the readability of any code in which it’s used.</p>
                             <p class="topic-code-area">
                                 <code>
-                                 
+                                    const announceThatIAmDoingImportantWork = () => {<br>
+                                        console.log("I’m doing very important work!");<br>
+                                    };
                                 </code>
                             </p>
                         </li>
                         <li>
-                            <p class="topic-code-area">......</p>
+                            <p class="topic-code-area"> we can re-assign the function to a variable with a suitably short name:</p>
                             <p class="topic-code-area">
+                                <code>
+                                    const busy = announceThatIAmDoingImportantWork;<br>
+
+                                    busy(); // This function call barely takes any space!<br>
+                                </code>
                  
                             </p>
                         </li>  
+                    <li>
+                        <p class="topic-code-area"> if we forgot the original name of our function. Is there a way we could figure it out?</p>
+                        <p class="topic-code-area">
+                            <code>
+                             console.log(busy.name);//announceThatIAmDoingImportantWork
+                            </code>
+                        </p>
+                    </li>
                     </ul>
                 </div>   
-            </div>
-        </div>
-        <div class="topic">
-            <div class="topic-heading"><h1>  ....</h1></div>
-            <div class="topic-card">
-                <div class="topic-explain">
-                    <p>.....</p>
-                    <p>....</p>
-                    <p>...</p>
-                   
-                </div>
                 <div class="topic-code">
-                    <h1>.....</h1>
+                    <h1>Functions as Parameters</h1>
                     <ul>
                         <li>
-                            <p class="topic-code-area">.....</p>
+                            <p class="topic-code-area">A higher-order function is a function that either accepts functions as parameters, returns a function, or both!</p>
+                            <p class="topic-code-area">
+                                The checkConsistentOutput function has two parameters. The first parameter is a function, and the second parameter is any number.
+                                 Inside the function, we declare two different variables: checkA and checkB.<br>
+
+                                checkA holds the value of the second argument plus 2.<br>
+                                checkB holds the result of invoking the passed function (func) with the second argument as its parameter.<br>
+                                We then compare checkA and checkB. <br>
+                                If the values of checkA and checkB are the same, the function returns the value of checkB. Otherwise, it returns 'Inconsistent results'.
+
+                            </p>
+                            <p>func is the callback function passed as the first argument.</p>
                             <p class="topic-code-area">
                                 <code>
-                                 
+                                    const addTwo = num => {<br>
+                                        return num + 2;}<br>
+                                      const checkConsistentOutput = (func, val) => {<br>
+                                      
+                                        let checkA = val+2;<br>
+                                        let checkB = func(val); {<br>
+                                       <br>
+                                        if(checkA===checkB)<br>
+                                          return checkB; }<br>
+                                       
+                                        else<br>
+                                        {
+                                          <br>return 'inconsistent results'; <br>
+                                        }
+                                      }<br>
+                                      console.log(checkConsistentOutput(addTwo,22));<br>
                                 </code>
                             </p>
                         </li>
-                        <li>
-                            <p class="topic-code-area">......</p>
-                            <p class="topic-code-area">
-                 
-                            </p>
-                        </li>  
-                    </ul>
-                </div>   
+                        </ul>
+                      </div>  
             </div>
         </div>
-        <!-- Topic Placeholder-->
+
+        
+        <!--
+        Topic Placeholder-->
+         <!--
         <div class="topic">
             <div class="topic-heading"><h1>  ....</h1></div>
             <div class="topic-card">
@@ -739,7 +762,9 @@ section.footer p, a {
                 </div>   
             </div>
         </div>
+    -->
         <!-- End-->
+       
     </div>
     <!-- Container End-->
     </div>
