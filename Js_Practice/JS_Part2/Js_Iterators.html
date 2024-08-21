@@ -78,26 +78,210 @@ section.footer p, a {
             <div class="topic-heading"><h1>.forEach()</h1></div>
             <div class="topic-card">
                 <div class="topic-explain">
-                    <p>.....</p>
-                    <p>....</p>
-                    <p>...</p>
+                    
+                    <p>The .forEach() method is a way to execute a function on each item in an array. 
+                        It’s often used when you need to perform actions on each element, but don't need to create a new array or return a value.</p>
+                    
                   
                 </div>
                 <div class="topic-code">
-                    <h1>.....</h1>
+                    <h1>Syntax: array.forEach(callback(currentValue [, index [, array]]) [, thisArg]);</h1>
+                    <ul>
+                        <li>callback: This is the function that is called for every item in the array.</li>
+
+                        <li>currentValue: The value of the current element in the array.</li>
+                        <li>index (optional): The index of the current element (position in the array).</li>
+                        <li>array (optional): The original array that .forEach() was called upon.</li>
+                        <li>thisArg (optional): The value to use as this when executing the callback function.</li>
+                    </ul>
                     <ul>
                         <li>
-                            <p class="topic-code-area">.....</p>
+                            <p class="topic-code-area">
+                                Basic Example
+                            </p>
                             <p class="topic-code-area">
                                 <code>
-                                 
+                                    const numbers = [1, 2, 3, 4, 5];<br>
+
+                                    numbers.forEach(function(number) {<br>
+                                      console.log(number);<br>
+                                    });<br> //Output:
+                                    1
+                                    2
+                                    3
+                                    4
+                                    5
                                 </code>
                             </p>
                         </li>
                         <li>
-                            <p class="topic-code-area">......</p>
+                            <p class="topic-code-area">Using Index: index of each element inside the .forEach() function:</p>
                             <p class="topic-code-area">
-                 
+                                <code>const fruits = ['apple', 'banana', 'cherry'];<br>
+
+                                    fruits.forEach(function(fruit, index) {<br>
+                                      console.log(`Index ${index}: ${fruit}`);<br>
+                                    });<br>
+                                Output// Index 0: apple
+                                Index 1: banana
+                                Index 2: cherry</code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Using thisArg:(refer to original array)You can provide a value for thisArg if you want to use a specific context inside your callback.
+                                <br> names refer to the original array.
+                            </p>
+                            <p class="topic-code-area">
+                                <code>
+                                    
+                                const names = ['Gurvinder', 'Singh', 'kathy'];<br>
+                                
+                                names.forEach(function(element,index,array) {<br>
+                                    console.log(element,index,array);<br>
+                                }); <br>Output//<br>
+                                Gurvinder 0 [ 'Gurvinder', 'Singh', 'kathy' ]<br>
+                                Singh 1 [ 'Gurvinder', 'Singh', 'kathy' ]<br>
+                                kathy 2 [ 'Gurvinder', 'Singh', 'kathy' ]<br>
+
+                                names.forEach(function(array) {<br>
+                                    console.log(names);<br>
+                                });<br> output//
+                                <br>Gurvinder<br>
+                                Singh<br>
+                                kathy
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Using Arrow Functions</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    const colors = ['red', 'green', 'blue'];<br>
+
+                                    colors.forEach(color => {<br>
+                                    console.log(color);<br>
+                                    });<br>
+                                </code>
+                            </p>
+                        </li>
+                              
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>The .map() Method</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>map() function, which is a method used with arrays in JavaScript .map() is called on an array, it takes an argument of a callback function and returns a new array! .</p>
+                    <p>.map() works in a similar manner to .forEach()— the major difference is that .map() returns a new array.</p>
+                  
+                  
+                </div>
+                <div class="topic-code">
+                    <h1>Syntax
+                        array.map((element, index, array) => {   
+                        });</h1>
+                        <ul>
+                            <li>element: The current element being processed in the array.</li>
+                            <li>index: The index of the current element being processed.</li>
+                            <li>array: The original array that map() was called upon.</li>
+                        </ul>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">Basic Example:Transforming an array of numbers to their squares:</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    let numbers = [1, 2, 3, 4, 5];<br>
+                                    let squares = numbers.map(num => num * num);<br>
+                                    
+                                    console.log(squares); // Output: [1, 4, 9, 16, 25]<br>
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Using Index: Appending the index to each element:</p>
+                            <p class="topic-code-area">
+                                <code>let names = ['gurvinder', 'singh', 'GS'];<br>
+                                    let namesWithIndex = names.map((name, index) => `${name} #${index}`);<br>  
+                                    console.log(namesWithIndex); // Output: ["gurvinder #0", "singh #1", "GS #2"]</code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Converting Objects: Extracting a specific property from an array of objects:</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    let users = [ <br>
+                                            { name: 'gurvinder', age: 25 },<br>
+                                            { name: 'singh', age: 30 },<br>
+                                            { name: 'dharuv', age: 35 }<br>
+                                        ];<br>
+                                        let names = users.map(user => user.name);<br>
+
+                                        console.log(names); // Output: ["gurvinder", "singh", "dharuv"]
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Chaining Methods: Combining map() with other array methods:</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    let numbers = [1, 2, 3, 4, 5];<br>
+                                    let result = numbers<br>
+                                        .map(num => num * 2)       // Double each number<br>
+                                        .filter(num => num > 5);   // Keep only numbers greater than 5<br>
+                                    
+                                    console.log(result); // Output: [6, 8, 10]<br>
+                                </code>
+                            </p>
+                        </li>
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>The .filter() Method</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>The .filter() method in JavaScript is used to create a new array with all elements that pass a test implemented by a provided function. </p>
+                    <p>. The callback function for the .filter() method should return true or false depending on the element that is passed to it. The elements that cause the callback function to return true are added to the new array. </p>
+                    
+                  
+                </div>
+                <div class="topic-code">
+                    <h1>Syntax: array.filter((element, index, array) => {
+                       
+                    });</h1>
+                    <ul>
+                        <li>element: The current element being processed in the array.</li>
+                        <li>index: The index of the current element being processed.</li>
+                        <li>array: The original array that .filter() was called upon.</li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">Basic Filtering: Filtering out odd numbers from an array:</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    let numbers = [1, 2, 3, 4, 5, 6];<br>
+                                    let evenNumbers = numbers.filter(num => num % 2 === 0);<br>
+
+                                    console.log(evenNumbers); // Output: [2, 4, 6]
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Filter users whose age is greater than 30</p>
+                            <p class="topic-code-area">
+                                let users = [<br>
+                                { name: 'Gurvinder', age: 25 },<br>
+                                { name: 'singh', age: 30 },<br>
+                                { name: 'sham', age: 35 }<br>
+                            ];<br>
+                     
+                            const userAgeAbove30 = users.filter(element => element.age > 30);<br>
+                            console.log(userAgeAbove30); <br>
+                        // Output: [{ name: 'sham', age: 35 }]<br>
+                           <br>
                             </p>
                         </li>  
                     </ul>
@@ -105,29 +289,38 @@ section.footer p, a {
             </div>
         </div>
         <div class="topic">
-            <div class="topic-heading"><h1>  ....</h1></div>
+            <div class="topic-heading"><h1>Understanding .map() vs. .filter()</h1></div>
             <div class="topic-card">
                 <div class="topic-explain">
-                    <p>.....</p>
-                    <p>....</p>
-                    <p>...</p>
+                    <p>.map(): Transforms each element in the array based on a function and returns a new array of the same length as the original. The function should return a new value for each element.</p>
+                    <p>.filter(): Creates a new array containing only the elements that pass a test. The function should return a boolean value (true or false), and only elements that return true are included in the new array.</p>
+                    
                   
                 </div>
                 <div class="topic-code">
-                    <h1>.....</h1>
+                    <h1>map() vs filter(): Use .map() when you need to transform data, and .filter() when you need to select a subset of elements based on a condition.</h1>
+                    <h2>.find(): Use when you want the first matching element.<br>
+                        .filter(): Use when you want all matching elements</h2>
                     <ul>
                         <li>
-                            <p class="topic-code-area">.....</p>
+                            <p class="topic-code-area">return a value of each array element for new array</p>
                             <p class="topic-code-area">
                                 <code>
-                                 
+                                    let ageChecks = users.map(element => element.age > 30);<br>
+
+                                    console.log(ageChecks); <br>
+                                    // Output: [false, false, true]<br>
                                 </code>
                             </p>
                         </li>
                         <li>
-                            <p class="topic-code-area">......</p>
+                            <p class="topic-code-area">Return and add the value into new array where the condition is true.</p>
                             <p class="topic-code-area">
-                 
+                                <code>
+                                    let userAgeAbove30 = users.filter(element => element.age > 30);<br>
+                                    console.log(userAgeAbove30); <br>
+                                    // Output: [{ name: 'Charlie', age: 35 }]<br>
+                                </code>
                             </p>
                         </li>  
                     </ul>
@@ -135,155 +328,83 @@ section.footer p, a {
             </div>
         </div>
         <div class="topic">
-            <div class="topic-heading"><h1>  ....</h1></div>
+            <div class="topic-heading"><h1>findIndex()</h1></div>
             <div class="topic-card">
                 <div class="topic-explain">
-                    <p>.....</p>
-                    <p>....</p>
-                    <p>...</p>
-                  
+                    <p> Calling .findIndex() on an array will return the index of the first element that evaluates to true in the callback function.</p>
+                                 
                 </div>
                 <div class="topic-code">
-                    <h1>.....</h1>
+                    <h1>Syntax: array.findIndex((element, index, array) => {<br>
+                        // Return true if the condition is met{<br>
+                    });</h1>
                     <ul>
                         <li>
-                            <p class="topic-code-area">.....</p>
+                            <p class="topic-code-area">Finding the index of the first number greater than 20:</p>
                             <p class="topic-code-area">
                                 <code>
-                                 
+                                    let numbers = [10, 20, 30, 40, 50];<br>
+                                    let index = numbers.findIndex(num => num > 20);<br>
+                                    console.log(index); // Output: 2 (30 is the third element in the array)<br>
                                 </code>
                             </p>
                         </li>
-                        <li>
-                            <p class="topic-code-area">......</p>
-                            <p class="topic-code-area">
-                 
-                            </p>
-                        </li>  
+                        
                     </ul>
                 </div>   
             </div>
         </div>
         <div class="topic">
-            <div class="topic-heading"><h1>  ....</h1></div>
+            <div class="topic-heading"><h1>reduce()</h1></div>
             <div class="topic-card">
                 <div class="topic-explain">
-                    <p>.....</p>
-                    <p>....</p>
-                    <p>...</p>
-                  
+                    <p>The .reduce() method in JavaScript is a powerful array method used to accumulate or reduce the values of an array into a single result based on a provided function. It’s useful for operations like summing values, concatenating elements, or combining arrays.</p>
+                                  
                 </div>
                 <div class="topic-code">
-                    <h1>.....</h1>
+                    <h1>Syntax: array.reduce((accumulator, currentValue, currentIndex, array) => {<br>
+                        // Return the updated accumulator<br>
+                    }, initialValue);</h1>
+                    <ul>
+                        <li>accumulator: The accumulated value returned from the last iteration. On the first iteration, it's the initialValue if provided, or the first element of the array if no initialValue is provided.</li>
+                        <li>currentValue: The current element being processed in the array.</li>
+                        <li>array: The original array that .reduce() was called upon (optional).</li>
+                        <li>initialValue: A value to use as the first argument to the first call of the callback function. If no initialValue is provided, the first element of the array will be used as the initial accumulator value.</li>
+                    </ul>
                     <ul>
                         <li>
-                            <p class="topic-code-area">.....</p>
+                            <p class="topic-code-area">Summing Array Elements</p>
                             <p class="topic-code-area">
                                 <code>
-                                 
+                                    let numbers = [1, 2, 3, 4, 5];<br>
+
+                                    // Sum all numbers in the array<br>
+                                    let sum = numbers.reduce((accumulator, currentValue) => accumulator + currentValue, 0);<br>
+                                    
+                                    console.log(sum); // Output: 15<br>
                                 </code>
                             </p>
                         </li>
                         <li>
-                            <p class="topic-code-area">......</p>
+                            <p class="topic-code-area"> Counting Occurrences</p>
                             <p class="topic-code-area">
-                 
-                            </p>
+                                <code>
+                                    let fruits = ['apple', 'banana', 'apple', 'orange', 'banana', 'banana'];<br>
+
+                                    let counts = fruits.reduce((accumulator, fruit) => {<br>
+                                        accumulator[fruit] = (accumulator[fruit] || 0) + 1;<br>
+                                        return accumulator;<br>
+                                    }, {});<br>
+                                </code>
+                             </p>
+                             <p class="topic-code-area">Explanation : accumulator[fruit] refers to the count for the current fruit. If accumulator['apple'] exists, 
+                                it increments the count by 1; otherwise, it sets the initial value to 0 if accumulator[fruit] is undefined.</p>
                         </li>  
                     </ul>
                 </div>   
             </div>
         </div>
-        <div class="topic">
-            <div class="topic-heading"><h1>  ....</h1></div>
-            <div class="topic-card">
-                <div class="topic-explain">
-                    <p>.....</p>
-                    <p>....</p>
-                    <p>...</p>
-                  
-                </div>
-                <div class="topic-code">
-                    <h1>.....</h1>
-                    <ul>
-                        <li>
-                            <p class="topic-code-area">.....</p>
-                            <p class="topic-code-area">
-                                <code>
-                                 
-                                </code>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="topic-code-area">......</p>
-                            <p class="topic-code-area">
-                 
-                            </p>
-                        </li>  
-                    </ul>
-                </div>   
-            </div>
-        </div>
-        <div class="topic">
-            <div class="topic-heading"><h1>  ....</h1></div>
-            <div class="topic-card">
-                <div class="topic-explain">
-                    <p>.....</p>
-                    <p>....</p>
-                    <p>...</p>
-                  
-                </div>
-                <div class="topic-code">
-                    <h1>.....</h1>
-                    <ul>
-                        <li>
-                            <p class="topic-code-area">.....</p>
-                            <p class="topic-code-area">
-                                <code>
-                                 
-                                </code>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="topic-code-area">......</p>
-                            <p class="topic-code-area">
-                 
-                            </p>
-                        </li>  
-                    </ul>
-                </div>   
-            </div>
-        </div>
-        <div class="topic">
-            <div class="topic-heading"><h1>  ....</h1></div>
-            <div class="topic-card">
-                <div class="topic-explain">
-                    <p>.....</p>
-                    <p>....</p>
-                    <p>...</p>
-                  
-                </div>
-                <div class="topic-code">
-                    <h1>.....</h1>
-                    <ul>
-                        <li>
-                            <p class="topic-code-area">.....</p>
-                            <p class="topic-code-area">
-                                <code>
-                                 
-                                </code>
-                            </p>
-                        </li>
-                        <li>
-                            <p class="topic-code-area">......</p>
-                            <p class="topic-code-area">
-                 
-                            </p>
-                        </li>  
-                    </ul>
-                </div>   
-            </div>
-        </div>
+        
 
         
         <!--
