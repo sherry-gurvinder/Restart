@@ -1,0 +1,141 @@
+/* Reset default styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+main {
+    flex: 1;
+    background: black;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    height: 5rem;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+    background: #333;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-right: 1em;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.social-media a {
+    color: #fff;
+    margin-left: 1em;
+    text-decoration: none;
+}
+
+.social-media a:hover {
+    text-decoration: underline;
+}
+
+/* Projects Section */
+.projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background: black;
+    color: white;
+}
+.project-heading {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+}
+.project-heading h1{
+    border: 1px solid;
+    padding: 1rem;;
+}
+.project-item {
+    border: 1px solid #fff;
+    padding: 2rem;
+    flex-basis: 15rem;
+    height: 10rem;
+    text-align: center;
+    margin: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background: #d4bf33;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.project-item a {
+    color: white;
+    text-decoration: none;
+    background: black;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.project-item a:hover {
+    background: #333;
+}
+
+/* Footer Styles */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    border-top: 1px solid #444;
+}
+
+footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

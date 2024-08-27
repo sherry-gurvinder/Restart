@@ -1,0 +1,125 @@
+/* Reset default margin and height for html and body */
+html, body {
+    margin: 0;
+    height: 100%;
+    background: #f0f4f8; /* Light background color */
+    font-family: Arial, sans-serif; /* Improved font */
+}
+
+/* Wrapper for layout control */
+.wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* Header, content, footer */
+    grid-template-columns: 1fr;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Header styling */
+header {
+    grid-row: 1 / 2;
+    background: #333; /* Dark background for contrast */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* Main content area */
+main {
+    grid-row: 2 / 3;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff; /* White background for contrast */
+}
+
+/* Content area styling */
+.content {
+    position: relative;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+/* Shadow effect container */
+.shadow-effect {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+}
+
+/* Quote section styling */
+.quote-section {
+    position: relative;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    z-index: 1;
+    max-width: 100%;
+    margin: 0 auto;
+    height: 64%;
+    /* transform: rotate(0deg); */
+}
+
+/* Quote shadow styling */
+.quote-section-shadow {
+    position: absolute;
+    top: 1rem; /* Adjust for shadow positioning */
+    left: 1rem;
+    height: 88%;
+    width: 100%;
+    transform: rotate(-5deg); /* Rotate to create shadow effect */
+    background: rgba(0, 0, 0, 0.2); /* Slightly transparent background */
+    z-index: 0;
+    pointer-events: none; /* Ensures it doesn’t interfere with interactions */
+    border-radius: 10px; /* Rounded corners to match the quote section */
+}
+
+/* Quote text styling */
+.quote-text {
+    margin: 0;
+    font-size: 1.2rem;
+    color: #333; /* Darker text color for readability */
+}
+
+/* Generate quote button container */
+.genrate-quote {
+    margin-top: 1rem;
+}
+
+/* Button styling */
+button#quote {
+    background: linear-gradient(45deg, #ff6f61, #d83a56); /* Gradient background */
+    border: none;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px; /* Rounded corners */
+    cursor: pointer;
+  
+}
+
+/* Button hover effect */
+button#quote:hover {
+    transform: scale(1.1); /* Slightly enlarge the button */
+}
+
+/* Footer styling */
+footer {
+    grid-row: 3 / 4;
+    background: #333; /* Dark background for contrast */
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.footer-content a {
+    color: white;
+}
