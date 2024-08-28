@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel='stylesheet'>
+    <title>Objects</title> 
+    
+    <style>
+        .header {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    justify-content: space-between;
+    border: 1px solid white;
+    padding: 1rem;
+    background: #333;
+}
+.logo
+{
+    display: grid;
+}
+section.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.social-media {
+    display: grid;
+    justify-items: end;
+    grid-template-columns: 1fr;
+    justify-items: end;
+    /* justify-content: space-around; */
+}
+section.social-media a {
+    color: white;
+    text-decoration: none;
+}
+.footer
+{
+    display: grid;
+    border: 1px solid white;
+  
+        background: #f1f1f1;
+        padding: 1em;
+        text-align: center;
+        border-top: 1px solid #ddd;
+ 
+}
+section.footer p, a {
+    color: black;
+    margin: 0;
+}
+.footer a {
+    color: #007bff !important;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+    </style>
+</head>
+<body>
+    <section class="header">
+        <section class="logo">
+            <h1>Gurvinder Singh</h1>
+            <p>Web Developer | Designer | Fullstack | React | NodeJS </p>
+        </section>
+        <section class="social-media">
+            <section class="links">
+                <a href="https://linkedin.com/in/sherrygurvinder" target="_blank">LinkedIn</a>
+            | 
+            <a href="https://github.com/sherry-gurvinder" target="_blank">GitHub</a>
+            </section>
+        </section>
+    </section>
+    <div class="container"> 
+        <div class="topic">
+            <div class="topic-heading"><h1>JavaScript and HTML</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>HTML defines the structure of a web page by using page elements as the building blocks. However, HTML by itself can not produce web page interactivity, that’s where JavaScript comes in.</p>
+                    <p>In web development, CSS provides the style to our HTML structure.</p>
+                    <p>If HTML and CSS provide structure and style and JavaScript provides interactivity. </p>
+                  
+                </div>
+                <div class="topic-code">
+                    <h1>The &lt;script&gt; Tag</h1>
+                    <p>The &lt;script&gt; tag is used to include or reference JavaScript code in an HTML document. It can be used to either embed JavaScript directly within the HTML file or link to an external JavaScript file.</p>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">The script element allows you to add JavaScript code inside an HTML file. Below, the script element embeds valid JavaScript code:</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    
+                                    &lt;script&gt;
+                                        function Hello() {
+                                            alert ('Hello World');
+                                        }
+                                        &lt;/script&gt;
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">External JavaScript file: Scripts placed in the head are usually executed before the content is loaded, whereas scripts placed at the end of the body are executed after the content is loaded, which can help in improving page load times.</p>
+                            <p class="topic-code-area">
+                                    <code>
+                                        &lt;script&gt; src="path/to/your/script.js"&lt/script&gt;
+                                    </code>
+                            </p>
+                        </li>  
+                        <li>
+                            <p class="topic-code-area">Defer attribute:it loads the script but defers the actual execution of the JavaScript until after it finishes parsing the rest of the elements in the HTML file. </p>
+                            <p class="topic-code-area">
+                                <code>
+                                    &lt;script&gt; src="path/to/your/script.js" defer &lt/script&gt;
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Async attribute:The async attribute loads and executes the script asynchronously with the rest of the webpage. This means that, similar to the defer attribute, the HTML parser will continue parsing the rest of the HTML as the script is downloaded in the background. However, with the async attribute, the script will not wait until the entire page is parsed: it will execute immediately after it has been downloaded.  </p>
+                            <p class="topic-code-area">
+                                <code>
+                                    &lt;script&gt; src="path/to/your/script.js" async &lt/script&gt;
+                                </code>
+                            </p>
+                        </li>
+                    </ul>
+                </div>   
+            </div>
+           
+        
+
+        
+        <!--
+        Topic Placeholder-->
+         <!--
+        <div class="topic">
+            <div class="topic-heading"><h1>  ....</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>.....</p>
+                    <p>....</p>
+                    <p>...</p>
+                  
+                </div>
+                <div class="topic-code">
+                    <h1>.....</h1>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">.....</p>
+                            <p class="topic-code-area">
+                                <code>
+                                 
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">......</p>
+                            <p class="topic-code-area">
+                 
+                            </p>
+                        </li>  
+                    </ul>
+                </div>   
+            </div>
+        </div>
+    -->
+        <!-- End-->
+       
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>What is the DOM?</h1></div>
+            <div class="topic-card">
+                <div class="topic-explain">
+                    <p>The Document Object Model, abbreviated DOM, is a powerful tree-like structure that allows programmers to conceptualize hierarchy and access the elements on a web page.</p>
+                    <p>The DOM is a logical tree-like Model that organizes a web page’s HTML Document as an Object.</p>
+                    
+                  
+                </div>
+                <div class="topic-code">
+                    <h1>The DOM as a Tree Structure</h1>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">
+                                <code>
+                                 <img src="../images/DOM.png">
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">Parent Child Relationships in the DOM</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    <img src="../images/DOM-Parent-Child.png"> 
+                                </code>
+                            </p>
+                        </li>  
+                       
+
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>The Document Keyword</h1></div>
+            <div class="topic-card">
+                <div class="topic-code">
+                    <h1>The document object in JavaScript is the door to the DOM structure. The document object allows you to access the root node of the DOM tree. Before you can access a specific element in the page</h1>
+                    <ul>
+                         <li>
+                            <p class="topic-code-area">Select and Modify Elements</p>
+                            <p class="topic-code-area">
+                                <span>The document object allows scripts to access children of the DOM as properties.</span>
+                                <span>if you want to access the &lt;body&gt; element from your script, you can access it as a property of the document object by using</span>
+                                    </p>
+                                    <p class="topic-code-area">      
+                                <code>
+                                    document.body
+                                </code>
+                            </p>
+                            <p class="topic-code-area">
+                               Let’s take a look at how we can reassign the contents of the &lt;body&gt; element to the text 'The cat loves the dog':
+                            </p>
+                            <p class="topic-code-area">      
+                                <code>
+                                    document.body.innerHTML = 'The cat loves the dog.';
+                                </code>
+                        </li> 
+                        <li>
+                            <p class="topic-code-area">Select and Modify Elements:The .querySelector() method allows us to specify a CSS selector as a string and returns the first element that matches that selector. The following code would return the first paragraph in the document. </p>
+                            <p class="topic-code-area">
+                                <code>
+                                    document.querySelector('p');
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">JavaScript has more targeted methods that select elements based on their class, id, or tag name.</p>
+                            <p class="topic-code-area">.getElementById() method:For example, if you want to access an element directly by its id, you can use the aptly named .getElementById() method:</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    document.getElementById('bio').innerHTML = 'The description';
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">getElementsByClassName</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    // Set first element of .student class as 'Not yet registered'
+                                    document.getElementsByClassName('student')[0].innerHTML = 'Not yet registered';
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">getElementsByTagName</p>
+                            <p class="topic-code-area">
+                                // Set second &lt;li&gt; tag as 'Cedric Diggory'
+                                    document.getElementsByTagName('li')[1].innerHTML = 'Cedric Diggory`;
+                            </p>
+                        </li>  
+                        <li>
+                            <p class="topic-code-area">Style an Element:element.style.property</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    document.querySelector('.blue').style.fontFamily = 'Roboto';
+                                </code>
+                            </p>
+                        </li> 
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>Traversing the DOM</h1></div>
+            <div class="topic-card">
+                <div class="topic-code">
+                    <h1>Each element has a .parentNode and .children property. The .parentNode property returns the parent of the specified element in the DOM hierarchy. Note that the document element is the root node so its .parentNode property will return null. The .children property returns an array of the specified element’s children. If the element does not have any children, it will return null.</h1>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">
+                                <code>
+                                    &lt;ul id='groceries'&gt; <br>
+                                    &lt;li&gt; id='must-have'>Toilet Paper  &lt;/li&gt;<br>
+                                    &lt;li &gt;Apples  &lt;/li&gt;<br>
+                                    &lt;li&gt;Chocolate  &lt;/li&gt;<br>
+                                    &lt;li&gt;Dumplings  &lt;/li&gt;<br>
+                                    &lt;/ul&gt;
+                                </code>
+                            </p>
+                            <p class="topic-code-area">
+                                <code>let parentElement = document.getElementById('must-have').parentNode; // returns  &lt;ul&gt; element</code> <br>
+                                <code>
+                                    let childElements = document.getElementById('groceries').children; // returns an array of &lt;li&gt; elements
+                                </code>
+                                </p>
+                        </li>
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>Create and Insert Elements</h1></div>
+            <div class="topic-card">
+                <div class="topic-code">
+                    <h1>Just as the DOM allows scripts to modify existing elements, it also allows for the creation of new ones.</h1>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">The .createElement() method creates a new element based on the specified tag name passed into it as an argument. However, it does not append it to the document. It creates an empty element with no inner HTML.</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    let paragraph = document.createElement('p');
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area"> The .appendChild() method will add a child element as the parent element’s last child node. </p>
+                            <p class="topic-code-area">In order to create an element and add it to the web page, you must assign it to be the child of an element that already exists on the DOM, referred to as the parent element. We call this process appending. </p>
+                            <p class="topic-code-area">
+                                <code>document.body.appendChild(paragraph);</code>
+                                <code>document.body.getElementById('[id of the element]').appendChild([element you want to append])</code>
+                            </p>
+                        </li> 
+                         
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>Remove an Element</h1></div>
+            <div class="topic-card">
+                <div class="topic-code">
+                    <h1>The .removeChild() method removes a specified child from a parent.</h1>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">In the below example code, the .querySelector() method returns the first paragraph in the document. Then, the paragraph element is passed as an argument of the .removeChild() method chained to the parent of the paragraph—document.body. This removes the first paragraph from the document body.</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    let paragraph = document.querySelector('p');
+                                    document.body.removeChild(paragraph);
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">If you want to hide an element rather than completely deleting it, the .hidden property allows you to hide it by setting the property as true or false:</p>
+                            <p class="topic-code-area">
+                                <code>document.getElementById('sign').hidden = true;</code>
+                            </p>
+                        </li>  
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>DOM Events with JavaScript</h1></div>
+            <div class="topic-card">
+            
+                <div class="topic-code">
+                    <h1>you can add interactivity to DOM elements by assigning a function to run based on an event. Events can include anything from a click to a user mousing over an element.</h1>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">The .onclick property allows you to assign a function to run on when a click event happens on an element:</p>
+                            <p class="topic-code-area">
+                                <code>
+                                    let element = document.querySelector('button');<br>
+
+                                    element.onclick = function() { <br>
+                                    element.style.backgroundColor = 'blue'<br> 
+                                    };
+
+                                </code>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">You can also assign the .onclick property to a function by name:</p>
+                            <p class="topic-code-area">
+                                <code>let element = document.querySelector('button');<br>
+
+                                    function turnBlue() {<br>
+                                       element.style.backgroundColor = 'blue';<br>
+                                    }<br>
+                                    
+                                    element.onclick = turnBlue;</code>
+                            </p>
+                        </li> 
+                        
+                    </ul>
+                </div>   
+            </div>
+        </div>
+        <div class="topic">
+            <div class="topic-heading"><h1>Review</h1></div>
+            <div class="topic-card">
+                <div class="topic-code">
+                    <h1>you manipulated a webpage structure by leveraging the Document Object Model (DOM) interface in JavaScript.</h1>
+                    <ul>
+                        <li>
+                            <p class="topic-code-area">The document keyword grants access to the root of the DOM in JavaScript.</p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">The DOM Interface allows you to select a specific element with CSS selectors by using the .querySelector() method.</p>
+                        </li>  
+                        <li>
+                            <p class="topic-code-area">You can access an element directly by its ID with the .getElementById() method which returns a single element.</p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">You can access an array of elements with the .getElementsByClassName() and .getElementsByTagName() methods, then call a single element by referencing its placement in the array.</p>
+                        </li> 
+                        <li>
+                            <p class="topic-code-area">The .innerHTML and .style properties allow you to modify an element by changing its contents or style respectively.</p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">You can create, append, and remove elements by using the .createElement(),.appendChild() and .removeChild() methods respectively.</p>
+                        </li> 
+                        <li>
+                            <p class="topic-code-area">The .onclick property can add interactivity to a DOM element based on a click event.</p>
+                        </li>
+                        <li>
+                            <p class="topic-code-area">The .children property returns a list of an element’s children and the .parentNode property returns the element’s closest connected node in the direction towards the root.</p>
+                        </li> 
+                    </ul>
+                </div>   
+            </div>
+        </div>
+    <!-- Container End-->
+    </div>
+    <section class="footer">
+            
+        <p>&copy; 2024 Gurvinder Singh. All rights reserved.</p>
+        <p>Contact me: <a href="mailto:your.email@example.com">sgurvinder0594@gmail.com</a></p>
+    
+</section>
+</body>
+</html>
