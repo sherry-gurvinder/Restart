@@ -1,1 +1,0 @@
-let age=prompt("enter the age");

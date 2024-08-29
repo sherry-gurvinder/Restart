@@ -1,0 +1,327 @@
+body
+{
+    background-color: #00878b;
+    color: white;
+    margin: 0;
+}
+
+
+.container {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    justify-items: center;
+    grid-row-gap: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    background: #00878b;
+}
+
+.topic {
+    text-align: center;
+    border: 1px solid;
+    display: grid;
+    background: white;
+    color: black;
+    grid-template-columns: 88%;
+    justify-content: center;
+    text-align: left;
+    min-width: 80%;
+    max-width: 80%;
+}
+.topic-heading p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+.topic-explain {
+    display: grid;
+}
+.topic-explain img {
+    /* display: grid; */
+    width: 50%;
+}
+p.topic-code-area img {
+    width: 50%;
+}
+.topic-code ul {
+  
+    padding-inline-start: 1rem;
+    
+}
+
+.topic-explain p {
+    font-size: 1.2rem;
+    font-family: monospace;
+    text-align: justify;
+}
+.topic-card {
+    display: grid;
+    /* align-content: space-evenly; */
+    grid-template-columns: 100%;
+}
+
+.topic-button {
+}
+li {
+    display: inline;
+    font-size: 2rem;
+}
+
+Nav {
+    display: grid;
+    background: repeating-linear-gradient(45deg, white, transparent 100px);
+}
+
+.topic .topic-heading > h1 {
+    /* background: black; */
+    color: #00878b;
+    padding: 1rem;
+    /* border-bottom-left-radius: 10rem; */
+    text-align: end;
+}
+.topic-code li {
+    font-size: 1.1rem;
+}
+.topic-code p {
+    font-size: 1.3rem;
+    text-align: left;
+    /* font-weight: bold; */
+    font-family: cursive;
+}
+code {
+    font-weight: lighter;
+    color: white !important;
+    background: black;
+    display: grid;
+    padding: 0rem;
+    justify-content: center;
+    grid-template-columns: 100%;
+    margin-left: 0rem;
+    padding: 2rem;
+    /* text-align: left; */
+    font-size: 1rem;
+    text-indent: -1rem;
+}
+.topic-code>p {
+    background: black;
+    color: white;
+    font-size: 1.4rem;
+    border-bottom-right-radius: 10rem;
+    padding: 1rem;
+}
+.topic-code ul li {
+    /* padding-inline-start: 1rem; */
+    list-style-type: decimal;
+    display: list-item;
+}
+html{
+    font-size:16px;
+}
+body {
+    background: #0a0a0a;
+    color: white;
+}
+nav{
+    display: grid;
+    height:1rem;
+    background:#36afa4;
+    justify-content:end;
+    height: 3rem;
+    align-content:center;
+    font-size:2rem;
+    border:1px solid;
+    margin:1rem;
+}
+main{
+    display: grid;
+    border:1px solid;
+    margin:1rem;
+}
+.header {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    justify-content: space-between;
+    border: 1px solid white;
+    padding: 1rem;
+    background: #333;
+}
+.logo {
+    display: grid;
+    justify-self: start;
+    color: white;
+}
+section.logo h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color:white;
+}
+section.logo p {
+    margin: 0;
+    color:white;
+}
+.social-media {
+    display: grid;
+    justify-items: end;
+    grid-template-columns: 1fr;
+    justify-items: end;
+    /* justify-content: space-around; */
+}
+section.social-media a {
+    color: white;
+    text-decoration: none;
+}
+.footer
+{
+    display: grid;
+    border: 1px solid white;
+  
+        background: #f1f1f1;
+        padding: 1em;
+        text-align: center;
+        border-top: 1px solid #ddd;
+ 
+}
+section.footer p, a {
+    color: black;
+    margin: 0;
+}
+.footer a {
+    color: #007bff !important;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+.container {
+    display: grid;
+    
+    grid-template-rows: 1fr auto;
+    justify-items: center;
+    grid-row-gap: 5rem;
+    justify-content: center;
+    color: white;
+    grid-gap: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    grid-auto-flow: dense;
+    background: #00878b;
+}
+.topic-item {
+    text-align: center;
+   
+    display: grid;
+    background: white;
+    color: black;
+    justify-content: center;
+    text-align: left;
+    width: 100%;
+  
+}
+.topic-heading {
+    display: grid;
+    /* border: 1px solid; */
+    /* margin: 1rem; */
+    /* justify-items: center; */
+    font-size: 1.4rem;
+    /* padding: 1rem; */
+    width: 100%;
+    box-shadow: 3px 1px 14px 3px #b1b1b1;
+    margin-top: 1rem;
+}
+.topic-sub-heading{
+    display: grid;
+     border:1px solid;
+    margin:1rem;
+  
+    font-size: 1.5rem;
+    
+}
+.code-area{
+    display: grid;
+     border:1px solid;
+    margin:1rem;
+    background:black;
+    color:white;  
+    font-size:0.75rem;
+
+}
+.topic-explain {
+    display: grid;
+    /* border: 1px solid; */
+    /* margin: 1rem; */
+    font-size: 1.2rem;
+}
+.fxn-review img{
+    max-width: 100%;
+
+}
+ul.fxn-review {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+
+ul.fxn-review li {
+    font-size: 1rem;
+    margin: 2rem;
+    background: black;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+
+ul.fxn-review li p {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+    text-align: justify;
+    margin: 1rem;
+    font-size: 1.4rem;
+}
+
+
+/* Assuming these are the styles from your homepage */
+
+body {
+    font-family: 'Arial', sans-serif; /* Replace with the actual font-family from your homepage */
+    color: #333333; /* Replace with the actual text color from your homepage */
+}
+
+.header h1, .header p {
+    font-family: 'Arial', sans-serif; /* Replace with the actual font-family from your homepage */
+    color: #333333; /* Replace with the actual text color from your homepage */
+}
+
+.topic-heading, .topic-sub-heading, .topic-explain, .code-area code {
+    font-family: 'Arial', sans-serif; /* Replace with the actual font-family from your homepage */
+    color: #333333; /* Replace with the actual text color from your homepage */
+}
+
+/* Example for additional styles */
+.topic-item {
+    margin-bottom: 20px;
+}
+
+.code-area {
+    background-color: #f4f4f4; /* Light grey background for code blocks */
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace; /* Monospace font for code */
+    color: #333333; /* Replace with actual code text color */
+}
+
+
+/*Media Query*/
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+    .topic {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
